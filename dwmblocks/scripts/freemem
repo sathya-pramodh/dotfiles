@@ -1,0 +1,4 @@
+#!/bin/bash
+exe=$(free -h | awk '/^Mem/ { print $3"\/"$2 }' | sed s/i//g)
+exe1=$(free -t | awk 'FNR == 2 {printf("%.2f%"), $3/$2*100}')
+echo "$exe1 $exe"
