@@ -67,9 +67,11 @@ static const char *volmute[]  = { "pactl", "set-sink-mute", "0", "toggle", NULL 
 static const char *screenshotwindow[] = {"screenshot", "window", NULL};
 static const char *screenshotarea[] = {"screenshot", "select", NULL};
 static const char *screenshotfull[] = {"screenshot", NULL, NULL};
+static const char *zoomcmd[] = {"zoom", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{MODKEY|ControlMask, XK_z, spawn, {.v = zoomcmd}},
 	{ 0,XK_F7,spawn,{.v = voldown}},
 	{ 0,XK_F8,spawn, {.v = volup}},
 	{ 0,XK_F6,spawn, {.v = volmute}},
