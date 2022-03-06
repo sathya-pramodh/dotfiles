@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { " ","", "爵", " "};
+static const char *tags[] = { " ","", "爵"};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -30,6 +30,7 @@ static const Rule rules[] = {
 	{ "Terminator", NULL, NULL, 1 << 1, 0, -1},
 	{ "Brave", NULL, NULL, 1 << 2, 0, -1},
 	{ "Steam", NULL, NULL, 1 << 3, 0, -1},
+	{ "Zoom", NULL, NULL, 0, 1, -1},
 };
 
 /* layout(s) */
@@ -46,6 +47,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
+#include <X11/XF86keysym.h>
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
@@ -68,9 +70,13 @@ static const char *screenshotwindow[] = {"screenshot", "window", NULL};
 static const char *screenshotarea[] = {"screenshot", "select", NULL};
 static const char *screenshotfull[] = {"screenshot", NULL, NULL};
 static const char *zoomcmd[] = {"zoom", NULL};
+static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
+static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0, XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },
+    	{ 0, XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
 	{MODKEY|ControlMask, XK_z, spawn, {.v = zoomcmd}},
 	{ 0,XK_F7,spawn,{.v = voldown}},
 	{ 0,XK_F8,spawn, {.v = volup}},
