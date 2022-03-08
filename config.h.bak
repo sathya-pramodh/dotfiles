@@ -49,6 +49,7 @@ static const Layout layouts[] = {
 
 /* key definitions */
 #include <X11/XF86keysym.h>
+#include "shiftview.c"
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
@@ -76,6 +77,8 @@ static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY, XK_n, shiftview, {.i = +1}},
+	{ MODKEY, XK_b, shiftview, {.i = -1}},
 	{ 0, XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },
     	{ 0, XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd} },
 	{MODKEY|ControlMask, XK_z, spawn, {.v = zoomcmd}},
