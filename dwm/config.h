@@ -31,6 +31,7 @@ static const Rule rules[] = {
 	{ "Brave", NULL, NULL, 1 << 2, 0, -1},
 	{ "Steam", NULL, NULL, 1 << 3, 0, -1},
 	{ "Zoom", NULL, NULL, 0, 1, -1},
+	{ "IntelliJIdea", NULL, NULL, 0, 1, -1},
 };
 
 /* layout(s) */
