@@ -39,8 +39,8 @@ XRENDER = -lXrender
 #PANGOLIB = `pkg-config --libs xft pango pangoxft`
 
 # Uncomment for the ipc patch / IPC_PATCH
-#YAJLLIBS = -lyajl
-#YAJLINC = -I/usr/include/yajl
+YAJLLIBS = -lyajl
+YAJLINC = -I/usr/include/yajl
 
 # Uncomment this for the rounded corners patch / ROUNDED_CORNERS_PATCH
 XEXTLIB = -lXext
