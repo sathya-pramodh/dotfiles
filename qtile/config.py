@@ -1,0 +1,1 @@
+/home/pramodhsathya/.config/qtile/config.py

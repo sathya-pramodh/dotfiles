@@ -211,7 +211,7 @@ static char selfloatbgcolor[]            = "#117799";
 #endif // BAR_FLEXWINTITLE_PATCH
 
 #if BAR_ALPHA_PATCH
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = 0xffffff;
 static const unsigned int borderalpha = OPAQUE;
 static const unsigned int alphas[][3] = {
 	/*                       fg      bg        border     */
@@ -602,9 +602,9 @@ static const int scrollargs[][2] = {
 #if FLEXTILE_DELUXE_LAYOUT
 static const Layout layouts[] = {
 	/* symbol     arrange function, { nmaster, nstack, layout, master axis, stack axis, secondary stack axis, symbol func } */
-	{ "[Tile]",      flextile,         { -1, -1, SPLIT_VERTICAL, TOP_TO_BOTTOM, TOP_TO_BOTTOM, 0, NULL } }, // default tile layout
- 	{ "[Float]",      NULL,             {0} },    /* no layout function means floating behavior */
-	{ "[Monocle]",      flextile,         { -1, -1, NO_SPLIT, MONOCLE, MONOCLE, 0, NULL } }, // monocle
+	{ "[T]",      flextile,         { -1, -1, SPLIT_VERTICAL, TOP_TO_BOTTOM, TOP_TO_BOTTOM, 0, NULL } }, // default tile layout
+ 	{ "[F]",      NULL,             {0} },    /* no layout function means floating behavior */
+	{ "[M]",      flextile,         { -1, -1, NO_SPLIT, MONOCLE, MONOCLE, 0, NULL } }, // monocle
 	{ "|||",      flextile,         { -1, -1, SPLIT_VERTICAL, LEFT_TO_RIGHT, TOP_TO_BOTTOM, 0, NULL } }, // columns (col) layout
 	{ ">M>",      flextile,         { -1, -1, FLOATING_MASTER, LEFT_TO_RIGHT, LEFT_TO_RIGHT, 0, NULL } }, // floating master
 	{ "[D]",      flextile,         { -1, -1, SPLIT_VERTICAL, TOP_TO_BOTTOM, MONOCLE, 0, NULL } }, // deck
@@ -666,12 +666,12 @@ static const Layout layouts[] = {
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	#if MONOCLE_LAYOUT
-	{ "[Monocle]",      monocle },
+	{ "[M]",      monocle },
 	#endif
 	#if TILE_LAYOUT
-	{ "[Tile]",      tile },    /* first entry is default */
+	{ "[T]",      tile },    /* first entry is default */
 	#endif
-	{ "[Float]",      NULL },    /* no layout function means floating behavior */
+	{ "[F]",      NULL },    /* no layout function means floating behavior */
 	#if BSTACK_LAYOUT
 	{ "TTT",      bstack },
 	#endif
