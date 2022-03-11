@@ -4,9 +4,9 @@ static const Block blocks[] = {
 	{" ", "/home/pramodhsathya/windowmanagers/dotfiles/dwmblocks/scripts/date",					5,		0},
 	{" CPU: ", "/home/pramodhsathya/windowmanagers/dotfiles/dwmblocks/scripts/cpu", 1 , 0},
 	{" RAM: ", "/home/pramodhsathya/windowmanagers/dotfiles/dwmblocks/scripts/freemem",	1,		0},
-	{" SSD:", "/home/pramodhsathya/windowmanagers/dotfiles/dwmblocks/scripts/ssd", 60, 0},
+	{" GPU: ", "/home/pramodhsathya/windowmanagers/dotfiles/dwmblocks/scripts/gpu", 1, 0},
 	{" ", "/home/pramodhsathya/windowmanagers/dotfiles/dwmblocks/scripts/kernelver", 0, 0},
-	{"UP: ", "/home/pramodhsathya/windowmanagers/dotfiles/dwmblocks/scripts/uptime", 30, 0},
+	{"", "/home/pramodhsathya/windowmanagers/dotfiles/dwmblocks/scripts/wifistatus", 10, 0},
 	{"","/home/pramodhsathya/windowmanagers/dotfiles/dwmblocks/scripts/battery", 1, 0},
 };
 
