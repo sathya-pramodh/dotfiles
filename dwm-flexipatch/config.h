@@ -388,7 +388,8 @@ static Sp scratchpads[] = {
  * them. This works seamlessly with alternative tags and alttagsdecoration patches.
  */
 static char *tagicons[][NUMTAGS] = {
-	[DEFAULT_TAGS]        = {  "","辶","", "爵","","","","ﭮ", ""},
+	[DEFAULT_TAGS] = { "1", "2", "3", "4", "5", "6", "7", "8", "9"},
+	//[DEFAULT_TAGS]        = {  "","辶","", "爵","","","","ﭮ", ""},
 	[ALTERNATIVE_TAGS]    = { "1", "2", "3", "4", "5", "6", "7", "8", "9"},
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
@@ -852,6 +853,7 @@ static const char *brupcmd[] = { "brightnessctl", "set", "10%+", NULL };
 static const char *brdowncmd[] = { "brightnessctl", "set", "10%-", NULL };
 static const char *suspendcmd[] = {"/bin/sh", "-c", "systemctl suspend", NULL};
 static const char *nautiluscmd[] = {"nautilus", NULL};
+static const char *neovimcmd[] = {"terminator", "-e", "nvim", NULL};
 
 
 #if ON_EMPTY_KEYS_PATCH
@@ -864,6 +866,7 @@ static Key on_empty_keys[] = {
 
 static Key keys[] = {
 	/* modifier                     key            function                argument */
+	{ MODKEY|ShiftMask, XK_n, spawn, {.v = neovimcmd}},
 	{ MODKEY|ShiftMask, XK_f, spawn, {.v = nautiluscmd}},
 	{ MODKEY|ControlMask, XK_s, spawn, {.v = suspendcmd} },
 	{ 0, XF86XK_MonBrightnessUp,  spawn,          {.v = brupcmd} },

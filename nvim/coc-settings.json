@@ -1,0 +1,23 @@
+{
+  "suggest.noselect": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    //"python",
+    "json",
+    "typescriptreact",
+    "typescript.tsx",
+    "graphql",
+    "cpp",
+    "java"
+  ],
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  "python.linting.enabled": true,
+  "python.formatting.provider": "black",
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips"
+}
