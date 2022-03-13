@@ -38,6 +38,7 @@ brave_cmd = "brave"
 zoom_cmd = "zoom"
 suspend_cmd = "systemctl suspend"
 nautilus_cmd = "nautilus"
+screenshot_cmd = "screenshot select"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -105,10 +106,10 @@ keys = [
     Key([mod, "control"], "z", lazy.spawn(zoom_cmd), desc="Launch zoom"),
     Key([mod, "control"], "s", lazy.spawn(suspend_cmd), desc="Suspend"),
     Key([mod, "shift"], "f", lazy.spawn(nautilus_cmd), desc="Launch nautilus"),
+    Key([mod, "shift"], "s", lazy.spawn(screenshot_cmd), desc="Screenshot part of the screen"),
 ]
 
 zoom_match = Match(wm_instance_class="zoom")
-terminator_match = Match(wm_instance_class="terminator")
 brave_match = Match(wm_instance_class="brave-browser")
 obs_match = Match(wm_instance_class="obs")
 steam_match = Match(wm_instance_class="Steam")
@@ -116,7 +117,7 @@ discord_match = Match(wm_instance_class="discord")
 tlauncher_match = Match(title="V TLauncher")
 nautilus_match = Match(wm_instance_class="nautilus")
 groups = [
-    Group("1", matches=[terminator_match]),
+    Group("1"),
     Group("2", matches=[zoom_match]),
     Group("3", matches=[brave_match]),
     Group("4", matches=[nautilus_match]),

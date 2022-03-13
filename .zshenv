@@ -1,0 +1,15 @@
+export EDITOR=/bin/nvim
+alias edit=nvim
+alias q=exit
+alias c=clear
+alias gpo="git push origin"
+alias gpl="git pull origin"
+alias gi="git init"
+alias gc="git clone"
+alias ga.="git add ."
+alias qtileconfig="nvim ~/.config/qtile/config.py"
+alias dwmpatchesconfig="nvim ~/windowmanagers/dotfiles/dwm-flexipatch/patches.h"
+alias dwmconfig="nvim ~/windowmanagers/dotfiles/dwm-flexipatch/config.h"
+alias dwmblocksconfig="nvim ~/windowmanagers/dotfiles/dwmblocks/blocks.h"
+alias rebuild="cd ~/windowmanagers/dotfiles/dwm-flexipatch && sudo make uninstall && sudo make clean install && cd ~/windowmanagers/dotfiles/dwmblocks && sudo make uninstall && sudo make clean install && cd ~/windowmanagers/dotfiles/dmenu && sudo make uninstall && sudo make clean install"
+alias alacrittyconfig="nvim ~/.config/alacritty/alacritty.yml"
