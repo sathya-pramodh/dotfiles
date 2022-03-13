@@ -106,7 +106,12 @@ keys = [
     Key([mod, "control"], "z", lazy.spawn(zoom_cmd), desc="Launch zoom"),
     Key([mod, "control"], "s", lazy.spawn(suspend_cmd), desc="Suspend"),
     Key([mod, "shift"], "f", lazy.spawn(nautilus_cmd), desc="Launch nautilus"),
-    Key([mod, "shift"], "s", lazy.spawn(screenshot_cmd), desc="Screenshot part of the screen"),
+    Key(
+        [mod, "shift"],
+        "s",
+        lazy.spawn(screenshot_cmd),
+        desc="Screenshot part of the screen",
+    ),
 ]
 
 zoom_match = Match(wm_instance_class="zoom")
@@ -324,17 +329,17 @@ screens = [
                     foreground="a3be8c",
                 ),
                 # widget.BatteryIcon(
-                    # font="Hack Nerd Font",
-                    # fontsize=15,
-                    # update_interval=5,
-                    # foreground="a3be8c",
+                # font="Hack Nerd Font",
+                # fontsize=15,
+                # update_interval=5,
+                # foreground="a3be8c",
                 # ),
                 # widget.Battery(
-                    # font="Hack Nerd Font",
-                    # fontsize=15,
-                    # format="{percent:2.0%}",
-                    # update_interval=5,
-                    # foreground="a3be8c",
+                # font="Hack Nerd Font",
+                # fontsize=15,
+                # format="{percent:2.0%}",
+                # update_interval=5,
+                # foreground="a3be8c",
                 # ),
                 widget.Sep(
                     linewidth=1,
