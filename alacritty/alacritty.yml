@@ -191,9 +191,9 @@ font:
 # Colors (Tomorrow Night)
 colors:
   # Default colors
-  #primary:
-    background: '#4c566a'
-    foreground: '#eceff4'
+  primary:
+    background: '#2e3440'
+    #foreground: '#eceff4'
 
     # Bright and dim foreground colors
     #

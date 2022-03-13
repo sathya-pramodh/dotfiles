@@ -26,7 +26,7 @@
 
 from typing import List  # noqa: F401
 
-from libqtile import bar, layout, widget, extension
+from libqtile import bar, layout, widget, extension, qtile
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -116,8 +116,9 @@ steam_match = Match(wm_instance_class="Steam")
 discord_match = Match(wm_instance_class="discord")
 tlauncher_match = Match(title="V TLauncher")
 nautilus_match = Match(wm_instance_class="nautilus")
+alacritty_match = Match(wm_instance_class="Alacritty")
 groups = [
-    Group("1"),
+    Group("1", matches=[alacritty_match]),
     Group("2", matches=[zoom_match]),
     Group("3", matches=[brave_match]),
     Group("4", matches=[nautilus_match]),
@@ -223,6 +224,9 @@ screens = [
                     format=" CPU: {load_percent}%",
                     foreground="#88c0d0",
                     update_interval=1,
+                    mouse_callbacks={
+                        "Button1": lambda: qtile.cmd_spawn(terminal + " -e htop"),
+                    },
                 ),
                 widget.Sep(
                     linewidth=3,
@@ -234,6 +238,9 @@ screens = [
                     format=" GPU: {temp}°C",
                     foreground="#ebcb8b",
                     update_interval=1,
+                    mouse_callbacks={
+                        "Button1": lambda: qtile.cmd_spawn("nvidia-settings"),
+                    },
                 ),
                 widget.Sep(
                     linewidth=3,
@@ -245,6 +252,9 @@ screens = [
                     format=" Mem:{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}",
                     foreground="a3be8c",
                     update_interval=1,
+                    mouse_callbacks={
+                        "Button1": lambda: qtile.cmd_spawn(terminal + " -e htop"),
+                    },
                 ),
                 widget.Chord(
                     chords_colors={
@@ -263,6 +273,11 @@ screens = [
                     format="  {essid}",
                     disconnected_message="睊",
                     foreground="ebcb8b",
+                    mouse_callbacks={
+                        "Button1": lambda: qtile.cmd_spawn(
+                            terminal + " -e sudo wifi-menu"
+                        )
+                    },
                 ),
                 widget.Sep(
                     linewidth=3,
@@ -289,6 +304,9 @@ screens = [
                     volume_up_cmd=["amixer", "-q", "set", "Master", "5%+"],
                     volume_down_cmd=["amixer", "-q", "set", "Master", "5%-"],
                     foreground="88c0d0",
+                    mouse_callbacks={
+                        "Button1": lambda: qtile.cmd_spawn("pavucontrol"),
+                    },
                 ),
                 widget.Sep(
                     linewidth=3,
