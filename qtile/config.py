@@ -26,10 +26,11 @@
 
 from typing import List  # noqa: F401
 
-from libqtile import bar, layout, widget, extension, qtile
+from libqtile import bar, layout, widget, extension, qtile, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+import os
 import subprocess
 
 mod = "mod4"
@@ -120,16 +121,14 @@ obs_match = Match(wm_instance_class="obs")
 steam_match = Match(wm_instance_class="Steam")
 discord_match = Match(wm_instance_class="discord")
 tlauncher_match = Match(title="V TLauncher")
-nautilus_match = Match(wm_instance_class="nautilus")
-alacritty_match = Match(wm_instance_class="Alacritty")
 groups = [
-    Group("1", matches=[alacritty_match]),
-    Group("2", matches=[zoom_match]),
+    Group("1"),
+    Group("2", matches=[zoom_match], layout="floating"),
     Group("3", matches=[brave_match]),
-    Group("4", matches=[nautilus_match]),
+    Group("4"),
     Group("5", matches=[steam_match]),
-    Group("6", matches=[obs_match], layout="tile", layouts=[layout.Tile()]),
-    Group("7", matches=[tlauncher_match]),
+    Group("6", matches=[obs_match], layout="floating", layouts=[layout.Floating()]),
+    Group("7", matches=[tlauncher_match], layout="floating"),
     Group("8", matches=[discord_match]),
     Group("9"),
 ]
@@ -160,6 +159,7 @@ for i in groups:
 
 layouts = [
     layout.Max(),
+    layout.Floating(),
     layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
@@ -349,7 +349,7 @@ screens = [
             ],
             26,
             background="#2e3440",
-            opacity=0.90,
+            opacity=0.81,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"],  # Borders are magenta
         ),
@@ -395,6 +395,12 @@ reconfigure_screens = True
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
 auto_minimize = True
+
+
+@hook.subscribe.startup_once
+def autostart():
+    home = os.path.expanduser("~/.config/qtile/autostart.sh")
+    subprocess.run([home])
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the

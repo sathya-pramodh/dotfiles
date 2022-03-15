@@ -1,5 +1,5 @@
 export EDITOR=/bin/nvim
-export DOTFILES="$HOME/windowmanagers/dotfiles"
+export DOTFILES="$HOME/dotfiles/dotfiles"
 alias edit=nvim
 alias q=exit
 alias c=clear
