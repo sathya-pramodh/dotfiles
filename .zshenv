@@ -1,5 +1,6 @@
 export EDITOR=/bin/nvim
 export DOTFILES="$HOME/dotfiles/dotfiles"
+export WALLPAPERS="$HOME/Downloads/livewall/"
 alias edit=nvim
 alias q=exit
 alias c=clear

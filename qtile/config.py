@@ -158,9 +158,10 @@ for i in groups:
     )
 
 layouts = [
+    layout.Columns(border_focus="#81a1c1", border_focus_stack=["#81a1c1", "#81a1c1"], border_width=4, margin=8, margin_on_single=8),
+    layout.Tile(margin=8),
     layout.Max(),
-    layout.Floating(),
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    layout.Floating(border_normal="#81a1c1", border_focus="#5e81ac"),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -168,9 +169,8 @@ layouts = [
     # layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),
-    layout.Tile(),
     # layout.TreeTab(),
-    layout.VerticalTile(),
+    layout.VerticalTile(margin=8),
     # layout.Zoomy(),
 ]
 
@@ -190,21 +190,21 @@ screens = [
                     linewidth=1,
                     padding=5,
                 ),
-                widget.GroupBox(
+                widget.CurrentLayoutIcon(
                     font="Hack Nerd Font",
                     fontsize=15,
-                    active="#bf6f6a",
-                    inactive="eceff4",
+                    foreground="d08770",
+                    background="2e3440",
                 ),
                 widget.Sep(
                     linewidth=3,
                     padding=15,
                 ),
-                widget.CurrentLayout(
+                widget.GroupBox(
                     font="Hack Nerd Font",
                     fontsize=15,
-                    foreground="d08770",
-                    background="2e3440",
+                    active="#bf6f6a",
+                    inactive="eceff4",
                 ),
                 widget.Sep(
                     linewidth=3,
@@ -291,7 +291,7 @@ screens = [
                 widget.GenPollText(
                     update_interval=0,
                     func=lambda: subprocess.check_output(
-                        "/home/pramodhsathya/windowmanagers/dotfiles/qtile/scripts/kernelver.sh"
+                        "/home/pramodhsathya/dotfiles/dotfiles/qtile/scripts/kernelver.sh"
                     )
                     .strip()
                     .decode("utf-8"),
@@ -320,7 +320,7 @@ screens = [
                 widget.GenPollText(
                     update_interval=5,
                     func=lambda: subprocess.check_output(
-                        "/home/pramodhsathya/windowmanagers/dotfiles/qtile/scripts/battery.sh"
+                        "/home/pramodhsathya/dotfiles/dotfiles/qtile/scripts/battery.sh"
                     )
                     .strip()
                     .decode("utf-8"),
@@ -385,7 +385,6 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
-        Match(wm_instance_class="obs"),
     ]
 )
 auto_fullscreen = True
