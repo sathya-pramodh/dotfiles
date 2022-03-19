@@ -1,4 +1,5 @@
 export EDITOR=/bin/nvim
+export PROJECT=$HOME/Desktop/Project/
 export DOTFILES="$HOME/dotfiles/dotfiles"
 export WALLPAPERS="$HOME/Downloads/livewall/"
 alias edit=nvim

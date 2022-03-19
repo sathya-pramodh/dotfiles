@@ -158,8 +158,8 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus="#81a1c1", border_focus_stack=["#81a1c1", "#81a1c1"], border_width=4, margin=8, margin_on_single=8),
-    layout.Tile(margin=8),
+    layout.Columns(border_focus="#81a1c1", border_focus_stack=["#81a1c1", "#81a1c1"], border_width=4, margin=10, margin_on_single=10),
+    layout.Tile(margin=10),
     layout.Max(),
     layout.Floating(border_normal="#81a1c1", border_focus="#5e81ac"),
     # Try more layouts by unleashing below layouts.
@@ -170,7 +170,7 @@ layouts = [
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.TreeTab(),
-    layout.VerticalTile(margin=8),
+    layout.VerticalTile(margin=10),
     # layout.Zoomy(),
 ]
 
