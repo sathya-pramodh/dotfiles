@@ -23,7 +23,6 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-
 from typing import List  # noqa: F401
 
 from libqtile import bar, layout, widget, extension, qtile, hook
@@ -113,6 +112,7 @@ keys = [
         lazy.spawn(screenshot_cmd),
         desc="Screenshot part of the screen",
     ),
+    Key([mod, "shift"], "n", lazy.spawn(terminal + " -e nvim"), desc="Launch neovim"),
 ]
 
 zoom_match = Match(wm_instance_class="zoom")
@@ -318,7 +318,7 @@ screens = [
                     padding=15,
                 ),
                 widget.GenPollText(
-                    update_interval=5,
+                    update_interval=10,
                     func=lambda: subprocess.check_output(
                         "/home/pramodhsathya/dotfiles/dotfiles/qtile/scripts/battery.sh"
                     )

@@ -13,7 +13,6 @@ set backspace=indent,eol,start " let backspace delete over lines
 set autoindent " enable auto indentation of lines
 set smartindent " allow vim to best-effort guess the indentation
 
-set wildmenu "graphical auto complete menu
 set autoread
 set lazyredraw "redraws the screne when it needs to
 set showmatch "highlights matching brackets
@@ -30,12 +29,10 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'github/copilot.vim'
 Plug 'mikelue/vim-maven-plugin'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ambv/black'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -44,7 +41,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
@@ -55,7 +51,6 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'vimwiki/vimwiki'
 Plug 'chriskempson/base16-vim'
-Plug 'nvie/vim-flake8'
 call plug#end()
 let g:system_copy#copy_command = 'xclip -sel clipboard'
 let g:system_copy#paste_command = 'xclip -sel clipboard -o'
@@ -78,7 +73,10 @@ let g:coc_global_extensions = [
   \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 
-  \ 'coc-python',
+  \ 'coc-yaml',
+  \ 'coc-html',
+  \ 'coc-css',
+  \ 'coc-pyright',
   \ 'coc-tabnine',
   \ 'coc-java',
   \ 'coc-vimlsp',
@@ -254,7 +252,6 @@ nmap == <plug>NERDCommenterToggle
 
 set splitbelow
 set splitright
-set showcmd
 highlight Comment cterm=italic gui=italic
 let g:WebDevIconsEnableAirlineTabline = 1
 let g:WebDevIconsEnableAirlineStatusline = 1
@@ -306,7 +303,6 @@ if (&t_Co == 256 || &t_Co == 88) && !has('gui_running') &&
 else
     colorscheme nord
 endif
-set clipboard=unnamed
 
 augroup compileandrun
     autocmd!
