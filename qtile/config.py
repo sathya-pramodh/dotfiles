@@ -81,10 +81,10 @@ keys = [
         lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack",
     ),
-    Key([mod, "shift"], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key(
@@ -102,17 +102,17 @@ keys = [
         ),
         desc="Launch dmenu",
     ),
-    Key([mod, "shift"], "b", lazy.spawn(brave_cmd), desc="Launch brave"),
+    Key([mod], "b", lazy.spawn(brave_cmd), desc="Launch brave"),
     Key([mod, "control"], "z", lazy.spawn(zoom_cmd), desc="Launch zoom"),
     Key([mod, "control"], "s", lazy.spawn(suspend_cmd), desc="Suspend"),
-    Key([mod, "shift"], "f", lazy.spawn(nautilus_cmd), desc="Launch nautilus"),
+    Key([mod], "f", lazy.spawn(nautilus_cmd), desc="Launch nautilus"),
     Key(
         [mod, "shift"],
         "s",
         lazy.spawn(screenshot_cmd),
         desc="Screenshot part of the screen",
     ),
-    Key([mod, "shift"], "n", lazy.spawn(terminal + " -e nvim"), desc="Launch neovim"),
+    Key([mod], "n", lazy.spawn(terminal + " -e nvim"), desc="Launch neovim"),
 ]
 
 zoom_match = Match(wm_instance_class="zoom")
