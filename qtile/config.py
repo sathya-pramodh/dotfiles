@@ -39,6 +39,7 @@ zoom_cmd = "zoom"
 suspend_cmd = "systemctl suspend"
 nautilus_cmd = "nautilus"
 screenshot_cmd = "screenshot select"
+rofi_cmd = "rofi -combi-modi window,drun -show combi -modi combi"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -84,7 +85,7 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod], "c", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key(
@@ -113,6 +114,7 @@ keys = [
         desc="Screenshot part of the screen",
     ),
     Key([mod], "n", lazy.spawn(terminal + " -e nvim"), desc="Launch neovim"),
+    Key([mod, "shift"], "p", lazy.spawn(rofi_cmd), desc="Launch rofi"),
 ]
 
 zoom_match = Match(wm_instance_class="zoom")
