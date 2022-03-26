@@ -56,6 +56,7 @@ _G.client.connect_signal(
 )
 --]]
 
+
 -- Make the focused window have a glowing border
 _G.client.connect_signal(
   'focus',

@@ -37,7 +37,7 @@ terminal = guess_terminal()
 brave_cmd = "brave"
 zoom_cmd = "zoom"
 suspend_cmd = "systemctl suspend"
-nautilus_cmd = "nautilus"
+thunar_cmd = "thunar"
 screenshot_cmd = "screenshot select"
 rofi_cmd = "rofi -combi-modi window,drun -show combi -modi combi"
 
@@ -106,7 +106,7 @@ keys = [
     Key([mod], "b", lazy.spawn(brave_cmd), desc="Launch brave"),
     Key([mod, "control"], "z", lazy.spawn(zoom_cmd), desc="Launch zoom"),
     Key([mod, "control"], "s", lazy.spawn(suspend_cmd), desc="Suspend"),
-    Key([mod], "f", lazy.spawn(nautilus_cmd), desc="Launch nautilus"),
+    Key([mod], "f", lazy.spawn(thunar_cmd), desc="Launch thunar"),
     Key(
         [mod, "shift"],
         "s",
@@ -130,7 +130,7 @@ groups = [
     Group("4"),
     Group("5", matches=[steam_match]),
     Group("6", matches=[obs_match], layout="floating", layouts=[layout.Floating()]),
-    Group("7", matches=[tlauncher_match], layout="floating"),
+    Group("7", matches=[tlauncher_match], layout="Tile"),
     Group("8", matches=[discord_match]),
     Group("9"),
 ]
@@ -160,8 +160,8 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus="#81a1c1", border_focus_stack=["#81a1c1", "#81a1c1"], border_width=4, margin=10, margin_on_single=10),
-    layout.Tile(margin=10),
+    layout.Columns(border_focus="#81a1c1", border_focus_stack=["#81a1c1", "#81a1c1"], border_width=4, margin=5, margin_on_single=5),
+    layout.Tile(margin=5),
     layout.Max(),
     layout.Floating(border_normal="#81a1c1", border_focus="#5e81ac"),
     # Try more layouts by unleashing below layouts.
@@ -172,7 +172,7 @@ layouts = [
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.TreeTab(),
-    layout.VerticalTile(margin=10),
+    layout.VerticalTile(margin=5),
     # layout.Zoomy(),
 ]
 
@@ -212,10 +212,9 @@ screens = [
                     linewidth=3,
                     padding=15,
                 ),
-                widget.WindowName(
+                widget.TaskList(
                     font="Hack Nerd Font",
                     fontsize=15,
-                    max_chars=20,
                     foreground="#81a1c1",
                 ),
                 widget.Clock(
@@ -395,7 +394,7 @@ reconfigure_screens = True
 
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
-auto_minimize = True
+auto_minimize = False
 
 
 @hook.subscribe.startup_once

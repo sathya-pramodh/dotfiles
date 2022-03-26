@@ -7,7 +7,7 @@ static const Block blocks[] = {
 	{" GPU: ", "/home/pramodhsathya/dotfiles/dotfiles/dwmblocks/scripts/gpu", 1, 0},
 	{" ", "/home/pramodhsathya/dotfiles/dotfiles/dwmblocks/scripts/kernelver", 0, 0},
 	{"", "/home/pramodhsathya/dotfiles/dotfiles/dwmblocks/scripts/wifistatus", 10, 0},
-	{"","/home/pramodhsathya/dotfiles/dotfiles/dwmblocks/scripts/battery", 1, 0},
+	{"","/home/pramodhsathya/dotfiles/dotfiles/dwmblocks/scripts/battery", 10, 0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.

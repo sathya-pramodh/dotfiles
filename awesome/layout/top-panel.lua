@@ -31,6 +31,11 @@ local month_calendar = awful.widget.calendar_popup.month({
 month_calendar:attach(textclock)
 
 local clock_widget = wibox.container.margin(textclock, dpi(13), dpi(13), dpi(9), dpi(8))
+local battery_widget = awful.widget.watch('bash -c "~/.config/awesome/scripts/battery"', 10)
+local kernelver = awful.widget.watch('bash -c ~/.config/awesome/scripts/kernelver', null)
+local cpu = awful.widget.watch('bash -c ~/.config/awesome/scripts/cpu', 1)
+local gpu = awful.widget.watch('bash -c ~/.config/awesome/scripts/gpu', 1)
+local freemem = awful.widget.watch('bash -c ~/.config/awesome/scripts/freemem', 1)
 
 local add_button = mat_icon_button(mat_icon(icons.plus, dpi(24)))
 add_button:buttons(
@@ -131,9 +136,15 @@ local TopPanel = function(s)
         layout = wibox.layout.fixed.horizontal,
         -- Clock
         clock_widget,
+        cpu,
+        gpu,
+        freemem,
+        kernelver,
         wibox.container.margin(systray, dpi(3), dpi(3), dpi(6), dpi(3)),
         -- Layout box
         LayoutBox(s),
+        -- Battery
+        battery_widget,
       }
     }
 

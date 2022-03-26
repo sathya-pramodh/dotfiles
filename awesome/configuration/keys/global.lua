@@ -1,4 +1,7 @@
 local awful = require('awful')
+local filesystem = require('gears.filesystem')
+local with_dpi = require('beautiful').xresources.apply_dpi
+local get_dpi = require('beautiful').xresources.get_dpi
 require('awful.autofocus')
 local beautiful = require('beautiful')
 local hotkeys_popup = require('awful.hotkeys_popup').widget
@@ -6,6 +9,7 @@ local hotkeys_popup = require('awful.hotkeys_popup').widget
 local modkey = require('configuration.keys.mod').modKey
 local altkey = require('configuration.keys.mod').altKey
 local apps = require('configuration.apps')
+local rofi_command = 'env /usr/bin/rofi -dpi ' .. get_dpi() .. ' -width ' .. with_dpi(400) .. ' -show drun -theme ' .. filesystem.get_configuration_dir() .. '/configuration/rofi.rasi -run-command "/bin/bash -c -i \'shopt -s expand_aliases; {cmd}\'"'
 -- Key bindings
 local globalKeys =
   awful.util.table.join(
@@ -18,11 +22,12 @@ local globalKeys =
   awful.key({altkey, 'Control'}, 'Down', awful.tag.viewnext, {description = 'view next', group = 'tag'}),
   awful.key({modkey}, 'Escape', awful.tag.history.restore, {description = 'go back', group = 'tag'}),
   -- Default client focus
+  awful.key({modkey, 'Control'}, 's', function() awful.spawn('systemctl suspend') end, {description = 'suspend', group = 'awesome'}),
   awful.key(
     {modkey},
     'p',
     function()
-      awful.spawn('rofi -combi-modi window,drun -show combi -modi combi')
+      awful.spawn(rofi_command)
     end,
     {description = 'Main menu', group = 'awesome'}
   ),
@@ -30,7 +35,7 @@ local globalKeys =
     {altkey},
     'space',
     function()
-      awful.spawn('rofi -combi-modi window,drun -show combi -modi combi')
+      awful.spawn(rofi_command)
     end,
     {description = 'Show main menu', group = 'awesome'}
   ),
@@ -80,14 +85,8 @@ local globalKeys =
     {description = 'Switch to previous window', group = 'client'}
   ),
   -- Programms
-  awful.key(
-    {modkey, 'Control'},
-    's',
-    function()
-      awful.spawn(apps.default.lock)
-    end,
-    {description = 'Lock the screen', group = 'awesome'}
-  ),
+  awful.key({modkey, "Control"}, "z", function() awful.spawn(apps.default.zoom) end, {description = 'zoom', group = 'launcher'}),
+  awful.key({modkey}, "f", function() awful.spawn(apps.default.thunar) end, {description = 'thunar', group = 'launcher'}),
   awful.key(
     {modkey, 'Shift'},
     's',

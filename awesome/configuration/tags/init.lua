@@ -13,7 +13,7 @@ local tags = {
   {
     icon = icons.code,
     type = 'code',
-    defaultApp = apps.default.editor,
+    defaultApp = apps.default.terminal,
     screen = 1
   },
   {

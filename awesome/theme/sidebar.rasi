@@ -44,6 +44,7 @@
     nordbkgrnd: #4c566a;
     nordfrgrnd: #5e81ac;
     nordfrgrndurgent: #bf616a;
+    nordtextcol: #eceff4;
 }
 window {
     height:   100%;
@@ -51,7 +52,7 @@ window {
     location: west;
     anchor:   west;
     border:  0px 2px 0px 0px;
-    text-color: @nordfrgrnd;
+    text-color: @nordtextcol;
     background-color: @nordbkgrnd;
 }
 
@@ -63,11 +64,11 @@ mode-switcher {
 button selected {
     background-color: @nordbkgrnd;
     border-color: @nordfrgrnd;
-    text-color: @nordfrgrndurgent;
+    text-color: @nordtextcol;
 }
 inputbar {
     background-color: @nordbkgrnd;
-    text-color: @nordfrgrnd;
+    text-color: @nordtextcol;
     padding: 4px;
     border: 0px 0px 4px 0px;
 }
@@ -86,7 +87,7 @@ element selected  normal {
     background-color: @nordbkgrnd;
 }
 element normal active {
-    text-color: @nordfrgrnd;
+    text-color: @nordtextcol;
 }
 element normal urgent {
     text-color: @nordfrgrndurgent;
@@ -94,18 +95,18 @@ element normal urgent {
 element alternate normal {
 }
 element alternate active {
-    text-color: @nordfrgrnd;
+    text-color: @nordtextcol;
 }
 element alternate urgent {
-    text-color: @nordfrgrnd;
+    text-color: @nordtextcol;
 }
 element selected active {
     background-color: @nordfrgrndurgent;
-    text-color: @nordfrgrnd;
+    text-color: @nordtextcol;
 }
 element selected urgent {
     background-color: @nordfrgrndurgent;
-    text-color: @nordfrgrnd;
+    text-color: @nordtextcol;
 }
 
 error-message {

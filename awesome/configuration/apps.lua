@@ -20,7 +20,9 @@ return {
     social = 'discord',
     game = rofi_command,
     files = 'nautilus',
-    music = rofi_command 
+    music = rofi_command,
+    zoom = "zoom",
+    thunar = "thunar",
   },
   -- List of apps to start once on start-up
   run_on_start_up = {
@@ -33,7 +35,6 @@ return {
     'xfce4-power-manager', -- Power manager
      'flameshot',
      'synology-drive -minimized',
-     'steam -silent',
     'feh --randomize --bg-fill ~/.wallpapers/*',
     '/usr/bin/variety',
     -- Add applications that need to be killed between reloads

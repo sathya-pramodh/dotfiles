@@ -104,3 +104,4 @@ _G.client.connect_signal(
 _G.tag.connect_signal('property::selected', tagCallback)
 
 _G.tag.connect_signal('property::layout', tagCallback)
+beautiful.useless_gap = 100
