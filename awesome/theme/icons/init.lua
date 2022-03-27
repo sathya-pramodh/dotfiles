@@ -24,5 +24,6 @@ return {
   memory = dir .. '/memory.svg',
   harddisk = dir .. '/harddisk.svg',
   thermometer = dir .. '/thermometer.svg',
-  plus = dir .. '/plus.svg'
+  plus = dir .. '/plus.svg',
+  powerbutton = dir .. '/power-button.svg',
 }

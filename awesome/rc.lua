@@ -6,6 +6,8 @@ local beautiful = require('beautiful')
 
 -- Theme
 beautiful.init(require('theme'))
+beautiful.useless_gap = 5
+beautiful.gap_single_client = true
 
 
 -- Layout

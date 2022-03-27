@@ -16,11 +16,11 @@ return {
     region_screenshot = 'flameshot gui -p ~/Pictures',
     delayed_screenshot = 'flameshot screen -p ~/Pictures -d 5000',
     browser = 'brave',
-    editor = 'gedit', -- gui text editor
+    editor = 'alacritty -e nvim', -- gui text editor
     social = 'discord',
-    game = rofi_command,
-    files = 'nautilus',
-    music = rofi_command,
+    game = 'steam',
+    files = 'thunar',
+    music = 'spotify',
     zoom = "zoom",
     thunar = "thunar",
   },

@@ -9,6 +9,7 @@ local mat_icon_button = require('widget.material.icon-button')
 local mat_icon = require('widget.material.icon')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('theme.icons')
+local apps = require('..configuration.apps')
 
 -- Titus - Horizontal Tray
 local systray = wibox.widget.systray()
@@ -32,10 +33,20 @@ month_calendar:attach(textclock)
 
 local clock_widget = wibox.container.margin(textclock, dpi(13), dpi(13), dpi(9), dpi(8))
 local battery_widget = awful.widget.watch('bash -c "~/.config/awesome/scripts/battery"', 10)
+battery_widget:connect_signal("button::press", function() awful.spawn("bash -c tuxedo-control-center") end)
 local kernelver = awful.widget.watch('bash -c ~/.config/awesome/scripts/kernelver', null)
+kernelver:connect_signal("button::press", function() awful.spawn(apps.default.terminal) end)
 local cpu = awful.widget.watch('bash -c ~/.config/awesome/scripts/cpu', 1)
+cpu:connect_signal("button::press", function() awful.spawn(apps.default.terminal .. " -e htop") end)
 local gpu = awful.widget.watch('bash -c ~/.config/awesome/scripts/gpu', 1)
+gpu:connect_signal("button::press", function() awful.spawn("bash -c nvidia-settings") end)
 local freemem = awful.widget.watch('bash -c ~/.config/awesome/scripts/freemem', 1)
+freemem:connect_signal("button::press", function() awful.spawn(apps.default.terminal .. " -e htop") end)
+local powerbutton = wibox.widget.imagebox(icons.power)
+powerbutton:connect_signal("button::press", function()
+  _G.exit_screen_show()
+end)
+local powerbutton_widget = wibox.container.margin(powerbutton, dpi(8), dpi(8), dpi(8), dpi(8))
 
 local add_button = mat_icon_button(mat_icon(icons.plus, dpi(24)))
 add_button:buttons(
@@ -127,6 +138,7 @@ local TopPanel = function(s)
       {
         layout = wibox.layout.fixed.horizontal,
         -- Create a taglist widget
+        arch_widget,
         TagList(s),
         TaskList(s),
         add_button
@@ -145,6 +157,7 @@ local TopPanel = function(s)
         LayoutBox(s),
         -- Battery
         battery_widget,
+        powerbutton_widget,
       }
     }
 
