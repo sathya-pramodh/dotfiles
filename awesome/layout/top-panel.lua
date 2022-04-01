@@ -123,7 +123,8 @@ local TopPanel = function(s)
       fg = beautiful.fg_normal,
       struts = {
         top = dpi(32)
-      }
+      },
+      opacity = 0.85,
     }
     )
 

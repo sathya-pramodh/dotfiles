@@ -281,7 +281,7 @@ screens = [
                     foreground="ebcb8b",
                     mouse_callbacks={
                         "Button1": lambda: qtile.cmd_spawn(
-                            terminal + " -e sudo wifi-menu"
+                            terminal + " -e sudo nmtui"
                         )
                     },
                 ),
@@ -299,6 +299,11 @@ screens = [
                     font="Hack Nerd Font",
                     fontsize=15,
                     foreground="a3be8c",
+                    mouse_callbacks={
+                        "Button1": lambda: qtile.cmd_spawn(
+                            terminal
+                        )
+                    },
                 ),
                 widget.Sep(
                     linewidth=3,
@@ -328,6 +333,11 @@ screens = [
                     font="Hack Nerd Font",
                     fontsize=15,
                     foreground="a3be8c",
+                    mouse_callbacks={
+                        "Button1": lambda: qtile.cmd_spawn(
+                            "tuxedo-control-center",
+                        )
+                    },
                 ),
                 # widget.BatteryIcon(
                 # font="Hack Nerd Font",

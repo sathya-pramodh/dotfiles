@@ -1,8 +1,7 @@
 #!/bin/bash
-exe=$(netctl list | grep \* | sed 's/\* //g')
+exe=$(iwgetid -r)
 if [ -z "$exe" ]; then
 	echo "睊"
 else
-	exe1=$(netctl list | grep \* | sed s/\*//g | sed s/wlo1-//g)
-	echo "直 $exe1"
+	echo "直 $exe"
 fi
