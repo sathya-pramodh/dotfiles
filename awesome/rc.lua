@@ -27,10 +27,6 @@ require('configuration.client')
 require('configuration.tags')
 _G.root.keys(require('configuration.keys.global'))
 
--- {{{ Screen
--- Reset wallpaper when a screen's geometry changes (e.g. different resolution)
-screen.connect_signal( "property::geometry", function(s) beautiful.wallpaper.maximized( beautiful.wallpaper, s, beautiful.wallpapers) end )
-
 -- Signal function to execute when a new client appears.
 _G.client.connect_signal(
   'manage',

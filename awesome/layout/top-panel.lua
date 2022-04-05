@@ -47,6 +47,8 @@ powerbutton:connect_signal("button::press", function()
   _G.exit_screen_show()
 end)
 local powerbutton_widget = wibox.container.margin(powerbutton, dpi(8), dpi(8), dpi(8), dpi(8))
+local pacman_update = awful.widget.watch('bash -c ~/.config/awesome/scripts/pacman_updates', 30)
+pacman_update:connect_signal("button::press", function() awful.spawn(apps.default.terminal .. " -e yay -Syu") end)
 
 local add_button = mat_icon_button(mat_icon(icons.plus, dpi(24)))
 add_button:buttons(
@@ -153,6 +155,7 @@ local TopPanel = function(s)
         gpu,
         freemem,
         kernelver,
+        pacman_update,
         wibox.container.margin(systray, dpi(3), dpi(3), dpi(6), dpi(3)),
         -- Layout box
         LayoutBox(s),

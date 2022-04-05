@@ -13,7 +13,7 @@ return {
     lock = 'i3lock-fancy',
     quake = 'terminator',
     screenshot = 'flameshot screen -p ~/Pictures',
-    region_screenshot = 'flameshot gui -p ~/Pictures',
+    region_screenshot = 'flameshot gui',
     delayed_screenshot = 'flameshot screen -p ~/Pictures -d 5000',
     browser = 'brave',
     editor = 'alacritty -e nvim', -- gui text editor
