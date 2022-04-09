@@ -11,11 +11,11 @@ configuration {
 }
 
 * {
-	background-color:            #4c566a;
-	text-color:                  #5e81ac;
-	selbg:                       #bf616a;
-	actbg:                       #bf616a;
-	urgbg:                       #4c566a;
+	background-color:            rgb(18, 30, 37);
+	text-color:                  #d3d7cf;
+	selbg:                       rgb(0, 86, 136);
+	actbg:                       rgb(22, 37, 46);
+	urgbg:                       #e53935;
 	winbg:			     #26c6da;
 
 	selected-normal-foreground:  @winbg;
@@ -43,10 +43,7 @@ configuration {
 }
 
 window {
-	location:	 west;
-	anchor:		 west;
 	x-offset: 0px;
-	height:		 100%;
 	margin-right: 60px;
 	orientation: horizontal;
 	children:	 [mainbox];

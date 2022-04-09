@@ -57,19 +57,34 @@ awful.layout.layouts = {
 awful.screen.connect_for_each_screen(
   function(s)
     for i, tag in pairs(tags) do
-      awful.tag.add(
-        i,
-        {
-          icon = tag.icon,
-          icon_only = true,
-          layout = awful.layout.suit.tile,
-          gap_single_client = true,
-          gap = 5,
-          screen = s,
-          defaultApp = tag.defaultApp,
-          selected = i == 1
-        }
-      )
+      if tag.type == 'game' then
+        awful.tag.add(
+          i,
+          {
+            icon = tag.icon,
+            icon_only = true,
+            layout = awful.layout.suit.floating,
+            gap_single_client = true,
+            gap = 3,
+            screen = s,
+            defaultApp = tag.defaultApp,
+            selected = i == 1
+          })
+      else
+        awful.tag.add(
+          i,
+          {
+            icon = tag.icon,
+            icon_only = true,
+            layout = awful.layout.suit.tile,
+            gap_single_client = true,
+            gap = 3,
+            screen = s,
+            defaultApp = tag.defaultApp,
+            selected = i == 1
+          }
+        )
+    end
     end
   end
 )

@@ -29,7 +29,6 @@ from libqtile import bar, layout, widget, extension, qtile, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
-import os
 import subprocess
 
 mod = "mod4"
@@ -38,8 +37,9 @@ brave_cmd = "brave"
 zoom_cmd = "zoom"
 suspend_cmd = "systemctl suspend"
 thunar_cmd = "thunar"
-screenshot_cmd = "screenshot select"
-rofi_cmd = "rofi -combi-modi window,drun -show combi -modi combi"
+screenshot_cmd = "flameshot gui"
+rofi_cmd = "rofi -show drun -theme '/home/pramodhsathya/.config/awesome/configuration/rofi.rasi'"
+rofi_shutdown = "rofi -show power-menu -modi power-menu:rofi-power-menu -theme '/home/pramodhsathya/.config/awesome/configuration/rofi.rasi'"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -89,7 +89,7 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key(
-        [mod],
+        [mod, "shift"],
         "p",
         lazy.run_extension(
             extension.DmenuRun(
@@ -114,24 +114,18 @@ keys = [
         desc="Screenshot part of the screen",
     ),
     Key([mod], "n", lazy.spawn(terminal + " -e nvim"), desc="Launch neovim"),
-    Key([mod, "shift"], "p", lazy.spawn(rofi_cmd), desc="Launch rofi"),
+    Key([mod], "p", lazy.spawn(rofi_cmd), desc="Launch rofi"),
 ]
 
-zoom_match = Match(wm_instance_class="zoom")
-brave_match = Match(wm_instance_class="brave-browser")
-obs_match = Match(wm_instance_class="obs")
-steam_match = Match(wm_instance_class="Steam")
-discord_match = Match(wm_instance_class="discord")
-tlauncher_match = Match(title="V TLauncher")
 groups = [
     Group("1"),
-    Group("2", matches=[zoom_match], layout="floating"),
-    Group("3", matches=[brave_match]),
+    Group("2"),
+    Group("3"),
     Group("4"),
-    Group("5", matches=[steam_match]),
-    Group("6", matches=[obs_match], layout="floating", layouts=[layout.Floating()]),
-    Group("7", matches=[tlauncher_match], layout="Tile"),
-    Group("8", matches=[discord_match]),
+    Group("5"),
+    Group("6"),
+    Group("7"),
+    Group("8"),
     Group("9"),
 ]
 
@@ -160,7 +154,13 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus="#81a1c1", border_focus_stack=["#81a1c1", "#81a1c1"], border_width=4, margin=5, margin_on_single=5),
+    layout.Columns(
+        border_focus="#81a1c1",
+        border_focus_stack=["#81a1c1", "#81a1c1"],
+        border_width=4,
+        margin=5,
+        margin_on_single=5,
+    ),
     layout.Tile(margin=5),
     layout.Max(),
     layout.Floating(border_normal="#81a1c1", border_focus="#5e81ac"),
@@ -187,14 +187,14 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.Prompt(font="Hack Nerd Font", fontsize=15, foreground="ff0000"),
+                widget.Prompt(font="Hack Nerd Font", fontsize=14, foreground="ff0000"),
                 widget.Sep(
                     linewidth=1,
                     padding=5,
                 ),
                 widget.CurrentLayoutIcon(
                     font="Hack Nerd Font",
-                    fontsize=15,
+                    fontsize=14,
                     foreground="d08770",
                     background="2e3440",
                 ),
@@ -204,9 +204,10 @@ screens = [
                 ),
                 widget.GroupBox(
                     font="Hack Nerd Font",
-                    fontsize=15,
-                    active="#bf6f6a",
+                    fontsize=14,
+                    active="#bf616a",
                     inactive="eceff4",
+                    highlight_method="block",
                 ),
                 widget.Sep(
                     linewidth=3,
@@ -214,19 +215,22 @@ screens = [
                 ),
                 widget.TaskList(
                     font="Hack Nerd Font",
-                    fontsize=15,
+                    fontsize=14,
                     foreground="#81a1c1",
+                    highlight_method="block",
+                    icon_size=20,
+                    max_title_width=150,
                 ),
                 widget.Clock(
                     font="Hack Nerd Font",
-                    fontsize=15,
+                    fontsize=14,
                     format="%I:%M%p",
                     foreground="eceff4",
                 ),
                 widget.Spacer(length=bar.STRETCH),
                 widget.CPU(
                     font="Hack Nerd Font",
-                    fontsize=15,
+                    fontsize=14,
                     format=" CPU: {load_percent}%",
                     foreground="#88c0d0",
                     update_interval=1,
@@ -240,7 +244,7 @@ screens = [
                 ),
                 widget.NvidiaSensors(
                     font="Hack Nerd Font",
-                    fontsize=15,
+                    fontsize=14,
                     format=" GPU: {temp}°C",
                     foreground="#ebcb8b",
                     update_interval=1,
@@ -252,10 +256,14 @@ screens = [
                     linewidth=3,
                     padding=15,
                 ),
-                widget.Memory(
+                widget.GenPollText(
+                    func=lambda: subprocess.check_output(
+                        "/home/pramodhsathya/dotfiles/dotfiles/qtile/scripts/freemem.sh"
+                    )
+                    .strip()
+                    .decode("utf-8"),
                     font="Hack Nerd Font",
-                    fontsize=15,
-                    format=" Mem:{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}",
+                    fontsize=14,
                     foreground="a3be8c",
                     update_interval=1,
                     mouse_callbacks={
@@ -274,15 +282,13 @@ screens = [
                 ),
                 widget.Wlan(
                     font="Hack Nerd Font",
-                    fontsize=15,
+                    fontsize=14,
                     interface="wlo1",
                     format="  {essid}",
                     disconnected_message="睊",
                     foreground="ebcb8b",
                     mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(
-                            terminal + " -e sudo nmtui"
-                        )
+                        "Button1": lambda: qtile.cmd_spawn(terminal + " -e sudo nmtui"),
                     },
                 ),
                 widget.Sep(
@@ -297,26 +303,27 @@ screens = [
                     .strip()
                     .decode("utf-8"),
                     font="Hack Nerd Font",
-                    fontsize=15,
+                    fontsize=14,
                     foreground="a3be8c",
-                    mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(
-                            terminal
-                        )
-                    },
+                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal)},
                 ),
                 widget.Sep(
                     linewidth=3,
                     padding=15,
                 ),
-                widget.Volume(
+                widget.GenPollText(
+                    update_interval=900,
+                    func=lambda: subprocess.check_output(
+                        "/home/pramodhsathya/dotfiles/dotfiles/qtile/scripts/pacman_updates.sh"
+                    )
+                    .strip()
+                    .decode("utf-8"),
                     font="Hack Nerd Font",
-                    fontsize=15,
-                    volume_up_cmd=["amixer", "-q", "set", "Master", "5%+"],
-                    volume_down_cmd=["amixer", "-q", "set", "Master", "5%-"],
-                    foreground="88c0d0",
+                    fontsize=14,
+                    foreground="ebcb8b",
                     mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn("pavucontrol"),
+                        "Button1": lambda: qtile.cmd_spawn("pamac-manager"),
+                        "Button3": lambda: qtile.cmd_spawn(terminal + " -e yay -Syu"),
                     },
                 ),
                 widget.Sep(
@@ -331,7 +338,7 @@ screens = [
                     .strip()
                     .decode("utf-8"),
                     font="Hack Nerd Font",
-                    fontsize=15,
+                    fontsize=14,
                     foreground="a3be8c",
                     mouse_callbacks={
                         "Button1": lambda: qtile.cmd_spawn(
@@ -339,15 +346,26 @@ screens = [
                         )
                     },
                 ),
+                widget.Sep(
+                    linewidth=3,
+                    padding=15,
+                ),
+                widget.QuickExit(
+                    font="Hack Nerd Font",
+                    fontsize=14,
+                    foreground="bf616a",
+                    default_text=" ",
+                    mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(rofi_shutdown)},
+                ),
                 # widget.BatteryIcon(
                 # font="Hack Nerd Font",
-                # fontsize=15,
+                # fontsize=14,
                 # update_interval=5,
                 # foreground="a3be8c",
                 # ),
                 # widget.Battery(
                 # font="Hack Nerd Font",
-                # fontsize=15,
+                # fontsize=14,
                 # format="{percent:2.0%}",
                 # update_interval=5,
                 # foreground="a3be8c",
@@ -356,11 +374,11 @@ screens = [
                     linewidth=1,
                     padding=5,
                 ),
-                widget.Systray(font="Hack Nerd Font", fontsize=15),
+                widget.Systray(font="Hack Nerd Font", fontsize=14),
             ],
             26,
             background="#2e3440",
-            opacity=0.81,
+            opacity=0.90,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"],  # Borders are magenta
         ),
@@ -396,6 +414,7 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
+        Match(title="Ninjabrain Bot "),
     ]
 )
 auto_fullscreen = True
@@ -405,12 +424,6 @@ reconfigure_screens = True
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
 auto_minimize = False
-
-
-@hook.subscribe.startup_once
-def autostart():
-    home = os.path.expanduser("~/.config/qtile/autostart.sh")
-    subprocess.run([home])
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
