@@ -29,6 +29,7 @@ from libqtile import bar, layout, widget, extension, qtile, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+import os
 import subprocess
 
 mod = "mod4"
@@ -38,8 +39,8 @@ zoom_cmd = "zoom"
 suspend_cmd = "systemctl suspend"
 thunar_cmd = "thunar"
 screenshot_cmd = "flameshot gui"
-rofi_cmd = "rofi -show drun -theme '/home/pramodhsathya/.config/awesome/configuration/rofi.rasi'"
-rofi_shutdown = "rofi -show power-menu -modi power-menu:rofi-power-menu -theme '/home/pramodhsathya/.config/awesome/configuration/rofi.rasi'"
+rofi_cmd = "rofi -show drun -theme '/home/pramodhsathya/dotfiles/dotfiles/qtile/rofi.rasi'"
+rofi_shutdown = "rofi -show power-menu -modi power-menu:rofi-power-menu -theme '/home/pramodhsathya/dotfiles/dotfiles/qtile/rofi.rasi'"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -157,13 +158,13 @@ layouts = [
     layout.Columns(
         border_focus="#81a1c1",
         border_focus_stack=["#81a1c1", "#81a1c1"],
-        border_width=4,
+        border_width=2,
         margin=5,
         margin_on_single=5,
     ),
-    layout.Tile(margin=5),
-    layout.Max(),
-    layout.Floating(border_normal="#81a1c1", border_focus="#5e81ac"),
+    layout.Tile(margin=5, margin_on_single=5, border_width=2),
+    layout.Max(border_width=2, border_focus="#81a1c1"),
+    layout.Floating(border_normal="#81a1c1", border_focus="#5e81ac", border_width=2),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -172,7 +173,7 @@ layouts = [
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.TreeTab(),
-    layout.VerticalTile(margin=5),
+    layout.VerticalTile(margin=5, border_width=2, border_focus="#81a1c1"),
     # layout.Zoomy(),
 ]
 
@@ -199,7 +200,7 @@ screens = [
                     background="2e3440",
                 ),
                 widget.Sep(
-                    linewidth=3,
+                    linewidth=1,
                     padding=15,
                 ),
                 widget.GroupBox(
@@ -210,7 +211,7 @@ screens = [
                     highlight_method="block",
                 ),
                 widget.Sep(
-                    linewidth=3,
+                    linewidth=1,
                     padding=15,
                 ),
                 widget.TaskList(
@@ -239,7 +240,7 @@ screens = [
                     },
                 ),
                 widget.Sep(
-                    linewidth=3,
+                    linewidth=1,
                     padding=15,
                 ),
                 widget.NvidiaSensors(
@@ -248,12 +249,13 @@ screens = [
                     format=" GPU: {temp}°C",
                     foreground="#ebcb8b",
                     update_interval=1,
+                    threshold=90,
                     mouse_callbacks={
                         "Button1": lambda: qtile.cmd_spawn("nvidia-settings"),
                     },
                 ),
                 widget.Sep(
-                    linewidth=3,
+                    linewidth=1,
                     padding=15,
                 ),
                 widget.GenPollText(
@@ -277,7 +279,7 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.Sep(
-                    linewidth=3,
+                    linewidth=1,
                     padding=15,
                 ),
                 widget.Wlan(
@@ -292,7 +294,7 @@ screens = [
                     },
                 ),
                 widget.Sep(
-                    linewidth=3,
+                    linewidth=1,
                     padding=15,
                 ),
                 widget.GenPollText(
@@ -308,7 +310,7 @@ screens = [
                     mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal)},
                 ),
                 widget.Sep(
-                    linewidth=3,
+                    linewidth=1,
                     padding=15,
                 ),
                 widget.GenPollText(
@@ -327,7 +329,7 @@ screens = [
                     },
                 ),
                 widget.Sep(
-                    linewidth=3,
+                    linewidth=1,
                     padding=15,
                 ),
                 widget.GenPollText(
@@ -347,7 +349,7 @@ screens = [
                     },
                 ),
                 widget.Sep(
-                    linewidth=3,
+                    linewidth=1,
                     padding=15,
                 ),
                 widget.QuickExit(
@@ -424,6 +426,12 @@ reconfigure_screens = True
 # If things like steam games want to auto-minimize themselves when losing
 # focus, should we respect this or not?
 auto_minimize = False
+
+
+@hook.subscribe.startup_once
+def start_once():
+    home = os.path.expanduser("~")
+    subprocess.call([home + "/.config/qtile/autostart.sh"])
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
