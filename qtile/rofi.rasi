@@ -45,6 +45,7 @@ configuration {
 window {
 	x-offset: 0px;
 	margin-right: 60px;
+	height: 550px;
 	orientation: horizontal;
 	children:	 [mainbox];
 }
@@ -52,7 +53,7 @@ window {
 mainbox {
 	spacing:  0em;
 	padding: 0px;
-	width:200px;
+	width:150px;
 	children: [ inputbar, listview, sidebar ];
 	expand: true;
 }
@@ -76,7 +77,7 @@ textbox-prompt-colon {
 
 listview {
 	spacing: 0em;
-	dynamic: false;
+	dynamic: true;
 	cycle:   true;
 }
 

@@ -39,7 +39,9 @@ zoom_cmd = "zoom"
 suspend_cmd = "systemctl suspend"
 thunar_cmd = "thunar"
 screenshot_cmd = "flameshot gui"
-rofi_cmd = "rofi -show drun -theme '/home/pramodhsathya/dotfiles/dotfiles/qtile/rofi.rasi'"
+rofi_cmd = (
+    "rofi -show drun -theme '/home/pramodhsathya/dotfiles/dotfiles/qtile/rofi.rasi'"
+)
 rofi_shutdown = "rofi -show power-menu -modi power-menu:rofi-power-menu -theme '/home/pramodhsathya/dotfiles/dotfiles/qtile/rofi.rasi'"
 
 keys = [
@@ -158,13 +160,13 @@ layouts = [
     layout.Columns(
         border_focus="#81a1c1",
         border_focus_stack=["#81a1c1", "#81a1c1"],
-        border_width=2,
+        border_width=1,
         margin=5,
         margin_on_single=5,
     ),
-    layout.Tile(margin=5, margin_on_single=5, border_width=2),
-    layout.Max(border_width=2, border_focus="#81a1c1"),
-    layout.Floating(border_normal="#81a1c1", border_focus="#5e81ac", border_width=2),
+    layout.Tile(margin=5, margin_on_single=5, border_width=1, border_focus="#81a1c1"),
+    layout.Max(border_width=1, border_focus="#81a1c1"),
+    layout.Floating(border_normal="#81a1c1", border_focus="#5e81ac", border_width=1),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -173,7 +175,7 @@ layouts = [
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.TreeTab(),
-    layout.VerticalTile(margin=5, border_width=2, border_focus="#81a1c1"),
+    layout.VerticalTile(margin=5, border_width=1, border_focus="#81a1c1"),
     # layout.Zoomy(),
 ]
 
@@ -188,7 +190,6 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.Prompt(font="Hack Nerd Font", fontsize=14, foreground="ff0000"),
                 widget.Sep(
                     linewidth=1,
                     padding=5,
@@ -204,6 +205,7 @@ screens = [
                     padding=15,
                 ),
                 widget.GroupBox(
+                    background="#3b4252",
                     font="Hack Nerd Font",
                     fontsize=14,
                     active="#bf616a",
@@ -217,15 +219,15 @@ screens = [
                 widget.TaskList(
                     font="Hack Nerd Font",
                     fontsize=14,
-                    foreground="#81a1c1",
+                    foreground="#d8dee9",
                     highlight_method="block",
-                    icon_size=20,
+                    icon_size=21,
                     max_title_width=150,
                 ),
                 widget.Clock(
                     font="Hack Nerd Font",
                     fontsize=14,
-                    format="%I:%M%p",
+                    format="%I:%M %p",
                     foreground="eceff4",
                 ),
                 widget.Spacer(length=bar.STRETCH),
@@ -282,21 +284,6 @@ screens = [
                     linewidth=1,
                     padding=15,
                 ),
-                widget.Wlan(
-                    font="Hack Nerd Font",
-                    fontsize=14,
-                    interface="wlo1",
-                    format="  {essid}",
-                    disconnected_message="睊",
-                    foreground="ebcb8b",
-                    mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(terminal + " -e sudo nmtui"),
-                    },
-                ),
-                widget.Sep(
-                    linewidth=1,
-                    padding=15,
-                ),
                 widget.GenPollText(
                     update_interval=0,
                     func=lambda: subprocess.check_output(
@@ -306,7 +293,7 @@ screens = [
                     .decode("utf-8"),
                     font="Hack Nerd Font",
                     fontsize=14,
-                    foreground="a3be8c",
+                    foreground="#88c0d0",
                     mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal)},
                 ),
                 widget.Sep(
@@ -331,6 +318,11 @@ screens = [
                 widget.Sep(
                     linewidth=1,
                     padding=15,
+                ),
+                widget.Systray(font="Hack Nerd Font", fontsize=14),
+                widget.Sep(
+                    linewidth=1,
+                    padding=10,
                 ),
                 widget.GenPollText(
                     update_interval=10,
@@ -359,24 +351,6 @@ screens = [
                     default_text=" ",
                     mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(rofi_shutdown)},
                 ),
-                # widget.BatteryIcon(
-                # font="Hack Nerd Font",
-                # fontsize=14,
-                # update_interval=5,
-                # foreground="a3be8c",
-                # ),
-                # widget.Battery(
-                # font="Hack Nerd Font",
-                # fontsize=14,
-                # format="{percent:2.0%}",
-                # update_interval=5,
-                # foreground="a3be8c",
-                # ),
-                widget.Sep(
-                    linewidth=1,
-                    padding=5,
-                ),
-                widget.Systray(font="Hack Nerd Font", fontsize=14),
             ],
             26,
             background="#2e3440",
@@ -432,6 +406,7 @@ auto_minimize = False
 def start_once():
     home = os.path.expanduser("~")
     subprocess.call([home + "/.config/qtile/autostart.sh"])
+
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
