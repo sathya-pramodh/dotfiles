@@ -22,17 +22,17 @@ set hlsearch "highlights matching searches
 let mapleader = '\'
 nnoremap <leader>\ :nohlsearch<CR>
 
-call plug#begin()
+call plug#begin("~/.config/nvim/plugged")
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'christoomey/vim-system-copy'
 Plug 'arcticicestudio/nord-vim'
-Plug 'github/copilot.vim'
-Plug 'mikelue/vim-maven-plugin'
+"Plug 'github/copilot.vim'
+"Plug 'mikelue/vim-maven-plugin'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'christoomey/vim-tmux-navigator'
+"Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -45,7 +45,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate'
 Plug 'vim-scripts/indentpython.vim'
-Plug 'tomasiser/vim-code-dark'
+"Plug 'tomasiser/vim-code-dark'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
@@ -296,13 +296,7 @@ let NERDTreeIgnore=['\.git$', '\.jpg$','\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '
 nmap <leader>gh :diffget //3<CR>
 nmap <leader>gu :diffget //2<CR>
 nmap <leader>gs :G<CR>
-if (&t_Co == 256 || &t_Co == 88) && !has('gui_running') &&
-  \ filereadable(expand("$HOME/.vim/plugin/guicolorscheme.vim"))
-    runtime! plugin/guicolorscheme.vim
-    GuiColorScheme nord
-else
-    colorscheme nord
-endif
+colorscheme nord
 
 augroup compileandrun
     autocmd!

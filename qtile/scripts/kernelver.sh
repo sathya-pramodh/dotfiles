@@ -1,2 +1,2 @@
 #!/bin/sh
-echo " $(uname -r | sed s/-arch1-1//g)"
+echo " $(uname -r | awk -F '-' '{print $1}')"

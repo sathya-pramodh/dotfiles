@@ -45,7 +45,7 @@ configuration {
 window {
 	x-offset: 0px;
 	margin-right: 60px;
-	height: 550px;
+	height: 650px;
 	orientation: horizontal;
 	children:	 [mainbox];
 }

@@ -40,9 +40,9 @@ suspend_cmd = "systemctl suspend"
 thunar_cmd = "thunar"
 screenshot_cmd = "flameshot gui"
 rofi_cmd = (
-    "rofi -show drun -theme '/home/pramodhsathya/dotfiles/dotfiles/qtile/rofi.rasi'"
+    "rofi -show drun"
 )
-rofi_shutdown = "rofi -show power-menu -modi power-menu:rofi-power-menu -theme '/home/pramodhsathya/dotfiles/dotfiles/qtile/rofi.rasi'"
+rofi_shutdown = "rofi -show power-menu -modi power-menu:rofi-power-menu"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -391,6 +391,7 @@ floating_layout = layout.Floating(
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
         Match(title="Ninjabrain Bot "),
+        Match(wm_class="obs"),
     ]
 )
 auto_fullscreen = True

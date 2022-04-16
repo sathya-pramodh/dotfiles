@@ -1,8 +1,0 @@
-/** Basic config file **/
-
-configuration {
-  font: "Hack Nerd Font 12";
-  show-icons:         true;
-  icon-theme:         "Papirus";
-}
-@import "$HOME/.config/awesome/theme/sidebar.rasi"
