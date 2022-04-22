@@ -29,6 +29,7 @@ from libqtile import bar, layout, widget, extension, qtile, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+from floating_window_snapping import move_snap_window
 import os
 import subprocess
 
@@ -97,7 +98,7 @@ keys = [
         lazy.run_extension(
             extension.DmenuRun(
                 dmenu_prompt="$",
-                font="Hack Nerd Font",
+                font="Fira Code Nerd Font",
                 fontsize=14,
                 dmenu_lines=10,
                 background="#2e3440",
@@ -118,6 +119,7 @@ keys = [
     ),
     Key([mod], "n", lazy.spawn(terminal + " -e nvim"), desc="Launch neovim"),
     Key([mod], "p", lazy.spawn(rofi_cmd), desc="Launch rofi"),
+    Key([mod], "t", lazy.window.toggle_floating(), desc='Toggle floating'),
 ]
 
 groups = [
@@ -194,19 +196,9 @@ screens = [
                     linewidth=1,
                     padding=5,
                 ),
-                widget.CurrentLayoutIcon(
-                    font="Hack Nerd Font",
-                    fontsize=14,
-                    foreground="d08770",
-                    background="2e3440",
-                ),
-                widget.Sep(
-                    linewidth=1,
-                    padding=15,
-                ),
                 widget.GroupBox(
                     background="#3b4252",
-                    font="Hack Nerd Font",
+                    font="Fira Code Nerd Font",
                     fontsize=14,
                     active="#bf616a",
                     inactive="eceff4",
@@ -217,7 +209,7 @@ screens = [
                     padding=15,
                 ),
                 widget.TaskList(
-                    font="Hack Nerd Font",
+                    font="Fira Code Nerd Font",
                     fontsize=14,
                     foreground="#d8dee9",
                     highlight_method="block",
@@ -225,14 +217,14 @@ screens = [
                     max_title_width=150,
                 ),
                 widget.Clock(
-                    font="Hack Nerd Font",
+                    font="Fira Code Nerd Font",
                     fontsize=14,
                     format="%I:%M %p",
                     foreground="eceff4",
                 ),
                 widget.Spacer(length=bar.STRETCH),
                 widget.CPU(
-                    font="Hack Nerd Font",
+                    font="Fira Code Nerd Font",
                     fontsize=14,
                     format=" CPU: {load_percent}%",
                     foreground="#88c0d0",
@@ -246,7 +238,7 @@ screens = [
                     padding=15,
                 ),
                 widget.NvidiaSensors(
-                    font="Hack Nerd Font",
+                    font="Fira Code Nerd Font",
                     fontsize=14,
                     format=" GPU: {temp}°C",
                     foreground="#ebcb8b",
@@ -266,7 +258,7 @@ screens = [
                     )
                     .strip()
                     .decode("utf-8"),
-                    font="Hack Nerd Font",
+                    font="Fira Code Nerd Font",
                     fontsize=14,
                     foreground="a3be8c",
                     update_interval=1,
@@ -291,7 +283,7 @@ screens = [
                     )
                     .strip()
                     .decode("utf-8"),
-                    font="Hack Nerd Font",
+                    font="Fira Code Nerd Font",
                     fontsize=14,
                     foreground="#88c0d0",
                     mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal)},
@@ -307,7 +299,7 @@ screens = [
                     )
                     .strip()
                     .decode("utf-8"),
-                    font="Hack Nerd Font",
+                    font="Fira Code Nerd Font",
                     fontsize=14,
                     foreground="ebcb8b",
                     mouse_callbacks={
@@ -319,7 +311,7 @@ screens = [
                     linewidth=1,
                     padding=15,
                 ),
-                widget.Systray(font="Hack Nerd Font", fontsize=14),
+                widget.Systray(font="Fira Code Nerd Font", fontsize=14),
                 widget.Sep(
                     linewidth=1,
                     padding=10,
@@ -331,7 +323,7 @@ screens = [
                     )
                     .strip()
                     .decode("utf-8"),
-                    font="Hack Nerd Font",
+                    font="Fira Code Nerd Font",
                     fontsize=14,
                     foreground="a3be8c",
                     mouse_callbacks={
@@ -345,11 +337,25 @@ screens = [
                     padding=15,
                 ),
                 widget.QuickExit(
-                    font="Hack Nerd Font",
+                    font="Fira Code Nerd Font",
                     fontsize=14,
                     foreground="bf616a",
                     default_text=" ",
                     mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(rofi_shutdown)},
+                ),
+                widget.Sep(
+                    linewidth=1,
+                    padding=5,
+                ),
+                widget.CurrentLayoutIcon(
+                    font="Fira Code Nerd Font",
+                    fontsize=14,
+                    foreground="d08770",
+                    background="2e3440",
+                ),
+                widget.Sep(
+                    linewidth=1,
+                    padding=5,
                 ),
             ],
             26,
@@ -363,6 +369,8 @@ screens = [
 
 # Drag floating layouts.
 mouse = [
+    Drag([mod], "Button1", move_snap_window(snap_dist=20),
+        start=lazy.window.get_position()),
     Drag(
         [mod],
         "Button1",

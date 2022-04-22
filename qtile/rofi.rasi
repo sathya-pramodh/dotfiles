@@ -39,7 +39,7 @@ configuration {
 	hide-scrollbar:              "true";
 	margin:                      0px;
 	padding:                     0px;
-	font:            "Hack Nerd Font 10";
+	font:            "Fira Code Nerd Font 10";
 }
 
 window {

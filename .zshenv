@@ -2,7 +2,6 @@ export EDITOR=/bin/nvim
 export PROJECT=$HOME/Desktop/Project/
 export DOTFILES="$HOME/dotfiles/dotfiles"
 export WALLPAPERS="$HOME/Downloads/livewall/"
-export AWESOMEPATH="$HOME/.config/awesome"
 alias edit=nvim
 alias q=exit
 alias c=clear
