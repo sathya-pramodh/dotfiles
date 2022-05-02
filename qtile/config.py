@@ -203,6 +203,7 @@ screens = [
                     active="#bf616a",
                     inactive="eceff4",
                     highlight_method="block",
+                    disable_drag=True,
                 ),
                 widget.Sep(
                     linewidth=1,
@@ -293,7 +294,7 @@ screens = [
                     padding=15,
                 ),
                 widget.GenPollText(
-                    update_interval=900,
+                    update_interval=28800,
                     func=lambda: subprocess.check_output(
                         "/home/pramodhsathya/dotfiles/dotfiles/qtile/scripts/pacman_updates.sh"
                     )

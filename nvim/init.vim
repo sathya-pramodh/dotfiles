@@ -1,7 +1,7 @@
 syntax on
 packloadall
 set visualbell
-set nu 
+set relativenumber
 set clipboard+=unnamedplus " public copy/paste register
 set ruler
 set showcmd
