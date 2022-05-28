@@ -40,10 +40,9 @@ zoom_cmd = "zoom"
 suspend_cmd = "systemctl suspend"
 thunar_cmd = "thunar"
 screenshot_cmd = "flameshot gui"
-rofi_cmd = (
-    "rofi -show drun"
-)
+rofi_cmd = "rofi -show drun"
 rofi_shutdown = "rofi -show power-menu -modi power-menu:rofi-power-menu"
+obs_cmd = "flatpak run com.obsproject.Studio"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -53,7 +52,7 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
+    Key(["mod1"], "Tab", lazy.layout.next(), desc="Move window focus to other window"),
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key(
@@ -119,7 +118,9 @@ keys = [
     ),
     Key([mod], "n", lazy.spawn(terminal + " -e nvim"), desc="Launch neovim"),
     Key([mod], "p", lazy.spawn(rofi_cmd), desc="Launch rofi"),
-    Key([mod], "t", lazy.window.toggle_floating(), desc='Toggle floating'),
+    Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating"),
+    Key([mod], "space", lazy.hide_show_bar("top"), desc="Toggle top bar hide/unhide"),
+    Key([mod], "o", lazy.spawn(obs_cmd), desc="Launch obs"),
 ]
 
 groups = [
@@ -231,7 +232,9 @@ screens = [
                     foreground="#88c0d0",
                     update_interval=1,
                     mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(terminal + " -e htop"),
+                        "Button1": lambda: qtile.cmd_spawn(
+                            terminal + " -e btop --utf-force"
+                        ),
                     },
                 ),
                 widget.Sep(
@@ -264,7 +267,9 @@ screens = [
                     foreground="a3be8c",
                     update_interval=1,
                     mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(terminal + " -e htop"),
+                        "Button1": lambda: qtile.cmd_spawn(
+                            terminal + " -e btop --utf-force"
+                        ),
                     },
                 ),
                 widget.Chord(
@@ -370,8 +375,12 @@ screens = [
 
 # Drag floating layouts.
 mouse = [
-    Drag([mod], "Button1", move_snap_window(snap_dist=20),
-        start=lazy.window.get_position()),
+    Drag(
+        [mod],
+        "Button1",
+        move_snap_window(snap_dist=20),
+        start=lazy.window.get_position(),
+    ),
     Drag(
         [mod],
         "Button1",
@@ -386,7 +395,7 @@ mouse = [
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
-follow_mouse_focus = True
+follow_mouse_focus = False
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
@@ -399,8 +408,10 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
-        Match(title="Ninjabrain Bot "),
-        Match(wm_class="obs"),
+        Match(wm_class="ninjabrainbot-Main"),
+        Match(wm_class="GParted"),
+        Match(wm_class="gnome-calculator"),
+        Match(wm_class="jetbrains-idea-ce"),
     ]
 )
 auto_fullscreen = True
@@ -426,4 +437,4 @@ def start_once():
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
-wmname = "LG3D"
+wmname = "qtile"

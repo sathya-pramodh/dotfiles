@@ -4,4 +4,4 @@ numlockx on
 xfce4-power-manager &
 pnmixer &
 nm-applet &
-optimus-manager-qt &
+discord &

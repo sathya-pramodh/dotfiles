@@ -111,4 +111,5 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias "\\ls"="\\ls --color='auto'"
 alias ls="lsd -l"
+alias btop="btop --utf-force"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
