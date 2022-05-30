@@ -4,4 +4,4 @@ numlockx on
 xfce4-power-manager &
 pnmixer &
 nm-applet &
-discord &
+flatpak run com.discordapp.Discord --start-minimized &

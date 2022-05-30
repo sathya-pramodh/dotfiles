@@ -411,7 +411,7 @@ floating_layout = layout.Floating(
         Match(wm_class="ninjabrainbot-Main"),
         Match(wm_class="GParted"),
         Match(wm_class="gnome-calculator"),
-        Match(wm_class="jetbrains-idea-ce"),
+        Match(wm_class="zoom "),
     ]
 )
 auto_fullscreen = True
@@ -437,4 +437,4 @@ def start_once():
 #
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
-wmname = "qtile"
+wmname = "LG3D"
