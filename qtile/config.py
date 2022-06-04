@@ -412,6 +412,7 @@ floating_layout = layout.Floating(
         Match(wm_class="GParted"),
         Match(wm_class="gnome-calculator"),
         Match(wm_class="zoom "),
+        Match(wm_class="jetbrains-idea-ce")
     ]
 )
 auto_fullscreen = True
