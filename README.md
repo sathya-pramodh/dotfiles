@@ -10,5 +10,6 @@ This is my personal dotfiles repository.
 - picom
 - qtile
 - rofi
+- zsh
 
 # Code isn't documented very much because it's tailored personally for my workflow :)
