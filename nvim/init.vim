@@ -300,7 +300,7 @@ colorscheme nord
 
 augroup compileandrun
     autocmd!
-    autocmd filetype python nnoremap <f5> :w <bar> :!python3.9 % <cr>
+    autocmd filetype python nnoremap <f5> :w <bar> :!python3 % <cr>
     autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++17 -O2 -Wall % -o %:r && ./%:r <CR>
     autocmd filetype c nnoremap <f5> :w <bar> !make %:r && ./%:r <cr>
     autocmd filetype java nnoremap <f5> :w <bar> !javac % && java %:r <cr>
