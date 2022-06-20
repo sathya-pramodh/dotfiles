@@ -5,4 +5,4 @@ configuration {
   icon-theme:         "Papirus";
 }
 @theme "/dev/null"
-@import "/home/pramodhsathya/dotfiles/dotfiles/qtile/rofi.rasi"
+@import "/home/pramodhsathya/dotfiles/qtile/rofi.rasi"

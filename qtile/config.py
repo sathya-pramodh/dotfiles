@@ -29,7 +29,6 @@ from libqtile import bar, layout, widget, extension, qtile, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
-from floating_window_snapping import move_snap_window
 import os
 import subprocess
 
@@ -258,7 +257,7 @@ screens = [
                 ),
                 widget.GenPollText(
                     func=lambda: subprocess.check_output(
-                        "/home/pramodhsathya/dotfiles/dotfiles/qtile/scripts/freemem.sh"
+                        "/home/pramodhsathya/dotfiles/qtile/scripts/freemem.sh"
                     )
                     .strip()
                     .decode("utf-8"),
@@ -285,7 +284,7 @@ screens = [
                 widget.GenPollText(
                     update_interval=0,
                     func=lambda: subprocess.check_output(
-                        "/home/pramodhsathya/dotfiles/dotfiles/qtile/scripts/kernelver.sh"
+                        "/home/pramodhsathya/dotfiles/qtile/scripts/kernelver.sh"
                     )
                     .strip()
                     .decode("utf-8"),
@@ -301,7 +300,7 @@ screens = [
                 widget.GenPollText(
                     update_interval=28800,
                     func=lambda: subprocess.check_output(
-                        "/home/pramodhsathya/dotfiles/dotfiles/qtile/scripts/pacman_updates.sh"
+                        "/home/pramodhsathya/dotfiles/qtile/scripts/pacman_updates.sh"
                     )
                     .strip()
                     .decode("utf-8"),
@@ -325,7 +324,7 @@ screens = [
                 widget.GenPollText(
                     update_interval=10,
                     func=lambda: subprocess.check_output(
-                        "/home/pramodhsathya/dotfiles/dotfiles/qtile/scripts/battery.sh"
+                        "/home/pramodhsathya/dotfiles/qtile/scripts/battery.sh"
                     )
                     .strip()
                     .decode("utf-8"),
@@ -375,12 +374,6 @@ screens = [
 
 # Drag floating layouts.
 mouse = [
-    Drag(
-        [mod],
-        "Button1",
-        move_snap_window(snap_dist=20),
-        start=lazy.window.get_position(),
-    ),
     Drag(
         [mod],
         "Button1",
