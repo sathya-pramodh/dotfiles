@@ -41,7 +41,7 @@ thunar_cmd = "thunar"
 screenshot_cmd = "flameshot gui"
 rofi_cmd = "rofi -show drun"
 rofi_shutdown = "rofi -show power-menu -modi power-menu:rofi-power-menu"
-obs_cmd = "flatpak run com.obsproject.Studio"
+obs_cmd = "obs"
 
 keys = [
     # A list of available commands that can be bound to keys can be found
@@ -332,9 +332,7 @@ screens = [
                     fontsize=14,
                     foreground="a3be8c",
                     mouse_callbacks={
-                        "Button1": lambda: qtile.cmd_spawn(
-                            "tuxedo-control-center",
-                        )
+                        "Button1": lambda: qtile.cmd_spawn("tuxedo-control-center")
                     },
                 ),
                 widget.Sep(
@@ -405,7 +403,7 @@ floating_layout = layout.Floating(
         Match(wm_class="GParted"),
         Match(wm_class="gnome-calculator"),
         Match(wm_class="zoom "),
-        Match(wm_class="jetbrains-idea-ce")
+        Match(wm_class="jetbrains-idea-ce"),
     ]
 )
 auto_fullscreen = True

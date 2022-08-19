@@ -13,6 +13,7 @@ then
 elif (("$exe1" >= 5 && "$exe1" < 25))
 then
 	echo "  $exe"
-else
-	echo "  $exe"
+elif (("$exe" == "charging"))
+then
+	echo "  100%"
 fi

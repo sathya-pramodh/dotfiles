@@ -1,4 +1,5 @@
 export EDITOR=/bin/nvim
+export PATH=$PATH:/home/pramodhsathya/.local/bin:/home/pramodhsathya/.local/lib/
 export PROJECT=$HOME/Desktop/Project/
 export DOTFILES="$HOME/dotfiles/dotfiles"
 export WALLPAPERS="$HOME/Downloads/livewall/"

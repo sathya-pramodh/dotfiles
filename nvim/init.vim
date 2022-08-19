@@ -32,7 +32,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
-"Plug 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -80,6 +80,8 @@ let g:coc_global_extensions = [
   \ 'coc-tabnine',
   \ 'coc-java',
   \ 'coc-vimlsp',
+  \ 'coc-clangd',
+  \ 'coc-rust-analyzer',
   \ ]
 " from readme
 " if hidden is not set, TextEdit might fail.
