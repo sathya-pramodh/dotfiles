@@ -3,10 +3,12 @@
 static const Block blocks[] = {
     /*Icon*/ /*Command*/ /*Update Interval*/ /*Update Signal*/
     {"", "/home/pramodhsathya/dotfiles/dwmblocks/scripts/date", 5, 0},
+    {"", "/home/pramodhsathya/dotfiles/dwmblocks/scripts/pacman_updates", 1800,
+     0},
     {" CPU: ", "/home/pramodhsathya/dotfiles/dwmblocks/scripts/cpu", 1, 0},
     {" RAM: ", "/home/pramodhsathya/dotfiles/dwmblocks/scripts/freemem", 1, 0},
     {" GPU: ", "/home/pramodhsathya/dotfiles/dwmblocks/scripts/gpu", 1, 0},
-    {" ", "/home/pramodhsathya/dotfiles/dwmblocks/scripts/kernelver", 0, 0},
+    {"", "/home/pramodhsathya/dotfiles/dwmblocks/scripts/kernelver", 0, 0},
     {"", "/home/pramodhsathya/dotfiles/dwmblocks/scripts/wifistatus", 10, 0},
     {"", "/home/pramodhsathya/dotfiles/dwmblocks/scripts/battery", 10, 0},
 };

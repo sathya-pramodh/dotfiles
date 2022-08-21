@@ -505,13 +505,15 @@ static const Rule rules[] = {
      *	WM_NAME(STRING) = title
      */
     /* class      instance    title       tags mask     isfloating   monitor */
-    RULE(.wintype = WTYPE "DIALOG",
-         .isfloating = 1) RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
-        RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
-            RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
-    RULE(.class = "ninjabrainbot-Main", .isfloating = 1)
+    RULE(.wintype = WTYPE "DIALOG", .isfloating = 1)
+        RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
+            RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
+                RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
+                    RULE(.class = "ninjabrainbot-Main", .isfloating = 1)
+                        RULE(.class = "gnome-calculator", .isfloating = 1)
 #if SCRATCHPADS_PATCH
-                RULE(.instance = "spterm", .tags = SPTAG(0), .isfloating = 1)
+                            RULE(.instance = "spterm", .tags = SPTAG(0),
+                                 .isfloating = 1)
 #endif // SCRATCHPADS_PATCH
 };
 
@@ -988,6 +990,8 @@ static const char *suspendcmd[] = {"/bin/sh", "-c", "systemctl suspend", NULL};
 static const char *thunarcmd[] = {"thunar", NULL};
 static const char *neovimcmd[] = {"alacritty", "-e", "nvim", NULL};
 static const char *roficmd[] = {"rofi", "-show", "drun", NULL};
+static const char *rofishutdowncmd[] = {
+    "rofi", "-show", "power-menu", "-modi", "power-menu:rofi-power-menu", NULL};
 
 #if ON_EMPTY_KEYS_PATCH
 static const char *firefoxcmd[] = {"firefox", NULL};
@@ -999,6 +1003,7 @@ static Key on_empty_keys[] = {
 
 static Key keys[] = {
     /* modifier                     key            function argument */
+    {MODKEY | ShiftMask | ControlMask, XK_s, spawn, {.v = rofishutdowncmd}},
     {MODKEY | ShiftMask, XK_n, spawn, {.v = neovimcmd}},
     {MODKEY, XK_f, spawn, {.v = thunarcmd}},
     {MODKEY | ControlMask, XK_s, spawn, {.v = suspendcmd}},
@@ -1212,7 +1217,7 @@ static Key keys[] = {
      mirrorlayout,
      {0}}, /* flextile, flip master and stack areas */
 #endif     // FLEXTILE_DELUXE_LAYOUT
-    {MODKEY|ShiftMask, XK_f, togglefloating, {0}},
+    {MODKEY | ShiftMask, XK_f, togglefloating, {0}},
 #if MAXIMIZE_PATCH
     {MODKEY | ControlMask | ShiftMask, XK_h, togglehorizontalmax, {0}},
     {MODKEY | ControlMask | ShiftMask, XK_l, togglehorizontalmax, {0}},
