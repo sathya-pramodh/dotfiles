@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": {
+          "position": {
+            "x": {
+              "min": 5,
+              "max": 6
+            },
+            "y": {
+              "min": 133,
+              "max": 134
+            },
+            "z": {
+              "min": 7,
+              "max": 8
+            }
+          },
+          "dimension": "minecraft:the_nether",
+          "block": {
+            "block": "minecraft:crimson_button"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "b:logic/start_button/on_press"
+  }
+}

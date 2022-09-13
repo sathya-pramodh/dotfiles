@@ -1,0 +1,24 @@
+scoreboard players set bLeftRampart settings -1
+scoreboard players set bRightRampart settings -1
+scoreboard players set uLeftRampart settings -1
+scoreboard players set tTreasure settings -1
+scoreboard players set sLeftGap settings -1
+scoreboard players set sRightGap settings -1
+scoreboard players set sLeftRampart settings -1
+scoreboard players set sMiddleRampart settings -1
+scoreboard players set sRightRampart settings -1
+
+scoreboard players set hoglins settings 1
+scoreboard players set random_gold settings 1
+scoreboard players set armor settings 1
+scoreboard players set terrain settings 1
+scoreboard players set bastion settings -1
+scoreboard players set biome settings -1
+scoreboard players set mode settings 0
+scoreboard players set nat_mobs settings 0
+scoreboard players set reset_method settings 0
+scoreboard players set spawnpoint_random settings -1
+scoreboard players set spawnpoint_bridge settings -1
+scoreboard players set spawnpoint_stables settings -1
+scoreboard players set spawnpoint_treasure settings -1
+scoreboard players set spawnpoint_units settings -1

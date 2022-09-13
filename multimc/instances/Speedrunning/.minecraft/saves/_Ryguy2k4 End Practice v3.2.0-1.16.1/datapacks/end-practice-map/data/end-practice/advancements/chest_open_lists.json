@@ -1,0 +1,33 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:item_used_on_block",
+        "conditions": {
+          "location": {
+            "block": {
+              "block": "minecraft:chest"
+            },
+			"position": {
+				"x": {
+					"max": 90,
+					"min": 89
+				},
+				"y": {
+					"max": 26,
+					"min": 25
+				},
+				"z": {
+					"max": 4,
+					"min": 3
+				}
+				
+			}
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "end-practice:chest_menu/chest_open_lists"
+    }
+  }
+  

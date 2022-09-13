@@ -1,0 +1,1 @@
+data modify storage main pos set from storage main copy[0]

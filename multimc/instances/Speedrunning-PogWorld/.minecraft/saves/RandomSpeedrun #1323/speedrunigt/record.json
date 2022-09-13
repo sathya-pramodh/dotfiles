@@ -1,0 +1,453 @@
+{
+  "mc_version": "1.16.1",
+  "speedrunigt_version": "10.11+1.16.1",
+  "category": "ANY",
+  "run_type": "random_seed",
+  "is_completed": false,
+  "is_coop": false,
+  "is_hardcore": false,
+  "is_legacy_igt": false,
+  "world_name": "RandomSpeedrun #1323",
+  "date": 1658603700615,
+  "retimed_igt": 157793,
+  "final_igt": 50315,
+  "final_rta": 157805,
+  "open_lan": null,
+  "timelines": [],
+  "advancements": {
+    "minecraft:adventure/adventuring_time": {
+      "complete": false,
+      "is_advancement": true,
+      "criteria": {
+        "minecraft:plains": {
+          "igt": 0,
+          "rta": 0
+        },
+        "minecraft:wooded_hills": {
+          "igt": 25915,
+          "rta": 133355
+        }
+      },
+      "igt": 0,
+      "rta": 0
+    },
+    "minecraft:recipes/misc/gold_nugget_from_blasting": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_golden_sword": {
+          "igt": 39365,
+          "rta": 146805
+        },
+        "has_golden_helmet": {
+          "igt": 39365,
+          "rta": 146805
+        },
+        "has_golden_leggings": {
+          "igt": 39365,
+          "rta": 146805
+        },
+        "has_golden_pickaxe": {
+          "igt": 39365,
+          "rta": 146805
+        },
+        "has_golden_axe": {
+          "igt": 39365,
+          "rta": 146805
+        },
+        "has_golden_boots": {
+          "igt": 39365,
+          "rta": 146805
+        },
+        "has_golden_hoe": {
+          "igt": 39365,
+          "rta": 146805
+        },
+        "has_golden_horse_armor": {
+          "igt": 39365,
+          "rta": 146805
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146805
+        },
+        "has_golden_shovel": {
+          "igt": 39365,
+          "rta": 146805
+        },
+        "has_golden_chestplate": {
+          "igt": 39365,
+          "rta": 146805
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/misc/gold_nugget_from_smelting": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_golden_sword": {
+          "igt": 39365,
+          "rta": 146806
+        },
+        "has_golden_helmet": {
+          "igt": 39365,
+          "rta": 146806
+        },
+        "has_golden_leggings": {
+          "igt": 39365,
+          "rta": 146806
+        },
+        "has_golden_pickaxe": {
+          "igt": 39365,
+          "rta": 146806
+        },
+        "has_golden_axe": {
+          "igt": 39365,
+          "rta": 146806
+        },
+        "has_golden_boots": {
+          "igt": 39365,
+          "rta": 146806
+        },
+        "has_golden_hoe": {
+          "igt": 39365,
+          "rta": 146806
+        },
+        "has_golden_horse_armor": {
+          "igt": 39365,
+          "rta": 146806
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146806
+        },
+        "has_golden_shovel": {
+          "igt": 39365,
+          "rta": 146806
+        },
+        "has_golden_chestplate": {
+          "igt": 39365,
+          "rta": 146806
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/misc/gold_ingot_from_gold_block": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_block": {
+          "igt": 39365,
+          "rta": 146807
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146807
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/misc/gold_nugget": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146807
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146807
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/tools/golden_pickaxe": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146808
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146808
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/combat/golden_sword": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146808
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146808
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/tools/golden_hoe": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146809
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146809
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/combat/golden_helmet": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146809
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146809
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/tools/golden_shovel": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146810
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146810
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/combat/golden_boots": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146810
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146810
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/building_blocks/gold_block": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146810
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146810
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/combat/golden_leggings": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146810
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146810
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/combat/golden_chestplate": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146811
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146811
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/food/golden_apple": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146811
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146811
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/tools/golden_axe": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146811
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146811
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/redstone/light_weighted_pressure_plate": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_gold_ingot": {
+          "igt": 39365,
+          "rta": 146812
+        },
+        "has_the_recipe": {
+          "igt": 39365,
+          "rta": 146812
+        }
+      },
+      "igt": 39365,
+      "rta": 146818
+    },
+    "minecraft:recipes/combat/arrow": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_feather": {
+          "igt": 43215,
+          "rta": 150652
+        },
+        "has_flint": {
+          "igt": 43215,
+          "rta": 150652
+        },
+        "has_the_recipe": {
+          "igt": 43215,
+          "rta": 150652
+        }
+      },
+      "igt": 43215,
+      "rta": 150658
+    },
+    "minecraft:recipes/tools/flint_and_steel": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_flint": {
+          "igt": 43215,
+          "rta": 150653
+        },
+        "has_the_recipe": {
+          "igt": 43215,
+          "rta": 150653
+        },
+        "has_obsidian": {
+          "igt": 43215,
+          "rta": 150653
+        }
+      },
+      "igt": 43215,
+      "rta": 150658
+    },
+    "minecraft:recipes/decorations/fletching_table": {
+      "complete": true,
+      "is_advancement": false,
+      "criteria": {
+        "has_flint": {
+          "igt": 43215,
+          "rta": 150653
+        },
+        "has_the_recipe": {
+          "igt": 43215,
+          "rta": 150653
+        }
+      },
+      "igt": 43215,
+      "rta": 150658
+    }
+  },
+  "stats": {
+    "13415023-cc13-4451-8d83-46593be7352d": {
+      "stats": {
+        "minecraft:crafted": {
+          "minecraft:gold_ingot": 9
+        },
+        "minecraft:picked_up": {
+          "minecraft:dirt": 1
+        },
+        "minecraft:custom": {
+          "minecraft:jump": 57,
+          "minecraft:open_chest": 2,
+          "minecraft:time_since_rest": 1008,
+          "minecraft:play_one_minute": 1008,
+          "minecraft:sprint_one_cm": 4361,
+          "minecraft:time_since_death": 1008,
+          "minecraft:walk_one_cm": 658,
+          "minecraft:sneak_time": 2,
+          "minecraft:fall_one_cm": 836,
+          "minecraft:fly_one_cm": 13730
+        },
+        "minecraft:used": {
+          "minecraft:dirt": 1
+        },
+        "minecraft:mined": {
+          "minecraft:grass": 2,
+          "minecraft:tall_grass": 1,
+          "minecraft:grass_block": 1,
+          "minecraft:dandelion": 1
+        }
+      },
+      "DataVersion": 2567
+    }
+  }
+}

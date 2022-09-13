@@ -1,0 +1,32 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:item_used_on_block",
+        "conditions": {
+          "location": {
+            "block": {
+              "block": "minecraft:ender_chest"
+            },
+			"position": {
+				"x": {
+					"max": 94,
+					"min": 93
+				},
+				"y": {
+					"max": 28,
+					"min": 27
+				},
+				"z": {
+					"max": 0,
+					"min": -1
+				}
+			}
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "end-practice:chest_menu/ender_chest_open_perch"
+    }
+  }
+  

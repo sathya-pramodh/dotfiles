@@ -1,0 +1,1 @@
+setblock -75 50 75 minecraft:oak_sign{Text2:'{"text":"Exit","color":"red","bold":true,"italic":false,"underlined":true,"clickEvent":{"action":"run_command","value":"function cave:player/end"}}'} replace

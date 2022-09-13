@@ -1,0 +1,9 @@
+execute positioned ~15 ~1 ~0 run function b:jigsaws/bastion/units/walls/wall_bases/wall_connected_wall/east_up
+execute positioned ~15 ~23 ~15 run function b:jigsaws/bastion/units/large_ramparts/rampart/up_south
+execute positioned ~2 ~2 ~3 run function b:jigsaws/bastion/mobs/piglin
+execute positioned ~4 ~5 ~10 run function b:jigsaws/bastion/mobs/piglin
+execute positioned ~5 ~6 ~8 run function b:jigsaws/bastion/mobs/piglin
+execute positioned ~4 ~7 ~7 run function b:jigsaws/bastion/mobs/piglin
+execute positioned ~13 ~11 ~3 run function b:jigsaws/bastion/mobs/piglin
+execute positioned ~11 ~18 ~14 run function b:jigsaws/bastion/mobs/piglin
+execute positioned ~12 ~18 ~12 run function b:jigsaws/bastion/mobs/piglin

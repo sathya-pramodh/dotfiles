@@ -1,0 +1,9 @@
+execute positioned ~-8 ~31 ~0 run function b:jigsaws/bastion/hoglin_stable/rampart_plates/rampart_plate/north_up
+execute positioned ~-6 ~3 ~10 run function b:jigsaws/bastion/mobs/piglin
+execute positioned ~-3 ~5 ~7 run function b:jigsaws/bastion/mobs/piglin
+execute positioned ~-11 ~10 ~3 run function b:jigsaws/bastion/mobs/piglin
+execute positioned ~-12 ~10 ~3 run function b:jigsaws/bastion/mobs/piglin
+execute positioned ~-9 ~16 ~7 run function b:jigsaws/bastion/mobs/piglin
+execute positioned ~-11 ~16 ~9 run function b:jigsaws/bastion/mobs/piglin_melee
+execute positioned ~-7 ~16 ~10 run function b:jigsaws/bastion/mobs/piglin
+execute positioned ~-11 ~18 ~4 run function b:jigsaws/bastion/mobs/piglin_melee

@@ -1,0 +1,1 @@
+give @p minecraft:oak_sign{BlockEntityTag:{Text2:'{"text":"More Random","color":"gold","bold":true,"italic":false,"underlined":true,"clickEvent":{"action":"run_command","value":"function cave:player/begin"}}'}} 1

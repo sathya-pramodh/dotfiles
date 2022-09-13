@@ -1,0 +1,16 @@
+{
+    "condition": "minecraft:location_check",
+    "predicate": {
+      "position": {
+        "y": {
+          "min": 10
+        }
+      },
+      "light": {
+        "light": {
+          "min": 1
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,17 @@
+speedrunigt:timer_text_font:minecraft:default
+speedrunigt:timer_rta_color:5636095
+speedrunigt:timer_display_decimals:THREE
+speedrunigt:bgf_opacity:0.0
+speedrunigt:igt_bg_padding:3
+speedrunigt:timer_rta_decoration:OUTLINE
+speedrunigt:rta_bg_padding:3
+speedrunigt:timer_igt_decoration:OUTLINE
+speedrunigt:timer_rta_pos_x:0.9984373
+speedrunigt:timer_rta_pos_y:0.52777827
+speedrunigt:lock_timer_position:false
+speedrunigt:timer_igt_pos_y:0.48888916
+speedrunigt:timer_igt_pos_x:0.99583334
+speedrunigt:display_time_only:false
+speedrunigt:timer_scale_rta:1.0
+speedrunigt:timer_igt_color:16777045
+speedrunigt:timer_scale_igt:1.0

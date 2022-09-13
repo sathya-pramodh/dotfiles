@@ -1,0 +1,47 @@
+{
+  "mc_version": "1.16.1",
+  "speedrunigt_version": "10.11+1.16.1",
+  "category": "ANY",
+  "run_type": "random_seed",
+  "is_completed": false,
+  "is_coop": false,
+  "is_hardcore": false,
+  "is_legacy_igt": false,
+  "world_name": "RandomSpeedrun #1374",
+  "date": 1658764731885,
+  "retimed_igt": 3402,
+  "final_igt": 3402,
+  "final_rta": 3508,
+  "open_lan": null,
+  "timelines": [],
+  "advancements": {
+    "minecraft:adventure/adventuring_time": {
+      "complete": false,
+      "is_advancement": true,
+      "criteria": {
+        "minecraft:plains": {
+          "igt": 0,
+          "rta": 0
+        }
+      },
+      "igt": 0,
+      "rta": 0
+    }
+  },
+  "stats": {
+    "13415023-cc13-4451-8d83-46593be7352d": {
+      "stats": {
+        "minecraft:custom": {
+          "minecraft:jump": 5,
+          "minecraft:time_since_rest": 73,
+          "minecraft:play_one_minute": 73,
+          "minecraft:sprint_one_cm": 205,
+          "minecraft:time_since_death": 73,
+          "minecraft:walk_one_cm": 23,
+          "minecraft:fly_one_cm": 986
+        }
+      },
+      "DataVersion": 2567
+    }
+  }
+}

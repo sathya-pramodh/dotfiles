@@ -1,0 +1,1 @@
+fill -38 64 -39 -38 62 -39 minecraft:nether_portal

@@ -1,0 +1,1194 @@
+[21:00:31] [main/INFO]: Loading Minecraft 1.16.1 with Fabric Loader 0.14.8
+[21:00:31] [main/INFO]: Loading 16 mods:
+	- antiresourcereload 1.0.2+1.16.1
+	- atum 1.0.5+1.16.1
+	- biome_threadlocal_fix 1.3
+	- dynamicmenufps 0.1
+	- fabricloader 0.14.8
+	- fast_reset 1.4.1
+	- java 18
+	- lazydfu 0.1.2
+	- lazystronghold 1.1.2
+	- lithium 0.6.6
+	- minecraft 1.16.1
+	- phosphor 0.7.2
+	- pogworld 1.2.0+1.16.1
+	- sodium 0.2.0+build.8
+	- speedrunigt 10.11+1.16.1
+	- worldpreview 2.3.3+1.16.1
+[21:00:31] [main/INFO]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/pramodhsathya/.local/share/multimc/libraries/net/fabricmc/sponge-mixin/0.11.4+mixin.0.8.5/sponge-mixin-0.11.4+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[21:00:31] [main/INFO]: Compatibility level set to JAVA_11
+[21:00:31] [main/INFO]: Loaded configuration file for Lithium: 79 options available, 0 override(s) found
+[21:00:31] [main/INFO]: Loaded configuration file for Sodium: 24 options available, 0 override(s) found
+[21:00:38] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:00:38] [Render thread/INFO]: Setting user: SathyaPramodh
+[21:00:38] [Render thread/WARN]: ERROR : Couldn't load Narrator library : Unable to load library 'fliteWrapper': Native library (linux-x86-64/libfliteWrapper.so) not found in resource path (/usr/lib/multimc/jars/NewLaunch.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/lwjgl/lwjgl-glfw/3.2.2/lwjgl-glfw-3.2.2.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/lwjgl/lwjgl-jemalloc/3.2.2/lwjgl-jemalloc-3.2.2.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/lwjgl/lwjgl-openal/3.2.2/lwjgl-openal-3.2.2.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/lwjgl/lwjgl-opengl/3.2.2/lwjgl-opengl-3.2.2.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/lwjgl/lwjgl-stb/3.2.2/lwjgl-stb-3.2.2.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/lwjgl/lwjgl-tinyfd/3.2.2/lwjgl-tinyfd-3.2.2.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/lwjgl/lwjgl/3.2.2/lwjgl-3.2.2.jar:/home/pramodhsathya/.local/share/multimc/libraries/com/mojang/patchy/1.3.9/patchy-1.3.9.jar:/home/pramodhsathya/.local/share/multimc/libraries/oshi-project/oshi-core/1.1/oshi-core-1.1.jar:/home/pramodhsathya/.local/share/multimc/libraries/net/java/dev/jna/jna/4.4.0/jna-4.4.0.jar:/home/pramodhsathya/.local/share/multimc/libraries/net/java/dev/jna/platform/3.4.0/platform-3.4.0.jar:/home/pramodhsathya/.local/share/multimc/libraries/com/ibm/icu/icu4j/66.1/icu4j-66.1.jar:/home/pramodhsathya/.local/share/multimc/libraries/com/mojang/javabridge/1.0.22/javabridge-1.0.22.jar:/home/pramodhsathya/.local/share/multimc/libraries/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar:/home/pramodhsathya/.local/share/multimc/libraries/io/netty/netty-all/4.1.25.Final/netty-all-4.1.25.Final.jar:/home/pramodhsathya/.local/share/multimc/libraries/com/google/guava/guava/21.0/guava-21.0.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar:/home/pramodhsathya/.local/share/multimc/libraries/commons-io/commons-io/2.5/commons-io-2.5.jar:/home/pramodhsathya/.local/share/multimc/libraries/commons-codec/commons-codec/1.10/commons-codec-1.10.jar:/home/pramodhsathya/.local/share/multimc/libraries/com/mojang/brigadier/1.0.17/brigadier-1.0.17.jar:/home/pramodhsathya/.local/share/multimc/libraries/com/mojang/datafixerupper/3.0.25/datafixerupper-3.0.25.jar:/home/pramodhsathya/.local/share/multimc/libraries/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar:/home/pramodhsathya/.local/share/multimc/libraries/com/mojang/authlib/1.6.25/authlib-1.6.25.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar:/home/pramodhsathya/.local/share/multimc/libraries/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar:/home/pramodhsathya/.local/share/multimc/libraries/it/unimi/dsi/fastutil/8.2.1/fastutil-8.2.1.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/apache/logging/log4j/log4j-api/2.16.0/log4j-api-2.16.0.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/apache/logging/log4j/log4j-core/2.16.0/log4j-core-2.16.0.jar:/home/pramodhsathya/.local/share/multimc/libraries/com/mojang/text2speech/1.11.3/text2speech-1.11.3.jar:/home/pramodhsathya/.local/share/multimc/libraries/net/fabricmc/intermediary/1.16.1/intermediary-1.16.1.jar:/home/pramodhsathya/.local/share/multimc/libraries/net/fabricmc/tiny-mappings-parser/0.3.0+build.17/tiny-mappings-parser-0.3.0+build.17.jar:/home/pramodhsathya/.local/share/multimc/libraries/net/fabricmc/sponge-mixin/0.11.4+mixin.0.8.5/sponge-mixin-0.11.4+mixin.0.8.5.jar:/home/pramodhsathya/.local/share/multimc/libraries/net/fabricmc/tiny-remapper/0.8.2/tiny-remapper-0.8.2.jar:/home/pramodhsathya/.local/share/multimc/libraries/net/fabricmc/access-widener/2.1.0/access-widener-2.1.0.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/ow2/asm/asm/9.3/asm-9.3.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/ow2/asm/asm-analysis/9.3/asm-analysis-9.3.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/ow2/asm/asm-commons/9.3/asm-commons-9.3.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/ow2/asm/asm-tree/9.3/asm-tree-9.3.jar:/home/pramodhsathya/.local/share/multimc/libraries/org/ow2/asm/asm-util/9.3/asm-util-9.3.jar:/home/pramodhsathya/.local/share/multimc/libraries/net/fabricmc/fabric-loader/0.14.8/fabric-loader-0.14.8.jar:/home/pramodhsathya/.local/share/multimc/libraries/com/mojang/minecraft/1.16.1/minecraft-1.16.1-client.jar)
+[21:00:38] [Render thread/INFO]: Initializing
+[21:00:38] [Render thread/INFO]: [STDOUT]: Using Fast Reset
+[21:00:38] [Render thread/INFO]: Backend library: LWJGL version 3.2.2 build 10
+[21:00:40] [Render thread/INFO]: Reloading ResourceManager: Default
+[21:00:43] [Render thread/INFO]: OpenAL initialized.
+[21:00:43] [Render thread/INFO]: Sound engine started
+[21:00:43] [Render thread/INFO]: Created: 1024x1024x4 minecraft:textures/atlas/blocks.png-atlas
+[21:00:43] [Render thread/INFO]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
+[21:00:43] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[21:00:43] [Render thread/INFO]: Created: 1024x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[21:00:43] [Render thread/INFO]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[21:00:43] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[21:00:43] [Render thread/INFO]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[21:00:44] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[21:00:44] [Render thread/INFO]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[21:00:44] [Render thread/INFO]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[21:01:08] [Render thread/INFO]: Resetting a random seed
+[21:01:08] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:01:08] [Render thread/INFO]: Cached resources unavailable, reloading.
+[21:01:09] [Render thread/WARN]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[21:01:09] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[21:01:09] [Render thread/WARN]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[21:01:09] [Render thread/WARN]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[21:01:09] [Render thread/WARN]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[21:01:09] [Render thread/INFO]: Reloading ResourceManager: Default
+[21:01:09] [Render thread/INFO]: Loaded 7 recipes
+[21:01:09] [Render thread/INFO]: Loaded 927 advancements
+[21:01:10] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:01:10] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:01:10] [Server thread/INFO]: Generating keypair
+[21:01:14] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:01:14] [Render thread/INFO]: Starting Preview at (57.5, 84.0, -232.5)
+[21:01:15] [Render thread/INFO]: Preparing spawn area: 0%
+[21:01:15] [Render thread/INFO]: Preparing spawn area: 0%
+[21:01:15] [Render thread/INFO]: Preparing spawn area: 0%
+[21:01:16] [Render thread/INFO]: Preparing spawn area: 0%
+[21:01:16] [Render thread/INFO]: Preparing spawn area: 0%
+[21:01:17] [Render thread/INFO]: Preparing spawn area: 1%
+[21:01:17] [Render thread/INFO]: Preparing spawn area: 1%
+[21:01:17] [Render thread/INFO]: Preparing spawn area: 2%
+[21:01:18] [Render thread/INFO]: Preparing spawn area: 3%
+[21:01:19] [Render thread/INFO]: Preparing spawn area: 5%
+[21:01:19] [Render thread/INFO]: Preparing spawn area: 5%
+[21:01:20] [Render thread/INFO]: Preparing spawn area: 8%
+[21:01:20] [Render thread/INFO]: Preparing spawn area: 8%
+[21:01:21] [Render thread/INFO]: Preparing spawn area: 10%
+[21:01:21] [Render thread/INFO]: Preparing spawn area: 10%
+[21:01:21] [Render thread/INFO]: Leaving world generation
+[21:01:21] [Render thread/INFO]: Stopping server
+[21:01:21] [Render thread/INFO]: Preparing spawn area: 10%
+[21:01:22] [Render thread/INFO]: Resetting a random seed
+[21:01:22] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:01:22] [Render thread/INFO]: Using cached server resources.
+[21:01:22] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:01:22] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:01:22] [Server thread/INFO]: Generating keypair
+[21:01:23] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:01:23] [Render thread/INFO]: Starting Preview at (-69.5, 64.0, 185.5)
+[21:01:24] [Render thread/INFO]: Preparing spawn area: 0%
+[21:01:24] [Render thread/INFO]: Preparing spawn area: 0%
+[21:01:24] [Render thread/INFO]: Preparing spawn area: 0%
+[21:01:25] [Render thread/INFO]: Preparing spawn area: 0%
+[21:01:25] [Render thread/INFO]: Preparing spawn area: 1%
+[21:01:26] [Render thread/INFO]: Preparing spawn area: 4%
+[21:01:26] [Render thread/INFO]: Preparing spawn area: 4%
+[21:01:27] [Render thread/INFO]: Preparing spawn area: 6%
+[21:01:27] [Render thread/INFO]: Preparing spawn area: 10%
+[21:01:28] [Render thread/INFO]: Preparing spawn area: 15%
+[21:01:28] [Render thread/INFO]: Preparing spawn area: 15%
+[21:01:29] [Render thread/INFO]: Preparing spawn area: 17%
+[21:01:29] [Render thread/INFO]: Preparing spawn area: 22%
+[21:01:30] [Render thread/INFO]: Preparing spawn area: 22%
+[21:01:30] [Render thread/INFO]: Preparing spawn area: 22%
+[21:01:31] [Render thread/INFO]: Preparing spawn area: 31%
+[21:01:31] [Render thread/INFO]: Preparing spawn area: 31%
+[21:01:32] [Render thread/INFO]: Preparing spawn area: 37%
+[21:01:32] [Render thread/INFO]: Preparing spawn area: 37%
+[21:01:33] [Render thread/INFO]: Preparing spawn area: 42%
+[21:01:33] [Render thread/INFO]: Preparing spawn area: 42%
+[21:01:34] [Render thread/INFO]: Preparing spawn area: 42%
+[21:01:34] [Render thread/INFO]: Preparing spawn area: 42%
+[21:01:35] [Render thread/INFO]: Preparing spawn area: 54%
+[21:01:35] [Render thread/INFO]: Preparing spawn area: 54%
+[21:01:36] [Render thread/INFO]: Preparing spawn area: 54%
+[21:01:36] [Render thread/INFO]: Preparing spawn area: 54%
+[21:01:38] [Render thread/INFO]: Preparing spawn area: 54%
+[21:01:38] [Render thread/INFO]: Preparing spawn area: 54%
+[21:01:38] [Render thread/INFO]: Preparing spawn area: 54%
+[21:01:39] [Render thread/INFO]: Preparing spawn area: 79%
+[21:01:39] [Render thread/INFO]: Preparing spawn area: 79%
+[21:01:39] [Render thread/INFO]: Preparing spawn area: 87%
+[21:01:40] [Render thread/INFO]: Preparing spawn area: 88%
+[21:01:40] [Render thread/INFO]: Preparing spawn area: 93%
+[21:01:41] [Render thread/INFO]: Preparing spawn area: 97%
+[21:01:41] [Render thread/INFO]: Time elapsed: 17574 ms
+[21:01:41] [Server thread/INFO]: Changing view distance to 15, from 10
+[21:01:42] [Server thread/INFO]: SathyaPramodh[local:E:7c66df6a] logged in with entity id 196 at (-69.5, 64.0, 185.5)
+[21:01:42] [Server thread/INFO]: SathyaPramodh joined the game
+[21:01:43] [Render thread/INFO]: Started 8 worker threads
+[21:01:43] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2116ms or 42 ticks behind
+[21:01:43] [Server thread/INFO]: Saving and pausing game...
+[21:01:43] [Render thread/INFO]: Loaded 0 advancements
+[21:01:43] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1361]'/minecraft:overworld
+[21:01:44] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1361]'/minecraft:the_nether
+[21:01:44] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1361]'/minecraft:the_end
+[21:01:44] [Stronghold thread/INFO]: [LazyStronghold] Started stronghold gen thread
+[21:01:45] [Server thread/INFO]: Saving and pausing game...
+[21:01:45] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1361]'/minecraft:overworld
+[21:01:45] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1361]'/minecraft:the_nether
+[21:01:45] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1361]'/minecraft:the_end
+[21:01:51] [Render thread/INFO]: [CHAT] [Debug]: Hitboxes: shown
+[21:01:56] [Stronghold thread/INFO]: [LazyStronghold] Generated 320 strongholds.
+[21:02:01] [Server thread/INFO]: Saving and pausing game...
+[21:02:01] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1361]'/minecraft:overworld
+[21:02:01] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1361]'/minecraft:the_nether
+[21:02:01] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1361]'/minecraft:the_end
+[21:02:01] [Server thread/INFO]: SathyaPramodh lost connection: Disconnected
+[21:02:01] [Server thread/INFO]: SathyaPramodh left the game
+[21:02:01] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[21:02:01] [Server thread/INFO]: Stopping server
+[21:02:01] [Server thread/INFO]: Saving players
+[21:02:01] [Server thread/INFO]: Saving worlds
+[21:02:01] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1361]'/minecraft:overworld
+[21:02:01] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1361]'/minecraft:the_nether
+[21:02:01] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1361]'/minecraft:the_end
+[21:02:01] [Render thread/INFO]: Stopping worker threads
+[21:02:01] [Render thread/INFO]: Resetting a random seed
+[21:02:02] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:02:02] [Render thread/INFO]: Using cached server resources.
+[21:02:02] [Thread-22/ERROR]: Uncaught exception in thread "Thread-22"
+java.lang.IllegalStateException: Lock is no longer valid
+	at net.minecraft.class_32$class_5143.method_27017(class_32.java:297) ~[client-intermediary.jar:?]
+	at net.minecraft.class_32$class_5143.method_27015(class_32.java:364) ~[client-intermediary.jar:?]
+	at net.minecraft.server.MinecraftServer.md5ab6e0$lambda$getWorldsInjectTwo$0$0(MinecraftServer.java:1725) ~[client-intermediary.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+[21:02:02] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:02:02] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:02:02] [Server thread/INFO]: Generating keypair
+[21:02:03] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:02:03] [Render thread/INFO]: Starting Preview at (219.5, 63.0, -55.5)
+[21:02:03] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:04] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:04] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:05] [Render thread/INFO]: Preparing spawn area: 1%
+[21:02:05] [Render thread/INFO]: Preparing spawn area: 3%
+[21:02:06] [Render thread/INFO]: Preparing spawn area: 6%
+[21:02:06] [Render thread/INFO]: Leaving world generation
+[21:02:06] [Render thread/INFO]: Stopping server
+[21:02:06] [Render thread/INFO]: Resetting a random seed
+[21:02:06] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:02:06] [Render thread/INFO]: Using cached server resources.
+[21:02:06] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:02:06] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:02:06] [Server thread/INFO]: Generating keypair
+[21:02:07] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:02:08] [Render thread/INFO]: Starting Preview at (131.5, 77.0, 101.5)
+[21:02:08] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:08] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:08] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:09] [Render thread/INFO]: Preparing spawn area: 1%
+[21:02:09] [Render thread/INFO]: Leaving world generation
+[21:02:09] [Render thread/INFO]: Stopping server
+[21:02:09] [Render thread/INFO]: Preparing spawn area: 4%
+[21:02:09] [Render thread/INFO]: Resetting a random seed
+[21:02:09] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:02:09] [Render thread/INFO]: Using cached server resources.
+[21:02:10] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:02:10] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:02:10] [Server thread/INFO]: Generating keypair
+[21:02:10] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:02:11] [Render thread/INFO]: Starting Preview at (102.5, 88.0, -6.5)
+[21:02:11] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:11] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:11] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:12] [Render thread/INFO]: Preparing spawn area: 1%
+[21:02:12] [Render thread/INFO]: Leaving world generation
+[21:02:12] [Render thread/INFO]: Stopping server
+[21:02:12] [Render thread/INFO]: Resetting a random seed
+[21:02:12] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:02:12] [Render thread/INFO]: Using cached server resources.
+[21:02:12] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:02:12] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:02:12] [Server thread/INFO]: Generating keypair
+[21:02:13] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:02:13] [Render thread/INFO]: Starting Preview at (-21.5, 65.0, -244.5)
+[21:02:13] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:13] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:14] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:14] [Render thread/INFO]: Leaving world generation
+[21:02:14] [Render thread/INFO]: Stopping server
+[21:02:14] [Render thread/INFO]: Resetting a random seed
+[21:02:14] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:02:14] [Render thread/INFO]: Using cached server resources.
+[21:02:14] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:02:14] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:02:14] [Server thread/INFO]: Generating keypair
+[21:02:16] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:02:16] [Render thread/INFO]: Starting Preview at (-234.5, 69.0, -226.5)
+[21:02:16] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:17] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:17] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:17] [Render thread/INFO]: Preparing spawn area: 0%
+[21:02:18] [Render thread/INFO]: Preparing spawn area: 1%
+[21:02:18] [Render thread/INFO]: Preparing spawn area: 3%
+[21:02:19] [Render thread/INFO]: Preparing spawn area: 4%
+[21:02:20] [Render thread/INFO]: Preparing spawn area: 6%
+[21:02:20] [Render thread/INFO]: Preparing spawn area: 9%
+[21:02:21] [Render thread/INFO]: Preparing spawn area: 12%
+[21:02:21] [Render thread/INFO]: Preparing spawn area: 15%
+[21:02:21] [Render thread/INFO]: Preparing spawn area: 15%
+[21:02:22] [Render thread/INFO]: Preparing spawn area: 15%
+[21:02:23] [Render thread/INFO]: Preparing spawn area: 15%
+[21:02:23] [Render thread/INFO]: Preparing spawn area: 23%
+[21:02:24] [Render thread/INFO]: Preparing spawn area: 23%
+[21:02:24] [Render thread/INFO]: Preparing spawn area: 30%
+[21:02:25] [Render thread/INFO]: Preparing spawn area: 32%
+[21:02:25] [Render thread/INFO]: Preparing spawn area: 32%
+[21:02:25] [Render thread/INFO]: Preparing spawn area: 38%
+[21:02:26] [Render thread/INFO]: Preparing spawn area: 38%
+[21:02:26] [Render thread/INFO]: Preparing spawn area: 43%
+[21:02:27] [Render thread/INFO]: Preparing spawn area: 43%
+[21:02:28] [Render thread/INFO]: Preparing spawn area: 43%
+[21:02:28] [Render thread/INFO]: Preparing spawn area: 43%
+[21:02:28] [Render thread/INFO]: Preparing spawn area: 43%
+[21:02:29] [Render thread/INFO]: Preparing spawn area: 56%
+[21:02:30] [Render thread/INFO]: Preparing spawn area: 56%
+[21:02:30] [Render thread/INFO]: Preparing spawn area: 56%
+[21:02:30] [Render thread/INFO]: Preparing spawn area: 62%
+[21:02:31] [Render thread/INFO]: Preparing spawn area: 62%
+[21:02:32] [Render thread/INFO]: Preparing spawn area: 62%
+[21:02:32] [Render thread/INFO]: Preparing spawn area: 70%
+[21:02:33] [Render thread/INFO]: Preparing spawn area: 71%
+[21:02:33] [Render thread/INFO]: Preparing spawn area: 71%
+[21:02:35] [Render thread/INFO]: Preparing spawn area: 74%
+[21:02:35] [Render thread/INFO]: Preparing spawn area: 74%
+[21:02:35] [Render thread/INFO]: Preparing spawn area: 74%
+[21:02:35] [Render thread/INFO]: Preparing spawn area: 84%
+[21:02:36] [Render thread/INFO]: Preparing spawn area: 87%
+[21:02:36] [Render thread/INFO]: Preparing spawn area: 87%
+[21:02:37] [Render thread/INFO]: Preparing spawn area: 91%
+[21:02:38] [Server thread/INFO]: Changing view distance to 15, from 10
+[21:02:38] [Render thread/INFO]: Preparing spawn area: 94%
+[21:02:38] [Render thread/INFO]: Preparing spawn area: 94%
+[21:02:38] [Render thread/INFO]: Time elapsed: 21611 ms
+[21:02:38] [Server thread/INFO]: SathyaPramodh[local:E:1d76898b] logged in with entity id 1549 at (-234.5, 69.0, -226.5)
+[21:02:38] [Server thread/INFO]: SathyaPramodh joined the game
+[21:02:38] [Render thread/INFO]: Started 8 worker threads
+[21:02:38] [Server thread/INFO]: Saving and pausing game...
+[21:02:38] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:overworld
+[21:02:38] [Render thread/INFO]: Loaded 0 advancements
+[21:02:38] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:the_nether
+[21:02:38] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:the_end
+[21:02:40] [Stronghold thread/INFO]: [LazyStronghold] Started stronghold gen thread
+[21:02:49] [Stronghold thread/INFO]: [LazyStronghold] Generated 320 strongholds.
+[21:03:04] [Render thread/INFO]: Loaded 16 advancements
+[21:03:34] [Render thread/INFO]: Loaded 18 advancements
+[21:03:44] [Render thread/INFO]: Loaded 20 advancements
+[21:04:13] [Server thread/INFO]: SathyaPramodh has made the advancement [Suit Up]
+[21:04:13] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Suit Up]
+[21:04:13] [Server thread/INFO]: SathyaPramodh has made the advancement [Diamonds!]
+[21:04:13] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Diamonds!]
+[21:04:13] [Render thread/INFO]: Loaded 43 advancements
+[21:04:37] [Render thread/WARN]: Unable to play empty soundEvent: minecraft:entity.salmon.ambient
+[21:04:52] [Render thread/INFO]: Loaded 44 advancements
+[21:05:00] [Server thread/INFO]: SathyaPramodh has made the advancement [Ice Bucket Challenge]
+[21:05:00] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Ice Bucket Challenge]
+[21:05:00] [Render thread/INFO]: Loaded 64 advancements
+[21:05:05] [Render thread/INFO]: Loaded 67 advancements
+[21:05:13] [Render thread/INFO]: Loaded 79 advancements
+[21:05:18] [Render thread/INFO]: Loaded 79 advancements
+[21:05:19] [Render thread/INFO]: Loaded 88 advancements
+[21:05:32] [Server thread/INFO]: SathyaPramodh has made the advancement [Stone Age]
+[21:05:32] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Stone Age]
+[21:05:32] [Render thread/INFO]: Loaded 102 advancements
+[21:06:10] [Server thread/INFO]: SathyaPramodh has made the advancement [Acquire Hardware]
+[21:06:10] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Acquire Hardware]
+[21:06:10] [Render thread/INFO]: Loaded 125 advancements
+[21:06:43] [Render thread/INFO]: Loaded 137 advancements
+[21:06:50] [Render thread/INFO]: Loaded 143 advancements
+[21:06:52] [Render thread/WARN]: Unable to play empty soundEvent: minecraft:entity.cod.ambient
+[21:06:53] [Render thread/INFO]: Loaded 160 advancements
+[21:07:03] [Render thread/INFO]: Loaded 162 advancements
+[21:07:31] [Render thread/INFO]: Stopping worker threads
+[21:07:31] [Render thread/INFO]: Started 8 worker threads
+[21:07:31] [Render thread/INFO]: Stopping worker threads
+[21:07:31] [Render thread/INFO]: Started 8 worker threads
+[21:07:34] [Server thread/INFO]: SathyaPramodh has made the advancement [We Need to Go Deeper]
+[21:07:34] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [We Need to Go Deeper]
+[21:07:34] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 2627ms or 52 ticks behind
+[21:07:34] [Render thread/INFO]: Loaded 180 advancements
+[21:07:34] [Render thread/INFO]: Loaded 180 advancements
+[21:07:41] [Render thread/WARN]: Received passengers for unknown entity
+[21:07:41] [Render thread/WARN]: Received passengers for unknown entity
+[21:08:06] [Render thread/WARN]: Received passengers for unknown entity
+[21:08:07] [Render thread/WARN]: Received passengers for unknown entity
+[21:08:14] [Render thread/WARN]: Received passengers for unknown entity
+[21:08:15] [Render thread/WARN]: Received passengers for unknown entity
+[21:08:22] [Render thread/INFO]: Loaded 182 advancements
+[21:08:41] [Render thread/INFO]: Loaded 192 advancements
+[21:08:45] [Server thread/INFO]: Saving and pausing game...
+[21:08:45] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:overworld
+[21:08:45] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:the_nether
+[21:08:45] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:the_end
+[21:09:30] [Server thread/INFO]: SathyaPramodh has made the advancement [A Terrible Fortress]
+[21:09:30] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [A Terrible Fortress]
+[21:09:30] [Render thread/INFO]: Loaded 194 advancements
+[21:09:40] [Server thread/INFO]: SathyaPramodh has made the advancement [Not Today, Thank You]
+[21:09:40] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Not Today, Thank You]
+[21:09:40] [Render thread/INFO]: Loaded 194 advancements
+[21:09:44] [Server thread/INFO]: SathyaPramodh has made the advancement [Monster Hunter]
+[21:09:44] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Monster Hunter]
+[21:09:44] [Render thread/INFO]: Loaded 211 advancements
+[21:09:49] [Render thread/INFO]: Loaded 211 advancements
+[21:10:00] [Server thread/INFO]: SathyaPramodh has made the advancement [Into Fire]
+[21:10:00] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Into Fire]
+[21:10:00] [Render thread/INFO]: Loaded 214 advancements
+[21:10:08] [Server thread/INFO]: SathyaPramodh burned to death
+[21:10:08] [Render thread/INFO]: [CHAT] SathyaPramodh burned to death
+[21:10:10] [Render thread/INFO]: Stopping worker threads
+[21:10:10] [Server thread/INFO]: Saving and pausing game...
+[21:10:10] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:overworld
+[21:10:10] [Render thread/INFO]: Started 8 worker threads
+[21:10:10] [Render thread/INFO]: Stopping worker threads
+[21:10:10] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:the_nether
+[21:10:10] [Render thread/INFO]: Started 8 worker threads
+[21:10:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:the_end
+[21:10:11] [Server thread/INFO]: Saving and pausing game...
+[21:10:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:overworld
+[21:10:12] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:the_nether
+[21:10:12] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:the_end
+[21:10:12] [Server thread/INFO]: SathyaPramodh lost connection: Disconnected
+[21:10:12] [Server thread/INFO]: SathyaPramodh left the game
+[21:10:12] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[21:10:12] [Server thread/INFO]: Stopping server
+[21:10:12] [Server thread/INFO]: Saving players
+[21:10:12] [Server thread/INFO]: Saving worlds
+[21:10:12] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:overworld
+[21:10:12] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:the_nether
+[21:10:12] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1366]'/minecraft:the_end
+[21:10:12] [Render thread/INFO]: Stopping worker threads
+[21:10:12] [Render thread/INFO]: Resetting a random seed
+[21:10:13] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:10:13] [Thread-61/ERROR]: Uncaught exception in thread "Thread-61"
+java.lang.IllegalStateException: Lock is no longer valid
+	at net.minecraft.class_32$class_5143.method_27017(class_32.java:297) ~[client-intermediary.jar:?]
+	at net.minecraft.class_32$class_5143.method_27015(class_32.java:364) ~[client-intermediary.jar:?]
+	at net.minecraft.server.MinecraftServer.md5ab6e0$lambda$getWorldsInjectTwo$0$0(MinecraftServer.java:1725) ~[client-intermediary.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+[21:10:13] [Render thread/INFO]: Using cached server resources.
+[21:10:13] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:10:13] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:10:13] [Server thread/INFO]: Generating keypair
+[21:10:15] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:10:15] [Render thread/INFO]: Starting Preview at (37.5, 63.0, -221.5)
+[21:10:15] [Render thread/INFO]: Preparing spawn area: 0%
+[21:10:15] [Render thread/INFO]: Preparing spawn area: 0%
+[21:10:16] [Render thread/INFO]: Preparing spawn area: 0%
+[21:10:16] [Render thread/INFO]: Preparing spawn area: 2%
+[21:10:17] [Render thread/INFO]: Preparing spawn area: 5%
+[21:10:17] [Render thread/INFO]: Preparing spawn area: 6%
+[21:10:17] [Render thread/INFO]: Leaving world generation
+[21:10:17] [Render thread/INFO]: Stopping server
+[21:10:17] [Render thread/INFO]: Resetting a random seed
+[21:10:17] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:10:17] [Render thread/INFO]: Using cached server resources.
+[21:10:18] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:10:18] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:10:18] [Server thread/INFO]: Generating keypair
+[21:10:18] [Render thread/INFO]: Preparing spawn area: 6%
+[21:10:19] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:10:19] [Render thread/INFO]: Starting Preview at (-24.5, 67.0, -40.5)
+[21:10:19] [Render thread/INFO]: Preparing spawn area: 0%
+[21:10:20] [Render thread/INFO]: Preparing spawn area: 0%
+[21:10:20] [Render thread/INFO]: Preparing spawn area: 0%
+[21:10:21] [Render thread/INFO]: Preparing spawn area: 1%
+[21:10:21] [Render thread/INFO]: Preparing spawn area: 4%
+[21:10:22] [Render thread/INFO]: Preparing spawn area: 5%
+[21:10:22] [Render thread/INFO]: Preparing spawn area: 9%
+[21:10:23] [Render thread/INFO]: Preparing spawn area: 9%
+[21:10:23] [Render thread/INFO]: Preparing spawn area: 12%
+[21:10:24] [Render thread/INFO]: Preparing spawn area: 14%
+[21:10:24] [Render thread/INFO]: Preparing spawn area: 14%
+[21:10:25] [Render thread/INFO]: Preparing spawn area: 19%
+[21:10:25] [Render thread/INFO]: Preparing spawn area: 19%
+[21:10:26] [Render thread/INFO]: Preparing spawn area: 22%
+[21:10:26] [Render thread/INFO]: Preparing spawn area: 22%
+[21:10:27] [Render thread/INFO]: Preparing spawn area: 22%
+[21:10:27] [Render thread/INFO]: Preparing spawn area: 22%
+[21:10:28] [Render thread/INFO]: Preparing spawn area: 22%
+[21:10:28] [Render thread/INFO]: Preparing spawn area: 35%
+[21:10:29] [Render thread/INFO]: Preparing spawn area: 35%
+[21:10:29] [Render thread/INFO]: Preparing spawn area: 35%
+[21:10:30] [Render thread/INFO]: Preparing spawn area: 43%
+[21:10:30] [Render thread/INFO]: Preparing spawn area: 46%
+[21:10:31] [Render thread/INFO]: Preparing spawn area: 46%
+[21:10:31] [Render thread/INFO]: Preparing spawn area: 46%
+[21:10:32] [Render thread/INFO]: Preparing spawn area: 55%
+[21:10:33] [Render thread/INFO]: Preparing spawn area: 56%
+[21:10:33] [Render thread/INFO]: Preparing spawn area: 56%
+[21:10:33] [Render thread/INFO]: Preparing spawn area: 56%
+[21:10:34] [Render thread/INFO]: Preparing spawn area: 65%
+[21:10:34] [Render thread/INFO]: Preparing spawn area: 65%
+[21:10:35] [Render thread/INFO]: Preparing spawn area: 70%
+[21:10:35] [Render thread/INFO]: Preparing spawn area: 72%
+[21:10:36] [Render thread/INFO]: Preparing spawn area: 75%
+[21:10:36] [Render thread/INFO]: Preparing spawn area: 77%
+[21:10:37] [Render thread/INFO]: Preparing spawn area: 80%
+[21:10:38] [Render thread/INFO]: Preparing spawn area: 84%
+[21:10:38] [Render thread/INFO]: Preparing spawn area: 84%
+[21:10:38] [Render thread/INFO]: Preparing spawn area: 86%
+[21:10:39] [Render thread/INFO]: Preparing spawn area: 87%
+[21:10:40] [Render thread/INFO]: Preparing spawn area: 92%
+[21:10:40] [Render thread/INFO]: Preparing spawn area: 92%
+[21:10:40] [Render thread/INFO]: Preparing spawn area: 92%
+[21:10:40] [Server thread/INFO]: Changing view distance to 15, from 10
+[21:10:40] [Render thread/INFO]: Time elapsed: 21495 ms
+[21:10:40] [Server thread/INFO]: SathyaPramodh[local:E:9b7f3011] logged in with entity id 8172 at (-24.5, 67.0, -40.5)
+[21:10:40] [Server thread/INFO]: SathyaPramodh joined the game
+[21:10:41] [Render thread/INFO]: Started 8 worker threads
+[21:10:41] [Server thread/INFO]: Saving and pausing game...
+[21:10:41] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1368]'/minecraft:overworld
+[21:10:41] [Render thread/INFO]: Loaded 0 advancements
+[21:10:41] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1368]'/minecraft:the_nether
+[21:10:41] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1368]'/minecraft:the_end
+[21:10:42] [Stronghold thread/INFO]: [LazyStronghold] Started stronghold gen thread
+[21:10:51] [Stronghold thread/INFO]: [LazyStronghold] Generated 320 strongholds.
+[21:10:57] [Server thread/INFO]: SathyaPramodh has made the advancement [Suit Up]
+[21:10:57] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Suit Up]
+[21:10:57] [Render thread/INFO]: Loaded 25 advancements
+[21:11:08] [Render thread/INFO]: Loaded 37 advancements
+[21:11:13] [Render thread/INFO]: Loaded 37 advancements
+[21:11:13] [Render thread/INFO]: Loaded 46 advancements
+[21:11:38] [Render thread/INFO]: Loaded 61 advancements
+[21:11:44] [Render thread/INFO]: Loaded 62 advancements
+[21:12:10] [Server thread/INFO]: Saving and pausing game...
+[21:12:10] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1368]'/minecraft:overworld
+[21:12:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1368]'/minecraft:the_nether
+[21:12:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1368]'/minecraft:the_end
+[21:12:11] [Server thread/INFO]: SathyaPramodh lost connection: Disconnected
+[21:12:11] [Server thread/INFO]: SathyaPramodh left the game
+[21:12:11] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[21:12:11] [Server thread/INFO]: Stopping server
+[21:12:11] [Server thread/INFO]: Saving players
+[21:12:11] [Server thread/INFO]: Saving worlds
+[21:12:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1368]'/minecraft:overworld
+[21:12:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1368]'/minecraft:the_nether
+[21:12:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1368]'/minecraft:the_end
+[21:12:11] [Render thread/INFO]: Stopping worker threads
+[21:12:11] [Thread-72/ERROR]: Uncaught exception in thread "Thread-72"
+java.util.ConcurrentModificationException: null
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[?:?]
+	at net.minecraft.class_4698.close(class_4698.java:169) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3977.close(class_3977.java:78) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3898.close(class_3898.java:347) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3215.close(class_3215.java:328) ~[client-intermediary.jar:?]
+	at net.minecraft.class_1937.close(class_1937.java:768) ~[client-intermediary.jar:?]
+	at net.minecraft.server.MinecraftServer.md5ab6e0$lambda$getWorldsInjectTwo$0$0(MinecraftServer.java:1718) ~[client-intermediary.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+[21:12:11] [Render thread/INFO]: Resetting a random seed
+[21:12:11] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:12:11] [Render thread/INFO]: Using cached server resources.
+[21:12:11] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:12:11] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:12:11] [Server thread/INFO]: Generating keypair
+[21:12:11] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:12:12] [Render thread/INFO]: Starting Preview at (62.5, 76.0, 52.5)
+[21:12:12] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:12] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:12] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:13] [Render thread/INFO]: Preparing spawn area: 2%
+[21:12:13] [Render thread/INFO]: Leaving world generation
+[21:12:13] [Render thread/INFO]: Stopping server
+[21:12:13] [Render thread/INFO]: Resetting a random seed
+[21:12:13] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:12:13] [Render thread/INFO]: Using cached server resources.
+[21:12:14] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:12:14] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:12:14] [Server thread/INFO]: Generating keypair
+[21:12:14] [Server thread/WARN]: Unable to find spawn biome
+[21:12:16] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:12:16] [Render thread/INFO]: Starting Preview at (5.5, 71.0, -3.5)
+[21:12:16] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:17] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:17] [Render thread/INFO]: Preparing spawn area: 1%
+[21:12:18] [Render thread/INFO]: Preparing spawn area: 1%
+[21:12:18] [Render thread/INFO]: Preparing spawn area: 3%
+[21:12:18] [Render thread/INFO]: Leaving world generation
+[21:12:18] [Render thread/INFO]: Stopping server
+[21:12:18] [Render thread/INFO]: Resetting a random seed
+[21:12:18] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:12:18] [Render thread/INFO]: Using cached server resources.
+[21:12:19] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:12:19] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:12:19] [Server thread/INFO]: Generating keypair
+[21:12:19] [Render thread/INFO]: Preparing spawn area: 3%
+[21:12:19] [Server thread/WARN]: Unable to find spawn biome
+[21:12:19] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:12:20] [Render thread/INFO]: Starting Preview at (0.5, 64.0, 9.5)
+[21:12:20] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:20] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:20] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:21] [Render thread/INFO]: Preparing spawn area: 2%
+[21:12:21] [Render thread/INFO]: Preparing spawn area: 5%
+[21:12:21] [Render thread/INFO]: Leaving world generation
+[21:12:21] [Render thread/INFO]: Stopping server
+[21:12:22] [Render thread/INFO]: Resetting a random seed
+[21:12:22] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:12:22] [Render thread/INFO]: Using cached server resources.
+[21:12:22] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:12:22] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:12:22] [Server thread/INFO]: Generating keypair
+[21:12:23] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:12:24] [Render thread/INFO]: Starting Preview at (151.5, 75.0, -241.5)
+[21:12:24] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:24] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:24] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:25] [Render thread/INFO]: Preparing spawn area: 1%
+[21:12:25] [Render thread/INFO]: Preparing spawn area: 4%
+[21:12:26] [Render thread/INFO]: Leaving world generation
+[21:12:26] [Render thread/INFO]: Stopping server
+[21:12:26] [Render thread/INFO]: Resetting a random seed
+[21:12:26] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:12:26] [Render thread/INFO]: Using cached server resources.
+[21:12:26] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:12:26] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:12:26] [Server thread/INFO]: Generating keypair
+[21:12:28] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:12:29] [Render thread/INFO]: Starting Preview at (-167.5, 67.0, 147.5)
+[21:12:29] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:29] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:29] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:29] [Render thread/INFO]: Preparing spawn area: 0%
+[21:12:30] [Render thread/INFO]: Preparing spawn area: 3%
+[21:12:30] [Render thread/INFO]: Preparing spawn area: 4%
+[21:12:31] [Render thread/INFO]: Preparing spawn area: 5%
+[21:12:31] [Render thread/INFO]: Preparing spawn area: 7%
+[21:12:32] [Render thread/INFO]: Preparing spawn area: 10%
+[21:12:32] [Render thread/INFO]: Preparing spawn area: 11%
+[21:12:33] [Render thread/INFO]: Preparing spawn area: 13%
+[21:12:33] [Render thread/INFO]: Preparing spawn area: 16%
+[21:12:34] [Render thread/INFO]: Preparing spawn area: 16%
+[21:12:35] [Render thread/INFO]: Preparing spawn area: 16%
+[21:12:35] [Render thread/INFO]: Preparing spawn area: 16%
+[21:12:35] [Render thread/INFO]: Preparing spawn area: 22%
+[21:12:36] [Render thread/INFO]: Preparing spawn area: 26%
+[21:12:36] [Render thread/INFO]: Preparing spawn area: 29%
+[21:12:37] [Render thread/INFO]: Preparing spawn area: 30%
+[21:12:37] [Render thread/INFO]: Preparing spawn area: 33%
+[21:12:38] [Render thread/INFO]: Preparing spawn area: 33%
+[21:12:38] [Render thread/INFO]: Preparing spawn area: 33%
+[21:12:39] [Render thread/INFO]: Preparing spawn area: 37%
+[21:12:39] [Render thread/INFO]: Preparing spawn area: 41%
+[21:12:40] [Render thread/INFO]: Preparing spawn area: 42%
+[21:12:40] [Render thread/INFO]: Preparing spawn area: 44%
+[21:12:41] [Render thread/INFO]: Preparing spawn area: 45%
+[21:12:41] [Render thread/INFO]: Preparing spawn area: 47%
+[21:12:42] [Render thread/INFO]: Preparing spawn area: 51%
+[21:12:42] [Render thread/INFO]: Preparing spawn area: 54%
+[21:12:43] [Render thread/INFO]: Preparing spawn area: 56%
+[21:12:43] [Render thread/INFO]: Preparing spawn area: 58%
+[21:12:44] [Render thread/INFO]: Preparing spawn area: 59%
+[21:12:45] [Render thread/INFO]: Preparing spawn area: 62%
+[21:12:45] [Render thread/INFO]: Preparing spawn area: 62%
+[21:12:46] [Render thread/INFO]: Preparing spawn area: 69%
+[21:12:46] [Render thread/INFO]: Preparing spawn area: 70%
+[21:12:48] [Render thread/INFO]: Preparing spawn area: 73%
+[21:12:48] [Render thread/INFO]: Preparing spawn area: 73%
+[21:12:48] [Render thread/INFO]: Preparing spawn area: 73%
+[21:12:48] [Render thread/INFO]: Preparing spawn area: 82%
+[21:12:48] [Render thread/INFO]: Preparing spawn area: 84%
+[21:12:49] [Render thread/INFO]: Preparing spawn area: 86%
+[21:12:49] [Render thread/INFO]: Preparing spawn area: 88%
+[21:12:50] [Render thread/INFO]: Preparing spawn area: 91%
+[21:12:50] [Render thread/INFO]: Preparing spawn area: 91%
+[21:12:51] [Render thread/INFO]: Preparing spawn area: 98%
+[21:12:51] [Render thread/INFO]: Time elapsed: 23231 ms
+[21:12:51] [Server thread/INFO]: Changing view distance to 15, from 10
+[21:12:51] [Server thread/INFO]: SathyaPramodh[local:E:a8b36cde] logged in with entity id 10919 at (-167.5, 67.0, 147.5)
+[21:12:51] [Server thread/INFO]: SathyaPramodh joined the game
+[21:12:51] [Render thread/INFO]: Started 8 worker threads
+[21:12:51] [Server thread/INFO]: Saving and pausing game...
+[21:12:51] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1373]'/minecraft:overworld
+[21:12:52] [Render thread/INFO]: Loaded 0 advancements
+[21:12:52] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1373]'/minecraft:the_nether
+[21:12:52] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1373]'/minecraft:the_end
+[21:12:53] [Stronghold thread/INFO]: [LazyStronghold] Started stronghold gen thread
+[21:13:01] [Stronghold thread/INFO]: [LazyStronghold] Generated 320 strongholds.
+[21:13:09] [Render thread/INFO]: Loaded 16 advancements
+[21:13:31] [Server thread/INFO]: SathyaPramodh has made the advancement [Suit Up]
+[21:13:31] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Suit Up]
+[21:13:31] [Render thread/INFO]: Loaded 40 advancements
+[21:13:41] [Render thread/INFO]: Loaded 52 advancements
+[21:13:45] [Render thread/INFO]: Loaded 52 advancements
+[21:13:45] [Render thread/INFO]: Loaded 61 advancements
+[21:13:51] [Render thread/INFO]: Loaded 67 advancements
+[21:14:00] [Server thread/INFO]: Villager class_1646['Villager'/11851, l='ServerLevel[RandomSpeedrun #1373]', x=119.85, y=75.02, z=257.50] died, message: 'Villager suffocated in a wall'
+[21:14:00] [Render thread/INFO]: Villager class_1646['Villager'/11851, l='ClientLevel', x=119.85, y=75.01, z=257.50] died, message: 'Villager died'
+[21:14:04] [Server thread/INFO]: SathyaPramodh has made the advancement [Diamonds!]
+[21:14:04] [Server thread/INFO]: SathyaPramodh has made the advancement [Isn't It Iron Pick]
+[21:14:04] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Diamonds!]
+[21:14:04] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Isn't It Iron Pick]
+[21:14:04] [Render thread/INFO]: Loaded 83 advancements
+[21:14:20] [Server thread/INFO]: SathyaPramodh has made the advancement [Stone Age]
+[21:14:20] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Stone Age]
+[21:14:20] [Render thread/INFO]: Loaded 97 advancements
+[21:15:08] [Render thread/INFO]: Loaded 109 advancements
+[21:15:38] [Render thread/INFO]: Loaded 111 advancements
+[21:16:15] [Server thread/INFO]: SathyaPramodh has made the advancement [Acquire Hardware]
+[21:16:15] [Server thread/INFO]: SathyaPramodh has made the advancement [Ice Bucket Challenge]
+[21:16:15] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Acquire Hardware]
+[21:16:15] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Ice Bucket Challenge]
+[21:16:15] [Render thread/INFO]: Loaded 141 advancements
+[21:16:35] [Render thread/INFO]: Loaded 142 advancements
+[21:16:46] [Render thread/INFO]: Loaded 159 advancements
+[21:17:04] [Render thread/INFO]: Loaded 161 advancements
+[21:20:45] [Render thread/INFO]: Loaded 168 advancements
+[21:21:01] [Server thread/INFO]: SathyaPramodh has made the advancement [Hot Stuff]
+[21:21:01] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Hot Stuff]
+[21:21:01] [Render thread/INFO]: Loaded 168 advancements
+[21:21:13] [Render thread/INFO]: Stopping worker threads
+[21:21:13] [Render thread/INFO]: Started 8 worker threads
+[21:21:13] [Render thread/INFO]: Stopping worker threads
+[21:21:13] [Render thread/INFO]: Started 8 worker threads
+[21:21:15] [Server thread/INFO]: SathyaPramodh has made the advancement [We Need to Go Deeper]
+[21:21:15] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [We Need to Go Deeper]
+[21:21:15] [Render thread/INFO]: Loaded 186 advancements
+[21:21:15] [Render thread/INFO]: Loaded 186 advancements
+[21:21:38] [Render thread/WARN]: Received passengers for unknown entity
+[21:21:38] [Render thread/WARN]: Received passengers for unknown entity
+[21:21:38] [Render thread/WARN]: Received passengers for unknown entity
+[21:21:47] [Server thread/INFO]: SathyaPramodh has made the advancement [Those Were the Days]
+[21:21:47] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Those Were the Days]
+[21:21:47] [Render thread/INFO]: Loaded 186 advancements
+[21:21:51] [Render thread/INFO]: Loaded 193 advancements
+[21:21:51] [Render thread/WARN]: Received passengers for unknown entity
+[21:22:08] [Render thread/WARN]: Received passengers for unknown entity
+[21:22:09] [Render thread/INFO]: Loaded 195 advancements
+[21:22:10] [Render thread/INFO]: Loaded 211 advancements
+[21:22:10] [Render thread/WARN]: Received passengers for unknown entity
+[21:22:18] [Render thread/WARN]: Received passengers for unknown entity
+[21:22:34] [Render thread/INFO]: Loaded 212 advancements
+[21:23:00] [Render thread/INFO]: Loaded 213 advancements
+[21:23:33] [Server thread/INFO]: SathyaPramodh has made the advancement [Who is Cutting Onions?]
+[21:23:33] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Who is Cutting Onions?]
+[21:23:33] [Render thread/INFO]: Loaded 230 advancements
+[21:23:56] [Server thread/INFO]: SathyaPramodh has made the advancement [War Pigs]
+[21:23:56] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [War Pigs]
+[21:23:56] [Render thread/INFO]: Loaded 230 advancements
+[21:24:00] [Render thread/INFO]: Loaded 235 advancements
+[21:24:30] [Render thread/INFO]: Loaded 245 advancements
+[21:25:21] [Render thread/INFO]: Loaded 246 advancements
+[21:25:36] [Server thread/INFO]: SathyaPramodh has made the advancement [A Terrible Fortress]
+[21:25:36] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [A Terrible Fortress]
+[21:25:36] [Render thread/INFO]: Loaded 248 advancements
+[21:26:15] [Render thread/WARN]: Received passengers for unknown entity
+[21:26:20] [Server thread/INFO]: SathyaPramodh has made the advancement [Monster Hunter]
+[21:26:20] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Monster Hunter]
+[21:26:20] [Render thread/INFO]: Loaded 265 advancements
+[21:26:22] [Render thread/WARN]: Received passengers for unknown entity
+[21:26:30] [Render thread/WARN]: Received passengers for unknown entity
+[21:26:43] [Render thread/INFO]: Loaded 276 advancements
+[21:26:55] [Render thread/WARN]: Received passengers for unknown entity
+[21:26:55] [Render thread/WARN]: Received passengers for unknown entity
+[21:26:55] [Render thread/WARN]: Received passengers for unknown entity
+[21:26:55] [Render thread/WARN]: Received passengers for unknown entity
+[21:26:56] [Render thread/WARN]: Received passengers for unknown entity
+[21:27:37] [Render thread/WARN]: Received passengers for unknown entity
+[21:27:58] [Server thread/INFO]: SathyaPramodh has made the advancement [Into Fire]
+[21:27:58] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Into Fire]
+[21:27:58] [Render thread/INFO]: Loaded 279 advancements
+[21:28:22] [Server thread/INFO]: SathyaPramodh burned to death
+[21:28:22] [Render thread/INFO]: [CHAT] SathyaPramodh burned to death
+[21:28:24] [Render thread/INFO]: Stopping worker threads
+[21:28:24] [Server thread/INFO]: Saving and pausing game...
+[21:28:24] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1373]'/minecraft:overworld
+[21:28:24] [Render thread/INFO]: Started 8 worker threads
+[21:28:24] [Render thread/INFO]: Stopping worker threads
+[21:28:24] [Render thread/INFO]: Started 8 worker threads
+[21:28:24] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1373]'/minecraft:the_nether
+[21:28:24] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1373]'/minecraft:the_end
+[21:28:26] [Server thread/INFO]: Saving and pausing game...
+[21:28:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1373]'/minecraft:overworld
+[21:28:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1373]'/minecraft:the_nether
+[21:28:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1373]'/minecraft:the_end
+[21:28:26] [Server thread/INFO]: SathyaPramodh lost connection: Disconnected
+[21:28:26] [Server thread/INFO]: SathyaPramodh left the game
+[21:28:26] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[21:28:26] [Server thread/INFO]: Stopping server
+[21:28:26] [Server thread/INFO]: Saving players
+[21:28:26] [Server thread/INFO]: Saving worlds
+[21:28:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1373]'/minecraft:overworld
+[21:28:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1373]'/minecraft:the_nether
+[21:28:26] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1373]'/minecraft:the_end
+[21:28:26] [Render thread/INFO]: Stopping worker threads
+[21:28:26] [Render thread/INFO]: Resetting a random seed
+[21:28:26] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:28:26] [Thread-115/ERROR]: Uncaught exception in thread "Thread-115"
+java.util.ConcurrentModificationException: null
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[?:?]
+	at net.minecraft.class_4698.close(class_4698.java:169) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3977.close(class_3977.java:78) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3898.close(class_3898.java:347) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3215.close(class_3215.java:328) ~[client-intermediary.jar:?]
+	at net.minecraft.class_1937.close(class_1937.java:768) ~[client-intermediary.jar:?]
+	at net.minecraft.server.MinecraftServer.md5ab6e0$lambda$getWorldsInjectTwo$0$0(MinecraftServer.java:1718) ~[client-intermediary.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+[21:28:26] [Render thread/INFO]: Using cached server resources.
+[21:28:27] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:28:27] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:28:27] [Server thread/INFO]: Generating keypair
+[21:28:27] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:28:28] [Render thread/INFO]: Starting Preview at (26.5, 63.0, 48.5)
+[21:28:28] [Render thread/INFO]: Preparing spawn area: 0%
+[21:28:28] [Render thread/INFO]: Preparing spawn area: 0%
+[21:28:29] [Render thread/INFO]: Preparing spawn area: 0%
+[21:28:29] [Render thread/INFO]: Preparing spawn area: 3%
+[21:28:30] [Render thread/INFO]: Preparing spawn area: 4%
+[21:28:30] [Render thread/INFO]: Preparing spawn area: 4%
+[21:28:31] [Render thread/INFO]: Preparing spawn area: 4%
+[21:28:31] [Render thread/INFO]: Preparing spawn area: 9%
+[21:28:31] [Render thread/INFO]: Preparing spawn area: 9%
+[21:28:32] [Render thread/INFO]: Preparing spawn area: 16%
+[21:28:33] [Render thread/INFO]: Preparing spawn area: 16%
+[21:28:33] [Render thread/INFO]: Preparing spawn area: 16%
+[21:28:34] [Render thread/INFO]: Preparing spawn area: 23%
+[21:28:34] [Render thread/INFO]: Preparing spawn area: 24%
+[21:28:35] [Render thread/INFO]: Preparing spawn area: 24%
+[21:28:35] [Render thread/INFO]: Preparing spawn area: 31%
+[21:28:35] [Render thread/INFO]: Preparing spawn area: 31%
+[21:28:36] [Render thread/INFO]: Preparing spawn area: 37%
+[21:28:36] [Render thread/INFO]: Preparing spawn area: 39%
+[21:28:37] [Render thread/INFO]: Preparing spawn area: 39%
+[21:28:37] [Render thread/INFO]: Preparing spawn area: 44%
+[21:28:38] [Render thread/INFO]: Preparing spawn area: 44%
+[21:28:39] [Render thread/INFO]: Preparing spawn area: 44%
+[21:28:39] [Render thread/INFO]: Preparing spawn area: 44%
+[21:28:40] [Render thread/INFO]: Preparing spawn area: 44%
+[21:28:41] [Render thread/INFO]: Preparing spawn area: 56%
+[21:28:41] [Render thread/INFO]: Preparing spawn area: 56%
+[21:28:41] [Render thread/INFO]: Preparing spawn area: 56%
+[21:28:42] [Render thread/INFO]: Preparing spawn area: 68%
+[21:28:42] [Render thread/INFO]: Preparing spawn area: 69%
+[21:28:43] [Render thread/INFO]: Preparing spawn area: 71%
+[21:28:43] [Render thread/INFO]: Preparing spawn area: 71%
+[21:28:44] [Render thread/INFO]: Preparing spawn area: 79%
+[21:28:44] [Render thread/INFO]: Preparing spawn area: 79%
+[21:28:45] [Render thread/INFO]: Preparing spawn area: 84%
+[21:28:45] [Render thread/INFO]: Preparing spawn area: 84%
+[21:28:46] [Render thread/INFO]: Preparing spawn area: 89%
+[21:28:47] [Render thread/INFO]: Preparing spawn area: 92%
+[21:28:47] [Render thread/INFO]: Preparing spawn area: 92%
+[21:28:47] [Render thread/INFO]: Time elapsed: 19065 ms
+[21:28:47] [Server thread/INFO]: Changing view distance to 15, from 10
+[21:28:47] [Server thread/INFO]: SathyaPramodh[local:E:a9d3b29b] logged in with entity id 22687 at (26.5, 63.0, 48.5)
+[21:28:47] [Server thread/INFO]: SathyaPramodh joined the game
+[21:28:47] [Render thread/INFO]: Started 8 worker threads
+[21:28:47] [Server thread/INFO]: Saving and pausing game...
+[21:28:47] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1374]'/minecraft:overworld
+[21:28:47] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1374]'/minecraft:the_nether
+[21:28:47] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1374]'/minecraft:the_end
+[21:28:47] [Render thread/INFO]: Loaded 0 advancements
+[21:28:48] [Stronghold thread/INFO]: [LazyStronghold] Started stronghold gen thread
+[21:28:51] [Server thread/INFO]: Saving and pausing game...
+[21:28:51] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1374]'/minecraft:overworld
+[21:28:51] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1374]'/minecraft:the_nether
+[21:28:51] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1374]'/minecraft:the_end
+[21:28:51] [Server thread/INFO]: SathyaPramodh lost connection: Disconnected
+[21:28:51] [Server thread/INFO]: SathyaPramodh left the game
+[21:28:51] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[21:28:52] [Server thread/INFO]: Stopping server
+[21:28:52] [Server thread/INFO]: Saving players
+[21:28:52] [Server thread/INFO]: Saving worlds
+[21:28:52] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1374]'/minecraft:overworld
+[21:28:52] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1374]'/minecraft:the_nether
+[21:28:52] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1374]'/minecraft:the_end
+[21:28:52] [Stronghold thread/INFO]: [LazyStronghold] Stronghold thread stopped early
+[21:28:52] [Render thread/INFO]: Stopping worker threads
+[21:28:52] [Thread-121/ERROR]: Uncaught exception in thread "Thread-121"
+java.util.ConcurrentModificationException: null
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[?:?]
+	at net.minecraft.class_4698.close(class_4698.java:169) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3977.close(class_3977.java:78) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3898.close(class_3898.java:347) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3215.close(class_3215.java:328) ~[client-intermediary.jar:?]
+	at net.minecraft.class_1937.close(class_1937.java:768) ~[client-intermediary.jar:?]
+	at net.minecraft.server.MinecraftServer.md5ab6e0$lambda$getWorldsInjectTwo$0$0(MinecraftServer.java:1718) ~[client-intermediary.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+[21:28:52] [Render thread/INFO]: Resetting a random seed
+[21:28:52] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:28:52] [Render thread/INFO]: Using cached server resources.
+[21:28:52] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:28:52] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:28:52] [Server thread/INFO]: Generating keypair
+[21:28:54] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:28:55] [Render thread/INFO]: Starting Preview at (-220.5, 71.0, 34.5)
+[21:28:55] [Render thread/INFO]: Preparing spawn area: 0%
+[21:28:55] [Render thread/INFO]: Preparing spawn area: 0%
+[21:28:55] [Render thread/INFO]: Preparing spawn area: 0%
+[21:28:55] [Render thread/INFO]: Preparing spawn area: 1%
+[21:28:56] [Render thread/INFO]: Preparing spawn area: 2%
+[21:28:56] [Render thread/INFO]: Leaving world generation
+[21:28:56] [Render thread/INFO]: Stopping server
+[21:28:56] [Render thread/INFO]: Resetting a random seed
+[21:28:56] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:28:56] [Render thread/INFO]: Using cached server resources.
+[21:28:56] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:28:56] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:28:56] [Server thread/INFO]: Generating keypair
+[21:28:57] [Server thread/WARN]: Unable to find spawn biome
+[21:29:01] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:29:02] [Render thread/INFO]: Starting Preview at (104.5, 66.0, -46.5)
+[21:29:02] [Render thread/INFO]: Preparing spawn area: 16%
+[21:29:02] [Render thread/INFO]: Preparing spawn area: 16%
+[21:29:03] [Render thread/INFO]: Preparing spawn area: 17%
+[21:29:03] [Render thread/INFO]: Leaving world generation
+[21:29:03] [Render thread/INFO]: Stopping server
+[21:29:03] [Render thread/INFO]: Resetting a random seed
+[21:29:03] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:29:03] [Render thread/INFO]: Using cached server resources.
+[21:29:03] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:29:03] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:29:03] [Server thread/INFO]: Generating keypair
+[21:29:04] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:29:04] [Render thread/INFO]: Starting Preview at (147.5, 69.0, 136.5)
+[21:29:04] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:04] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:05] [Render thread/INFO]: Preparing spawn area: 1%
+[21:29:05] [Render thread/INFO]: Preparing spawn area: 3%
+[21:29:05] [Render thread/INFO]: Leaving world generation
+[21:29:05] [Render thread/INFO]: Stopping server
+[21:29:05] [Render thread/INFO]: Resetting a random seed
+[21:29:05] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:29:05] [Render thread/INFO]: Using cached server resources.
+[21:29:06] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:29:06] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:29:06] [Server thread/INFO]: Generating keypair
+[21:29:07] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:29:08] [Render thread/INFO]: Starting Preview at (259.5, 69.0, 34.5)
+[21:29:08] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:08] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:08] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:08] [Render thread/INFO]: Preparing spawn area: 2%
+[21:29:09] [Render thread/INFO]: Leaving world generation
+[21:29:09] [Render thread/INFO]: Stopping server
+[21:29:09] [Render thread/INFO]: Resetting a random seed
+[21:29:09] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:29:09] [Render thread/INFO]: Using cached server resources.
+[21:29:09] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:29:09] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:29:09] [Server thread/INFO]: Generating keypair
+[21:29:10] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:29:10] [Render thread/INFO]: Starting Preview at (-66.5, 64.0, -24.5)
+[21:29:10] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:10] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:11] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:11] [Render thread/INFO]: Preparing spawn area: 2%
+[21:29:12] [Render thread/INFO]: Leaving world generation
+[21:29:12] [Render thread/INFO]: Stopping server
+[21:29:12] [Render thread/INFO]: Preparing spawn area: 4%
+[21:29:12] [Render thread/INFO]: Resetting a random seed
+[21:29:12] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:29:12] [Render thread/INFO]: Using cached server resources.
+[21:29:12] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:29:12] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:29:12] [Server thread/INFO]: Generating keypair
+[21:29:13] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:29:14] [Render thread/INFO]: Starting Preview at (91.5, 64.0, 209.5)
+[21:29:14] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:14] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:14] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:14] [Render thread/INFO]: Preparing spawn area: 1%
+[21:29:15] [Render thread/INFO]: Preparing spawn area: 4%
+[21:29:15] [Render thread/INFO]: Preparing spawn area: 6%
+[21:29:16] [Render thread/INFO]: Leaving world generation
+[21:29:16] [Render thread/INFO]: Stopping server
+[21:29:16] [Render thread/INFO]: Resetting a random seed
+[21:29:16] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:29:16] [Render thread/INFO]: Using cached server resources.
+[21:29:16] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:29:16] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:29:16] [Server thread/INFO]: Generating keypair
+[21:29:17] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:29:18] [Render thread/INFO]: Starting Preview at (174.5, 65.0, 35.5)
+[21:29:18] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:18] [Render thread/INFO]: Preparing spawn area: 0%
+[21:29:18] [Render thread/INFO]: Preparing spawn area: 1%
+[21:29:19] [Render thread/INFO]: Preparing spawn area: 3%
+[21:29:19] [Render thread/INFO]: Preparing spawn area: 4%
+[21:29:20] [Render thread/INFO]: Preparing spawn area: 6%
+[21:29:20] [Render thread/INFO]: Preparing spawn area: 10%
+[21:29:21] [Render thread/INFO]: Preparing spawn area: 11%
+[21:29:21] [Render thread/INFO]: Preparing spawn area: 13%
+[21:29:22] [Render thread/INFO]: Preparing spawn area: 17%
+[21:29:22] [Render thread/INFO]: Preparing spawn area: 18%
+[21:29:23] [Render thread/INFO]: Preparing spawn area: 21%
+[21:29:23] [Render thread/INFO]: Preparing spawn area: 24%
+[21:29:24] [Render thread/INFO]: Preparing spawn area: 25%
+[21:29:24] [Render thread/INFO]: Preparing spawn area: 28%
+[21:29:25] [Render thread/INFO]: Preparing spawn area: 32%
+[21:29:25] [Render thread/INFO]: Preparing spawn area: 34%
+[21:29:26] [Render thread/INFO]: Preparing spawn area: 34%
+[21:29:26] [Render thread/INFO]: Preparing spawn area: 34%
+[21:29:27] [Render thread/INFO]: Preparing spawn area: 34%
+[21:29:27] [Render thread/INFO]: Preparing spawn area: 43%
+[21:29:28] [Render thread/INFO]: Preparing spawn area: 45%
+[21:29:28] [Render thread/INFO]: Preparing spawn area: 45%
+[21:29:30] [Render thread/INFO]: Preparing spawn area: 45%
+[21:29:30] [Render thread/INFO]: Preparing spawn area: 45%
+[21:29:30] [Render thread/INFO]: Preparing spawn area: 55%
+[21:29:30] [Render thread/INFO]: Preparing spawn area: 56%
+[21:29:31] [Render thread/INFO]: Preparing spawn area: 57%
+[21:29:31] [Render thread/INFO]: Preparing spawn area: 58%
+[21:29:33] [Render thread/INFO]: Preparing spawn area: 58%
+[21:29:33] [Render thread/INFO]: Preparing spawn area: 58%
+[21:29:33] [Render thread/INFO]: Preparing spawn area: 58%
+[21:29:33] [Render thread/INFO]: Preparing spawn area: 69%
+[21:29:34] [Render thread/INFO]: Preparing spawn area: 71%
+[21:29:34] [Render thread/INFO]: Preparing spawn area: 71%
+[21:29:35] [Render thread/INFO]: Preparing spawn area: 76%
+[21:29:37] [Render thread/INFO]: Preparing spawn area: 78%
+[21:29:37] [Render thread/INFO]: Preparing spawn area: 78%
+[21:29:37] [Render thread/INFO]: Preparing spawn area: 78%
+[21:29:37] [Render thread/INFO]: Preparing spawn area: 86%
+[21:29:37] [Render thread/INFO]: Preparing spawn area: 88%
+[21:29:38] [Render thread/INFO]: Preparing spawn area: 89%
+[21:29:39] [Render thread/INFO]: Preparing spawn area: 90%
+[21:29:39] [Render thread/INFO]: Preparing spawn area: 96%
+[21:29:39] [Render thread/INFO]: Preparing spawn area: 98%
+[21:29:39] [Server thread/INFO]: Changing view distance to 15, from 10
+[21:29:39] [Render thread/INFO]: Time elapsed: 22055 ms
+[21:29:39] [Server thread/INFO]: SathyaPramodh[local:E:e91a7171] logged in with entity id 23834 at (174.5, 65.0, 35.5)
+[21:29:39] [Server thread/INFO]: SathyaPramodh joined the game
+[21:29:40] [Render thread/INFO]: Started 8 worker threads
+[21:29:40] [Server thread/INFO]: Saving and pausing game...
+[21:29:40] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:overworld
+[21:29:40] [Render thread/INFO]: Loaded 0 advancements
+[21:29:40] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:the_nether
+[21:29:40] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:the_end
+[21:29:42] [Stronghold thread/INFO]: [LazyStronghold] Started stronghold gen thread
+[21:29:49] [Stronghold thread/INFO]: [LazyStronghold] Generated 320 strongholds.
+[21:29:58] [Render thread/INFO]: Loaded 3 advancements
+[21:30:12] [Render thread/INFO]: Loaded 6 advancements
+[21:30:21] [Render thread/INFO]: Loaded 18 advancements
+[21:30:25] [Render thread/INFO]: Loaded 21 advancements
+[21:30:26] [Render thread/INFO]: Loaded 30 advancements
+[21:30:30] [Render thread/INFO]: Loaded 32 advancements
+[21:30:34] [Render thread/INFO]: Loaded 33 advancements
+[21:30:42] [Server thread/INFO]: SathyaPramodh has made the advancement [Suit Up]
+[21:30:42] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Suit Up]
+[21:30:42] [Render thread/INFO]: Loaded 51 advancements
+[21:30:54] [Render thread/INFO]: Loaded 53 advancements
+[21:31:00] [Server thread/INFO]: SathyaPramodh has made the advancement [Acquire Hardware]
+[21:31:00] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Acquire Hardware]
+[21:31:00] [Render thread/INFO]: Loaded 80 advancements
+[21:31:14] [Server thread/INFO]: SathyaPramodh has made the advancement [Isn't It Iron Pick]
+[21:31:14] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Isn't It Iron Pick]
+[21:31:14] [Render thread/INFO]: Loaded 82 advancements
+[21:31:16] [Server thread/INFO]: SathyaPramodh has made the advancement [Stone Age]
+[21:31:16] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Stone Age]
+[21:31:16] [Render thread/INFO]: Loaded 96 advancements
+[21:31:54] [Server thread/INFO]: SathyaPramodh has made the advancement [Ice Bucket Challenge]
+[21:31:54] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Ice Bucket Challenge]
+[21:31:54] [Render thread/INFO]: Loaded 101 advancements
+[21:32:44] [Render thread/INFO]: Loaded 107 advancements
+[21:32:50] [Render thread/INFO]: Loaded 119 advancements
+[21:33:14] [Render thread/INFO]: Stopping worker threads
+[21:33:14] [Render thread/INFO]: Started 8 worker threads
+[21:33:14] [Render thread/INFO]: Stopping worker threads
+[21:33:14] [Render thread/INFO]: Started 8 worker threads
+[21:33:16] [Server thread/INFO]: SathyaPramodh has made the advancement [We Need to Go Deeper]
+[21:33:16] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [We Need to Go Deeper]
+[21:33:16] [Render thread/INFO]: Loaded 137 advancements
+[21:33:16] [Render thread/INFO]: Loaded 137 advancements
+[21:33:17] [Render thread/WARN]: Received passengers for unknown entity
+[21:33:29] [Server thread/INFO]: SathyaPramodh has made the advancement [Not Today, Thank You]
+[21:33:29] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Not Today, Thank You]
+[21:33:29] [Render thread/INFO]: Loaded 137 advancements
+[21:34:02] [Render thread/INFO]: Loaded 147 advancements
+[21:34:03] [Server thread/INFO]: SathyaPramodh has made the advancement [A Terrible Fortress]
+[21:34:03] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [A Terrible Fortress]
+[21:34:03] [Render thread/INFO]: Loaded 149 advancements
+[21:34:18] [Render thread/INFO]: Loaded 151 advancements
+[21:34:25] [Server thread/INFO]: SathyaPramodh has made the advancement [Monster Hunter]
+[21:34:25] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Monster Hunter]
+[21:34:25] [Render thread/INFO]: Loaded 168 advancements
+[21:34:29] [Render thread/INFO]: Loaded 168 advancements
+[21:34:52] [Server thread/INFO]: SathyaPramodh has made the advancement [Into Fire]
+[21:34:52] [Render thread/INFO]: [CHAT] SathyaPramodh has made the advancement [Into Fire]
+[21:34:52] [Render thread/INFO]: Loaded 171 advancements
+[21:36:07] [Server thread/INFO]: SathyaPramodh was burnt to a crisp whilst fighting Blaze
+[21:36:07] [Render thread/INFO]: [CHAT] SathyaPramodh was burnt to a crisp whilst fighting Blaze
+[21:36:09] [Render thread/INFO]: Stopping worker threads
+[21:36:09] [Server thread/INFO]: Saving and pausing game...
+[21:36:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:overworld
+[21:36:09] [Render thread/INFO]: Started 8 worker threads
+[21:36:09] [Render thread/INFO]: Stopping worker threads
+[21:36:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:the_nether
+[21:36:09] [Render thread/INFO]: Started 8 worker threads
+[21:36:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:the_end
+[21:36:09] [Server thread/INFO]: Saving and pausing game...
+[21:36:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:overworld
+[21:36:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:the_nether
+[21:36:09] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:the_end
+[21:36:11] [Server thread/INFO]: Saving and pausing game...
+[21:36:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:overworld
+[21:36:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:the_nether
+[21:36:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:the_end
+[21:36:11] [Server thread/INFO]: SathyaPramodh lost connection: Disconnected
+[21:36:11] [Server thread/INFO]: SathyaPramodh left the game
+[21:36:11] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[21:36:11] [Server thread/INFO]: Stopping server
+[21:36:11] [Server thread/INFO]: Saving players
+[21:36:11] [Server thread/INFO]: Saving worlds
+[21:36:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:overworld
+[21:36:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:the_nether
+[21:36:11] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1381]'/minecraft:the_end
+[21:36:11] [Render thread/INFO]: Stopping worker threads
+[21:36:11] [Render thread/INFO]: Resetting a random seed
+[21:36:11] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:36:11] [Thread-167/ERROR]: Uncaught exception in thread "Thread-167"
+java.util.ConcurrentModificationException: null
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[?:?]
+	at net.minecraft.class_4698.close(class_4698.java:169) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3977.close(class_3977.java:78) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3898.close(class_3898.java:347) ~[client-intermediary.jar:?]
+	at net.minecraft.class_3215.close(class_3215.java:328) ~[client-intermediary.jar:?]
+	at net.minecraft.class_1937.close(class_1937.java:768) ~[client-intermediary.jar:?]
+	at net.minecraft.server.MinecraftServer.md5ab6e0$lambda$getWorldsInjectTwo$0$0(MinecraftServer.java:1718) ~[client-intermediary.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+[21:36:11] [Render thread/INFO]: Using cached server resources.
+[21:36:12] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:36:12] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:36:12] [Server thread/INFO]: Generating keypair
+[21:36:12] [Server thread/WARN]: Unable to find spawn biome
+[21:36:13] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:36:13] [Render thread/INFO]: Starting Preview at (9.5, 66.0, -3.5)
+[21:36:13] [Render thread/INFO]: Preparing spawn area: 0%
+[21:36:14] [Render thread/INFO]: Preparing spawn area: 0%
+[21:36:14] [Render thread/INFO]: Preparing spawn area: 1%
+[21:36:15] [Render thread/INFO]: Preparing spawn area: 1%
+[21:36:15] [Render thread/INFO]: Preparing spawn area: 3%
+[21:36:15] [Render thread/INFO]: Preparing spawn area: 4%
+[21:36:16] [Render thread/INFO]: Preparing spawn area: 6%
+[21:36:16] [Render thread/INFO]: Leaving world generation
+[21:36:16] [Render thread/INFO]: Stopping server
+[21:36:16] [Render thread/INFO]: Preparing spawn area: 8%
+[21:36:17] [Render thread/INFO]: Resetting a random seed
+[21:36:17] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:36:17] [Render thread/INFO]: Using cached server resources.
+[21:36:17] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:36:17] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:36:17] [Server thread/INFO]: Generating keypair
+[21:36:17] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:36:17] [Render thread/INFO]: Starting Preview at (-252.5, 64.0, -221.5)
+[21:36:18] [Render thread/INFO]: Preparing spawn area: 0%
+[21:36:18] [Render thread/INFO]: Preparing spawn area: 0%
+[21:36:18] [Render thread/INFO]: Preparing spawn area: 0%
+[21:36:19] [Render thread/INFO]: Preparing spawn area: 2%
+[21:36:19] [Render thread/INFO]: Preparing spawn area: 4%
+[21:36:20] [Render thread/INFO]: Leaving world generation
+[21:36:20] [Render thread/INFO]: Stopping server
+[21:36:20] [Render thread/INFO]: Preparing spawn area: 4%
+[21:36:20] [Render thread/INFO]: Resetting a random seed
+[21:36:20] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:36:20] [Render thread/INFO]: Using cached server resources.
+[21:36:20] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:36:20] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:36:20] [Server thread/INFO]: Generating keypair
+[21:36:22] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:36:22] [Render thread/INFO]: Starting Preview at (-7.5, 71.0, 149.5)
+[21:36:22] [Render thread/INFO]: Preparing spawn area: 0%
+[21:36:22] [Render thread/INFO]: Preparing spawn area: 0%
+[21:36:23] [Render thread/INFO]: Preparing spawn area: 1%
+[21:36:23] [Render thread/INFO]: Preparing spawn area: 3%
+[21:36:24] [Render thread/INFO]: Preparing spawn area: 4%
+[21:36:24] [Render thread/INFO]: Preparing spawn area: 7%
+[21:36:25] [Render thread/INFO]: Preparing spawn area: 9%
+[21:36:25] [Render thread/INFO]: Leaving world generation
+[21:36:25] [Render thread/INFO]: Stopping server
+[21:36:25] [Render thread/INFO]: Preparing spawn area: 13%
+[21:36:25] [Render thread/INFO]: Resetting a random seed
+[21:36:25] [Render thread/INFO]: [STDOUT]: done waiting for save lock
+[21:36:25] [Render thread/INFO]: Using cached server resources.
+[21:36:26] [Render thread/INFO]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', name='PROD'
+[21:36:26] [Server thread/INFO]: Starting integrated minecraft server version 1.16.1
+[21:36:26] [Server thread/INFO]: Generating keypair
+[21:36:26] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[21:36:26] [Render thread/INFO]: Starting Preview at (257.5, 68.0, -251.5)
+[21:36:27] [Render thread/INFO]: Preparing spawn area: 0%
+[21:36:27] [Render thread/INFO]: Preparing spawn area: 0%
+[21:36:27] [Render thread/INFO]: Preparing spawn area: 0%
+[21:36:28] [Render thread/INFO]: Preparing spawn area: 0%
+[21:36:28] [Render thread/INFO]: Preparing spawn area: 1%
+[21:36:29] [Render thread/INFO]: Preparing spawn area: 5%
+[21:36:29] [Render thread/INFO]: Preparing spawn area: 6%
+[21:36:30] [Render thread/INFO]: Preparing spawn area: 6%
+[21:36:30] [Render thread/INFO]: Preparing spawn area: 6%
+[21:36:31] [Render thread/INFO]: Preparing spawn area: 11%
+[21:36:31] [Render thread/INFO]: Preparing spawn area: 13%
+[21:36:32] [Render thread/INFO]: Preparing spawn area: 16%
+[21:36:32] [Render thread/INFO]: Preparing spawn area: 18%
+[21:36:33] [Render thread/INFO]: Preparing spawn area: 20%
+[21:36:33] [Render thread/INFO]: Preparing spawn area: 23%
+[21:36:34] [Render thread/INFO]: Preparing spawn area: 23%
+[21:36:34] [Render thread/INFO]: Preparing spawn area: 23%
+[21:36:35] [Render thread/INFO]: Preparing spawn area: 26%
+[21:36:35] [Render thread/INFO]: Preparing spawn area: 26%
+[21:36:36] [Render thread/INFO]: Preparing spawn area: 26%
+[21:36:36] [Render thread/INFO]: Preparing spawn area: 34%
+[21:36:37] [Render thread/INFO]: Preparing spawn area: 35%
+[21:36:38] [Render thread/INFO]: Preparing spawn area: 35%
+[21:36:38] [Render thread/INFO]: Preparing spawn area: 35%
+[21:36:38] [Render thread/INFO]: Preparing spawn area: 44%
+[21:36:39] [Render thread/INFO]: Preparing spawn area: 45%
+[21:36:41] [Render thread/INFO]: Preparing spawn area: 48%
+[21:36:41] [Render thread/INFO]: Preparing spawn area: 48%
+[21:36:41] [Render thread/INFO]: Preparing spawn area: 48%
+[21:36:41] [Render thread/INFO]: Preparing spawn area: 48%
+[21:36:41] [Render thread/INFO]: Preparing spawn area: 57%
+[21:36:43] [Render thread/INFO]: Preparing spawn area: 60%
+[21:36:43] [Render thread/INFO]: Preparing spawn area: 60%
+[21:36:43] [Render thread/INFO]: Preparing spawn area: 60%
+[21:36:43] [Render thread/INFO]: Preparing spawn area: 60%
+[21:36:44] [Render thread/INFO]: Preparing spawn area: 70%
+[21:36:44] [Render thread/INFO]: Preparing spawn area: 71%
+[21:36:45] [Render thread/INFO]: Preparing spawn area: 72%
+[21:36:45] [Render thread/INFO]: Preparing spawn area: 77%
+[21:36:46] [Render thread/INFO]: Preparing spawn area: 79%
+[21:36:46] [Render thread/INFO]: Preparing spawn area: 79%
+[21:36:47] [Render thread/INFO]: Preparing spawn area: 84%
+[21:36:47] [Render thread/INFO]: Preparing spawn area: 86%
+[21:36:48] [Render thread/INFO]: Preparing spawn area: 88%
+[21:36:48] [Render thread/INFO]: Preparing spawn area: 88%
+[21:36:49] [Render thread/INFO]: Preparing spawn area: 95%
+[21:36:49] [Render thread/INFO]: Preparing spawn area: 95%
+[21:36:49] [Server thread/INFO]: Changing view distance to 15, from 10
+[21:36:50] [Render thread/INFO]: Time elapsed: 23333 ms
+[21:36:50] [Server thread/INFO]: SathyaPramodh[local:E:4b358368] logged in with entity id 29474 at (257.5, 68.0, -251.5)
+[21:36:50] [Server thread/INFO]: SathyaPramodh joined the game
+[21:36:50] [Render thread/INFO]: Started 8 worker threads
+[21:36:50] [Server thread/INFO]: Saving and pausing game...
+[21:36:50] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1385]'/minecraft:overworld
+[21:36:50] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1385]'/minecraft:the_nether
+[21:36:50] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1385]'/minecraft:the_end
+[21:36:50] [Render thread/INFO]: Loaded 0 advancements
+[21:36:51] [Stronghold thread/INFO]: [LazyStronghold] Started stronghold gen thread
+[21:36:56] [Render thread/INFO]: Loaded 6 advancements
+[21:36:59] [Stronghold thread/INFO]: [LazyStronghold] Generated 320 strongholds.
+[21:37:12] [Server thread/INFO]: Saving and pausing game...
+[21:37:12] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1385]'/minecraft:overworld
+[21:37:13] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1385]'/minecraft:the_nether
+[21:37:13] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1385]'/minecraft:the_end
+[21:37:13] [Server thread/INFO]: SathyaPramodh lost connection: Disconnected
+[21:37:13] [Server thread/INFO]: SathyaPramodh left the game
+[21:37:13] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[21:37:13] [Server thread/INFO]: Stopping server
+[21:37:13] [Server thread/INFO]: Saving players
+[21:37:13] [Server thread/INFO]: Saving worlds
+[21:37:13] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1385]'/minecraft:overworld
+[21:37:14] [Server thread/INFO]: ThreadedAnvilChunkStorage (RandomSpeedrun #1385): All chunks are saved
+[21:37:14] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1385]'/minecraft:the_nether
+[21:37:14] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[21:37:14] [Server thread/INFO]: Saving chunks for level 'ServerLevel[RandomSpeedrun #1385]'/minecraft:the_end
+[21:37:14] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[21:37:14] [Server thread/INFO]: ThreadedAnvilChunkStorage (RandomSpeedrun #1385): All chunks are saved
+[21:37:14] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[21:37:14] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[21:37:14] [Render thread/INFO]: Stopping worker threads
+[21:37:15] [Render thread/INFO]: Stopping!
