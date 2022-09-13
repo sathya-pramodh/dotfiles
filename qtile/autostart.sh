@@ -5,5 +5,6 @@ picom -f -b
 xfce4-power-manager &
 nitrogen --restore &
 pnmixer &
+pulsemeeter daemon &
 nm-applet &
 discord --start-minimized &
