@@ -1,1 +1,0 @@
-execute if score hoglins settings matches 1 run function b:components/bastion/shared/hoglin

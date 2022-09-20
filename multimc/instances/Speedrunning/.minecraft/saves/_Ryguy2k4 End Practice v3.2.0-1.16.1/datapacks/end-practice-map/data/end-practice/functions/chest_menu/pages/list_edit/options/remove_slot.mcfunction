@@ -1,2 +1,0 @@
-execute if score page ChestMenu matches 3 run function end-practice:chest_menu/pages/list_edit/options/remove_slot_auto
-execute if score page ChestMenu matches 4 run function end-practice:chest_menu/pages/list_edit/options/remove_slot_manual

@@ -93,7 +93,7 @@ focus = "Ctrl-Shift-F"
 reset = "Ctrl-Shift-R"
 
 # Pressing this will reset the selected instance.
-wall_reset = "Ctrl-Shift"
+wall_reset = ""
 
 # Pressing this will play the selected instance and reset all other instances.
 wall_reset_others = "Shift"
@@ -124,11 +124,11 @@ unstretch_height = 1080
 # Whether or not to enable mouse support on the wall. Enabling this will allow
 # you to click on instances to perform various actions instead of having to use
 # the number keys. Note that enabling this does not disable the number keys.
-use_mouse = false
+use_mouse = true
 
 # If enabled, resetting from within an instance will switch to the first locked
 # instance (if any) instead of going back to the wall.
-goto_locked = false
+goto_locked = true
 
 # More advanced wall settings, mainly aimed towards increasing performance.
 [advanced_wall]

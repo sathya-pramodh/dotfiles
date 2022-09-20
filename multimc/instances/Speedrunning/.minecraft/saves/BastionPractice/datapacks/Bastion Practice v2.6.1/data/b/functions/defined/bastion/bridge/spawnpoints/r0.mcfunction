@@ -1,9 +1,0 @@
-summon area_effect_cloud ~-26 ~35 ~10 {Rotation: [-90.0f, 0.0f], Tags: ["chalice", "spawnpoint"]}
-summon area_effect_cloud ~-21 ~26 ~15 {Rotation: [-90.0f, 0.0f], Tags: ["lower_bridge", "spawnpoint"]}
-summon area_effect_cloud ~20 ~26 ~14 {Rotation: [90.0f, 0.0f], Tags: ["lower_back", "spawnpoint"]}
-summon area_effect_cloud ~19 ~35 ~19 {Rotation: [90.0f, 0.0f], Tags: ["back", "spawnpoint"]}
-summon area_effect_cloud ~16 ~43 ~3 {Rotation: [180.0f, 0.0f], Tags: ["left_rampart", "spawnpoint"]}
-summon area_effect_cloud ~16 ~42 ~29 {Rotation: [0.0f, 0.0f], Tags: ["right_rampart", "spawnpoint"]}
-summon area_effect_cloud ~16 ~52 ~1 {Rotation: [0.0f, 0.0f], Tags: ["top_left", "spawnpoint"]}
-summon area_effect_cloud ~15 ~52 ~30 {Rotation: [180.0f, 0.0f], Tags: ["top_right", "spawnpoint"]}
-summon area_effect_cloud ~16 ~1 ~-11 {Rotation: [45.0f, 0.0f], Tags: ["left_wall", "spawnpoint"]}

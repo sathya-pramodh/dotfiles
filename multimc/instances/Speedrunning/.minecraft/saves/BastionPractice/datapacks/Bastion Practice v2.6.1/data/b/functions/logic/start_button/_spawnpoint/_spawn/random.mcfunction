@@ -1,2 +1,0 @@
-execute if score spawnpoint_random settings matches -1 run function b:logic/start_button/_spawnpoint/random_aec
-execute if score spawnpoint_random settings matches 0 run function b:logic/start_button/_spawnpoint/_spawn/_random/desired

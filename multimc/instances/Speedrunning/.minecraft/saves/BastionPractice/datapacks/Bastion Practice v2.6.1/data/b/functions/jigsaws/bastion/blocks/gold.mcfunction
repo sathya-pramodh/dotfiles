@@ -1,1 +1,0 @@
-function b:components/bastion/shared/gold_block
