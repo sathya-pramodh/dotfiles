@@ -50,6 +50,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'vimwiki/vimwiki'
+Plug 'wakatime/vim-wakatime'
 Plug 'chriskempson/base16-vim'
 call plug#end()
 let g:system_copy#copy_command = 'xclip -sel clipboard'
