@@ -228,6 +228,7 @@ let g:NERDTreeGitStatusShowClean = 1 " default: 0
 let g:NERDTreeGitStatusConcealBrackets = 1 " default: 0
 
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let NERDTreeCustomOpenArgs={'file':{'where': 't'}}
 
 
 "split navigations
@@ -303,6 +304,9 @@ inoremap <silent><expr> <TAB>
 \ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
 \ CheckBackSpace() ? "\<TAB>" :
 \ coc#refresh()
+
+autocmd BufWritePre *.py :silent call CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 function! CheckBackSpace() abort
 let col = col('.') - 1
