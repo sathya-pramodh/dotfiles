@@ -7,10 +7,12 @@ This is my personal dotfiles repository.
 - dwmblocks
 - neofetch(ASCII art of the Arch Linux logo)
 - neovim
+- lunarvim
 - picom
 - qtile
 - rofi
 - resetti
 - zsh
+- powerlevel10k
 
 # Code isn't documented very much because it's tailored personally for my workflow :)
