@@ -1,9 +1,9 @@
 export EDITOR=/bin/nvim
-export PATH=$PATH:/home/pramodhsathya/.local/bin:/home/pramodhsathya/.local/lib/
+export PATH=$PATH:/home/pramodhsathya/.local/bin:/home/pramodhsathya/.local/lib/:/home/pramodhsathya/.cargo/bin
 export PROJECT=$HOME/Desktop/Project/
 export DOTFILES="$HOME/dotfiles/dotfiles"
 export WALLPAPERS="$HOME/Downloads/livewall/"
-alias edit=lvim
+alias edit=nvim
 alias q=exit
 alias c=clear
 alias gpo="git push origin"
