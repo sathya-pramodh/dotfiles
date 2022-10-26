@@ -19,3 +19,4 @@ alias rebuild="cd $DOTFILES/dwm-flexipatch && sudo make uninstall && sudo make c
 alias alacrittyconfig="nvim ~/.config/alacritty/alacritty.yml"
 . "$HOME/.cargo/env"
 alias prime-run="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
+alias python3="python3.11"
