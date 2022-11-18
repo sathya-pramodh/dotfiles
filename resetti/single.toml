@@ -7,7 +7,7 @@
 # - standard    Traditional single/multi-instance resetting for random seeds.
 # - wall        Wall-style resetting for random seeds.
 # - setseed     Set-seed resetter for good spawns, like spawn-juicer.
-type = "wall"
+type = "standard"
 
 # Whether or not to count the amount of resets performed.
 count_resets = false
@@ -27,10 +27,10 @@ mode = "double"
 # events occur. Anything left blank will be ignored.
 [hooks]
 # The command/script to run when a reset from the wall occurs.
-wall_reset = "paplay /home/pramodhsathya/Downloads/setups/media_reset.wav"
+wall_reset = ""
 
 # The command/script to run when a reset occurs.
-reset = "paplay /home/pramodhsathya/Downloads/setups/media_reset.wav"
+reset = ""
 
 # The command/script to run when an instance is locked on the wall.
 lock = ""
@@ -40,10 +40,10 @@ unlock = ""
 
 [obs]
 # Whether or not to enable OBS websocket support. This is *required* for wall and setseed.
-enabled = true
+enabled = false
 
 # The port to connect to OBS websocket on.
-port = 4444
+port = 4440
 
 # The password to use when connecting. This can be left blank if you have
 # authentication disabled in OBS websocket.
@@ -90,7 +90,7 @@ focus = "Ctrl-Shift-F"
 
 # Pressing this will reset the current instance.
 # If you are on the wall, pressing this will reset all instances.
-reset = "Ctrl-Shift-R"
+reset = "Z"
 
 # Pressing this will reset the selected instance.
 wall_reset = ""
@@ -128,7 +128,7 @@ use_mouse = false
 
 # If enabled, resetting from within an instance will switch to the first locked
 # instance (if any) instead of going back to the wall.
-goto_locked = true
+goto_locked = false
 
 # More advanced wall settings, mainly aimed towards increasing performance.
 [advanced_wall]
