@@ -1,9 +1,11 @@
 function Color(color)
-	color = color or "nord"
-	vim.cmd.colorscheme(color)
+    if not vim.g.vscode then
+        color = color or "nord"
+        vim.cmd.colorscheme(color)
+    end
 
-	vim.api.nvim_set_hl(0, "Normal",{bg = "none"})
-	vim.api.nvim_set_hl(0, "NormalFloat",{bg = "none"})
+    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
 Color()

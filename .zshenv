@@ -1,5 +1,5 @@
 export EDITOR=/bin/nvim
-export PATH=$PATH:/home/pramodhsathya/.local/bin:/home/pramodhsathya/.local/lib/:/home/pramodhsathya/.cargo/bin
+export PATH=$PATH:/home/pramodhsathya/.local/bin:/home/pramodhsathya/.local/lib/:/home/pramodhsathya/.cargo/bin:/home/pramodhsathya/go/bin/
 export PROJECT=$HOME/Desktop/Project/
 export DOTFILES="$HOME/dotfiles/dotfiles"
 export WALLPAPERS="$HOME/Downloads/livewall/"
@@ -19,4 +19,4 @@ alias rebuild="cd $DOTFILES/dwm-flexipatch && sudo make uninstall && sudo make c
 alias alacrittyconfig="nvim ~/.config/alacritty/alacritty.yml"
 . "$HOME/.cargo/env"
 alias prime-run="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
-alias python3="python3.11"
+alias cvim="nvim -S Session.vim"

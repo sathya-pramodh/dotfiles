@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -184,6 +189,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["tabnine-nvim"] = {
+    loaded = true,
+    path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/tabnine-nvim",
+    url = "https://github.com/codota/tabnine-nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
