@@ -20,3 +20,10 @@ alias alacrittyconfig="nvim ~/.config/alacritty/alacritty.yml"
 . "$HOME/.cargo/env"
 alias prime-run="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 alias cvim="nvim -S Session.vim"
+alias mux='pgrep -vx tmux > /dev/null && \
+        tmux new -d -s delete-me && \
+        tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && \
+        tmux kill-session -t delete-me && \
+        tmux attach || tmux attach'
+CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib/:$CUDNN_PATH/lib

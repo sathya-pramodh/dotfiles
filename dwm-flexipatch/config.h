@@ -455,7 +455,8 @@ static Sp scratchpads[] = {
  */
 static char *tagicons[][NUMTAGS] = {
     [DEFAULT_TAGS] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"},
-    //[DEFAULT_TAGS]        = {  "","辶","", "爵","","","","ﭮ", ""},
+    //[DEFAULT_TAGS]        = {  "","辶","",
+    //"爵","","","","ﭮ", ""},
     [ALTERNATIVE_TAGS] = {"1", "2", "3", "4", "5", "6", "7", "8", "9"},
     [ALT_TAGS_DECORATION] = {"<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>",
                              "<8>", "<9>"},
@@ -505,15 +506,18 @@ static const Rule rules[] = {
      *	WM_NAME(STRING) = title
      */
     /* class      instance    title       tags mask     isfloating   monitor */
-    RULE(.wintype = WTYPE "DIALOG", .isfloating = 1)
-        RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
-            RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
-                RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
-                    RULE(.class = "ninjabrainbot-Main", .isfloating = 1)
-                        RULE(.class = "gnome-calculator", .isfloating = 1)
+    RULE(.wintype = WTYPE "DIALOG",
+         .isfloating = 1) RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
+        RULE(.wintype = WTYPE "TOOLBAR",
+             .isfloating = 1) RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
+            RULE(.class = "java-lang-Thread", .isfloating = 1)
+                RULE(.class = "gnome-calculator", .isfloating = 1)
+                    RULE(.title = "Android Emulator - Pixel_4_API_30:5554",
+                         .isfloating = 1)
 #if SCRATCHPADS_PATCH
-                            RULE(.instance = "spterm", .tags = SPTAG(0),
-                                 .isfloating = 1)
+                        RULE(.instance = "spterm", .tags = SPTAG(0),
+                             .isfloating = 1)
+                            RULE(.class = "Minecraft* 1.16.1", .isfloating = 1)
 #endif // SCRATCHPADS_PATCH
 };
 
@@ -521,8 +525,9 @@ static const Rule rules[] = {
 #if PERTAG_PATCH
 static const MonitorRule monrules[] = {
     /* monitor  tag   layout  mfact  nmaster  showbar  topbar */
-    {1, -1, 2, -1, -1, -1, -1}, // use a different layout for the second monitor
-    {-1, -1, 0, -1, -1, -1, -1}, // default
+    {-1, 1, 2, -1, -1, -1, -1},   // use a different layout for the second
+    {-1, 2, 1, -1, -1, -1, -1},   // use a different layout for the second
+    {-1, -1, -1, -1, -1, -1, -1}, // use a different layout for the second
 };
 #else
 static const MonitorRule monrules[] = {
@@ -698,12 +703,12 @@ static const int scrollargs[][2] = {
 static const Layout layouts[] = {
     /* symbol     arrange function, { nmaster, nstack, layout, master axis,
        stack axis, secondary stack axis, symbol func } */
+    {"[M]", flextile, {-1, -1, NO_SPLIT, MONOCLE, MONOCLE, 0, NULL}}, // monocle
     {"[T]",
      flextile,
      {-1, -1, SPLIT_VERTICAL, TOP_TO_BOTTOM, TOP_TO_BOTTOM, 0,
       NULL}},           // default tile layout
     {"[F]", NULL, {0}}, /* no layout function means floating behavior */
-    {"[M]", flextile, {-1, -1, NO_SPLIT, MONOCLE, MONOCLE, 0, NULL}}, // monocle
     {"|||",
      flextile,
      {-1, -1, SPLIT_VERTICAL, LEFT_TO_RIGHT, TOP_TO_BOTTOM, 0,
@@ -978,7 +983,7 @@ static const StatusCmd statuscmds[] = {
 static const char *statuscmd[] = {"/bin/sh", "-c", NULL, NULL};
 #endif // BAR_DWMBLOCKS_PATCH
 #endif // BAR_STATUSCMD_PATCH
-static const char *browsercmd[] = {"brave", NULL};
+static const char *browsercmd[] = {"brave-browser", NULL};
 static const char *volup[] = {"pactl", "set-sink-volume", "0", "+5%", NULL};
 static const char *voldown[] = {"pactl", "set-sink-volume", "0", "-5%", NULL};
 static const char *volmute[] = {"pactl", "set-sink-mute", "0", "toggle", NULL};
@@ -987,7 +992,7 @@ static const char *zoomcmd[] = {"zoom", NULL};
 static const char *brupcmd[] = {"brightnessctl", "set", "10%+", NULL};
 static const char *brdowncmd[] = {"brightnessctl", "set", "10%-", NULL};
 static const char *suspendcmd[] = {"/bin/sh", "-c", "systemctl suspend", NULL};
-static const char *thunarcmd[] = {"thunar", NULL};
+static const char *nautiluscmd[] = {"nautilus", NULL};
 static const char *neovimcmd[] = {"alacritty", "-e", "nvim", NULL};
 static const char *roficmd[] = {"rofi", "-show", "drun", NULL};
 static const char *rofishutdowncmd[] = {
@@ -1005,7 +1010,7 @@ static Key keys[] = {
     /* modifier                     key            function argument */
     {MODKEY | ShiftMask | ControlMask, XK_s, spawn, {.v = rofishutdowncmd}},
     {MODKEY | ShiftMask, XK_n, spawn, {.v = neovimcmd}},
-    {MODKEY, XK_f, spawn, {.v = thunarcmd}},
+    {MODKEY, XK_f, spawn, {.v = nautiluscmd}},
     {MODKEY | ControlMask, XK_s, spawn, {.v = suspendcmd}},
     {0, XF86XK_MonBrightnessUp, spawn, {.v = brupcmd}},
     {0, XF86XK_MonBrightnessDown, spawn, {.v = brdowncmd}},

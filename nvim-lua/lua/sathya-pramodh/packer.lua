@@ -50,8 +50,14 @@ if not vim.g.vscode then
                 "MunifTanjim/nui.nvim",
             }
         }
+
+        use({
+            "iamcco/markdown-preview.nvim",
+            run = function() vim.fn["mkdp#util#install"]() end,
+        })
         use 'akinsho/flutter-tools.nvim'
         use 'nvim-lualine/lualine.nvim'
-        use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+        use 'tanvirtin/monokai.nvim'
+        use "EdenEast/nightfox.nvim"
     end)
 end

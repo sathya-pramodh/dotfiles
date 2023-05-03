@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
@@ -139,10 +144,20 @@ _G.packer_plugins = {
     path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["monokai.nvim"] = {
+    loaded = true,
+    path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/monokai.nvim",
+    url = "https://github.com/tanvirtin/monokai.nvim"
+  },
   ["neo-tree.nvim"] = {
     loaded = true,
     path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nord.nvim"] = {
     loaded = true,
@@ -189,11 +204,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["tabnine-nvim"] = {
-    loaded = true,
-    path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/tabnine-nvim",
-    url = "https://github.com/codota/tabnine-nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

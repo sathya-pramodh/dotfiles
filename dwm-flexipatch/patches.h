@@ -66,7 +66,7 @@
  * produce a window title section in the bar that is representative of what is
  * shown on screen.
  */
-#define BAR_FLEXWINTITLE_PATCH 0
+#define BAR_FLEXWINTITLE_PATCH 1
 
 /* This patch adds a context menu for layout switching.
  *   - xmenu needs to be installed.
@@ -97,7 +97,7 @@
  * https://gitlab.com/udiboy1209-suckless/dwm/-/commit/071f5063e8ac4280666828179f92788d893eea40#4b1a539194be7467cefbda22f675a3b7c19ceca7
  * https://dwm.suckless.org/patches/statuscolors/
  */
-#define BAR_POWERLINE_STATUS_PATCH 0
+#define BAR_POWERLINE_STATUS_PATCH 1
 
 /* Adds powerline arrows for the tags.
  * https://gitlab.com/udiboy1209-suckless/dwm/-/commit/071f5063e8ac4280666828179f92788d893eea40#4b1a539194be7467cefbda22f675a3b7c19ceca7
@@ -242,7 +242,7 @@
  * the sole purpose of providing visual aid.
  * https://dwm.suckless.org/patches/alternativetags/
  */
-#define BAR_ALTERNATIVE_TAGS_PATCH 1
+#define BAR_ALTERNATIVE_TAGS_PATCH 0
 
 /* This patches provides the ability to use alternative text for tags which
  * contain at least one window.
@@ -537,7 +537,7 @@
 /* The cyclelayouts patch lets you cycle through all your layouts.
  * https://dwm.suckless.org/patches/cyclelayouts/
  */
-#define CYCLELAYOUTS_PATCH 0
+#define CYCLELAYOUTS_PATCH 1
 
 /* Make dwm respect _MOTIF_WM_HINTS property, and not draw borders around
  * windows requesting for it. Some applications use this property to notify
@@ -594,7 +594,7 @@
  * tasks. This patch takes precedence over the fakefullscreen client patch
  * below. https://dwm.suckless.org/patches/fakefullscreen/
  */
-#define FAKEFULLSCREEN_PATCH 1
+#define FAKEFULLSCREEN_PATCH 0
 
 /* Similarly to the fakefullscreen patch this patch only allows clients to
  * "fullscreen" into the space currently given to them. The "twist" with this
@@ -748,7 +748,7 @@
  * monocle-layout is activated. Do not display the number of open clients in the
  * current tag. https://dwm.suckless.org/patches/monoclesymbol/
  */
-#define MONOCLESYMBOL_PATCH 0
+#define MONOCLESYMBOL_PATCH 1
 
 /* Makes a window floating and 1/3rd the height and 1/3rd the width of the
  * screen and is positioned in either the center or one of the 8 cardinal
@@ -1189,7 +1189,7 @@
  * https://github.com/bakkeby/patches/wiki/togglelayout
  */
 
-#define TOGGLELAYOUT_PATCH 0
+#define TOGGLELAYOUT_PATCH 1
 
 /* Minor patch that lets you use the same keyboard shortcut to toggle to the
  * previous tag if the designated tag is already active.
@@ -1337,7 +1337,7 @@
  * A revamped, more flexible, and over-the-top version of the original flextile
  * layout. https://dwm.suckless.org/patches/flextile/ (original)
  */
-#define FLEXTILE_DELUXE_LAYOUT 0
+#define FLEXTILE_DELUXE_LAYOUT 1
 
 /* Gappless grid layout.
  * https://dwm.suckless.org/patches/gaplessgrid/
@@ -1362,9 +1362,9 @@
 /* The default tile layout.
  * This can be optionally disabled in favour of other layouts.
  */
-#define TILE_LAYOUT 1
+#define TILE_LAYOUT 0
 
 /* Monocle layout (default).
  * This can be optionally disabled in favour of other layouts.
  */
-#define MONOCLE_LAYOUT 1
+#define MONOCLE_LAYOUT 0

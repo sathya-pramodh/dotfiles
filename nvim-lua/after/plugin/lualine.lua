@@ -2,7 +2,6 @@ if not vim.g.vscode then
     require('lualine').setup {
         options = {
             icons_enabled = true,
-            theme = 'nord',
             component_separators = '|',
             section_separators = '',
         },
