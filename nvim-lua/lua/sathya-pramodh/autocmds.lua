@@ -14,5 +14,4 @@ if not vim.g.vscode then
             group = compileAndRun,
             command = "lua vim.keymap.set('n', '<F5>', ':!cat input.txt | python3 % > output.txt<CR>')"
         })
-    vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 end

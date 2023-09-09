@@ -18,7 +18,7 @@ play_res = "1920x1080+0,0"
 
 # An alternate resolution that can be toggled to while ingame. Delete this if
 # you do not want to use e.g. thin or tall window.
-alt_res = "400x1080+810,0"
+alt_res = "1920x10000+0,0"
 
 # The delay section contains delays (in milliseconds) before performing various
 # actions. These defaults are completely arbitrary. Increase relevant delays if
@@ -84,9 +84,9 @@ wall_reset = ""
 # - wall_reset_others(n)    Focus reset instance N.
 # - wall_play_next_locked   Plays the first locked and idle instance.
 [keybinds]
-"Ctrl-Shift-R" = ["ingame_reset"]
+"Z" = ["ingame_reset"]
 "R" = ["wall_reset_all"]
-"code49" = ["ingame_toggle_res"]
+"Shift-Tab" = ["ingame_toggle_res"]
 "Ctrl-Shift-F" = ["ingame_focus", "wall_focus"]
 "LMB" = ["wall_reset"]
 "LMB-Ctrl" = ["wall_play"]
@@ -139,6 +139,8 @@ freeze_at = 0
 
 # The percentage to show instances at on preview. Set below 0 to disable.
 show_at = 0
+
+wall_window = "Projector (Scene) - Wall"
 
 # Instance moving settings.
 [wall.moving]

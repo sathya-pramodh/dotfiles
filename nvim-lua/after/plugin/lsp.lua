@@ -9,10 +9,12 @@ if not vim.g.vscode then
     local cmp_mappings = lsp.defaults.cmp_mappings({
         ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
         ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-        ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-        ['<C-Space>'] = cmp.mapping.complete()
     })
-
+    cmp.setup({
+        mapping = {
+            ['<CR>'] = cmp.mapping.confirm({ select = false }),
+        }
+    })
     lsp.set_preferences({ sign_icons = {} })
     lsp.on_attach(function(client, bufnr)
         local opts = { buffer = bufnr, remap = false }
@@ -27,7 +29,7 @@ if not vim.g.vscode then
         vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
         vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
     end)
-    vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+    vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
     lsp.setup()
 
     vim.diagnostic.config({

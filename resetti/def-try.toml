@@ -158,23 +158,19 @@ use_gaps = false
 #
 # Refer to the documentation for examples on various moving setups. TODO
 [[wall.moving.groups]]
-# The position on the projector.
-position = "1920x880+0,0"
-
-# The size of the group (in instances.)
+position = "1920x800+0,140"
 width = 1
 height = 1
 
-# The locked instance group. You can delete this if you want to have no locked
-# instances on the projector.
-[wall.moving.locks]
-# The position on the projector.
-position = "1920x200+0,880"
-
-# The size of the group (in instances.)
-width = 4
+[[wall.moving.groups]]
+position = "1920x140+0,940"
+width = 3
 height = 1
 
+[wall.moving.locks]
+position = "1920x140+0,0"
+width = 4
+height = 1
 # This section contains settings for optimizing CPU utilization while resetting.
 [wall.performance]
 # The path to write sleepbg.lock to. If left blank, it will default to the

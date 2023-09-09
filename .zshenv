@@ -25,5 +25,4 @@ alias mux='pgrep -vx tmux > /dev/null && \
         tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && \
         tmux kill-session -t delete-me && \
         tmux attach || tmux attach'
-CUDNN_PATH=$(dirname $(python -c "import nvidia.cudnn;print(nvidia.cudnn.__file__)"))
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/lib/:$CUDNN_PATH/lib
+export GTK_THEME=Adwaita:dark

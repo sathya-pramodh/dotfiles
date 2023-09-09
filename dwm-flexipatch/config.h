@@ -153,7 +153,7 @@ static void (*bartabmonfns[])(Monitor *) = {NULL /* , customlayoutfn */};
 #if BAR_PANGO_PATCH
 static const char font[] = "monospace 10";
 #else
-static const char *fonts[] = {"Hack Nerd Font:size=12"};
+static const char *fonts[] = {"FiraCode: size=12"};
 #endif // BAR_PANGO_PATCH
 static const char dmenufont[] = "Hack Nerd Font:size=12";
 
@@ -513,7 +513,8 @@ static const Rule rules[] = {
             RULE(.class = "java-lang-Thread", .isfloating = 1)
                 RULE(.class = "gnome-calculator", .isfloating = 1)
                     RULE(.title = "Android Emulator - Pixel_4_API_30:5554",
-                         .isfloating = 1)
+                         .isfloating = 1) RULE(.title = "Minecraft* 1.16.1",
+                                               .isfloating = 1)
 #if SCRATCHPADS_PATCH
                         RULE(.instance = "spterm", .tags = SPTAG(0),
                              .isfloating = 1)
