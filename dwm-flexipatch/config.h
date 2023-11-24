@@ -510,15 +510,20 @@ static const Rule rules[] = {
          .isfloating = 1) RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
         RULE(.wintype = WTYPE "TOOLBAR",
              .isfloating = 1) RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
-            RULE(.class = "java-lang-Thread", .isfloating = 1)
+            RULE(.class = "java-lang-Thread", .isfloating = 1, .monitor = 1)
                 RULE(.class = "gnome-calculator", .isfloating = 1)
                     RULE(.title = "Android Emulator - Pixel_4_API_30:5554",
                          .isfloating = 1) RULE(.title = "Minecraft* 1.16.1",
-                                               .isfloating = 1)
+                                               .tags = 1 << 0)
+                        RULE(.title = "Windowed Projector (Scene) - Wall",
+                             .tags = 1 << 1)
+                            RULE(.title = "Windowed Projector (Scene) - Mag",
+                                 .tags = 1 << 1, .isfloating = 1, .monitor = 1)
 #if SCRATCHPADS_PATCH
-                        RULE(.instance = "spterm", .tags = SPTAG(0),
-                             .isfloating = 1)
-                            RULE(.class = "Minecraft* 1.16.1", .isfloating = 1)
+                                RULE(.instance = "spterm", .tags = SPTAG(0),
+                                     .isfloating = 1)
+                                    RULE(.class = "Minecraft* 1.16.1",
+                                         .isfloating = 1)
 #endif // SCRATCHPADS_PATCH
 };
 
@@ -526,8 +531,7 @@ static const Rule rules[] = {
 #if PERTAG_PATCH
 static const MonitorRule monrules[] = {
     /* monitor  tag   layout  mfact  nmaster  showbar  topbar */
-    {-1, 1, 2, -1, -1, -1, -1},   // use a different layout for the second
-    {-1, 2, 1, -1, -1, -1, -1},   // use a different layout for the second
+    {-1, 1, 3, -1, -1, -1, -1},   // use a different layout for the second
     {-1, -1, -1, -1, -1, -1, -1}, // use a different layout for the second
 };
 #else
@@ -798,13 +802,12 @@ static const Layout layouts[] = {
 #else
 static const Layout layouts[] = {
 /* symbol     arrange function */
-#if TILE_LAYOUT
-    {"[T]", tile}, /* first entry is default */
-#endif
 #if MONOCLE_LAYOUT
     {"[M]", monocle},
 #endif
-    {"[F]", NULL}, /* no layout function means floating behavior */
+#if TILE_LAYOUT
+    {"[T]", tile}, /* first entry is default */
+#endif
 #if BSTACK_LAYOUT
     {"TTT", bstack},
 #endif
@@ -841,6 +844,7 @@ static const Layout layouts[] = {
 #if NROWGRID_LAYOUT
     {"###", nrowgrid},
 #endif
+    {"[F]", NULL}, /* no layout function means floating behavior */
 #if CYCLELAYOUTS_PATCH
     {NULL, NULL},
 #endif
@@ -1244,7 +1248,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_t, unfloatvisible, {.v = &layouts[0]}},
 #endif // UNFLOATVISIBLE_PATCH
 #if TOGGLEFULLSCREEN_PATCH
-    {MODKEY, XK_y, togglefullscreen, {0}},
+    {0, XK_grave, togglefullscreen, {0}},
 #endif // TOGGLEFULLSCREEN_PATCH
 #if !FAKEFULLSCREEN_PATCH && FAKEFULLSCREEN_CLIENT_PATCH
     {MODKEY | ShiftMask, XK_y, togglefakefullscreen, {0}},

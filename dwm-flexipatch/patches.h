@@ -323,7 +323,7 @@
  * https://github.com/bakkeby/dwm-flexipatch/issues/50 (_IS_FLOATING patch)
  * https://dwm.suckless.org/patches/ewmhtags/
  */
-#define BAR_EWMHTAGS_PATCH 0
+#define BAR_EWMHTAGS_PATCH 1
 
 /* Allows the bar height to be explicitly set rather than being derived from
  * font. https://dwm.suckless.org/patches/bar_height/
@@ -445,7 +445,7 @@
 /* This patch allows windows to be resized with its aspect ratio remaining
  * constant. https://dwm.suckless.org/patches/aspectresize/
  */
-#define ASPECTRESIZE_PATCH 1
+#define ASPECTRESIZE_PATCH 0
 
 /* This patch adds new clients above the selected client, instead of always
  * becoming the new master. This behaviour is known from Xmonad.
@@ -610,7 +610,7 @@
  * patches. The size and position can be specified using absolute, relative or
  * fixed co-ordinates and https://github.com/bakkeby/patches/wiki/floatpos/
  */
-#define FLOATPOS_PATCH 0
+#define FLOATPOS_PATCH 1
 
 /* Add-on functionality for the above: make the float positions respect outer
  * (vanity)gaps. */
@@ -742,13 +742,13 @@
  * what is used for the main monitor. E.g. normal vertical split for main
  * monitor and horizontal split for the second.
  */
-#define MONITOR_RULES_PATCH 0
+#define MONITOR_RULES_PATCH 1
 
 /* Always display the the monocle-symbol as defined in config.h if the
  * monocle-layout is activated. Do not display the number of open clients in the
  * current tag. https://dwm.suckless.org/patches/monoclesymbol/
  */
-#define MONOCLESYMBOL_PATCH 1
+#define MONOCLESYMBOL_PATCH 0
 
 /* Makes a window floating and 1/3rd the height and 1/3rd the width of the
  * screen and is positioned in either the center or one of the 8 cardinal
@@ -837,7 +837,7 @@
  * monitor (default).
  * https://dwm.suckless.org/patches/pertag/
  */
-#define PERTAG_PATCH 0
+#define PERTAG_PATCH 1
 
 /* Option to store gaps on a per tag basis rather than on a per monitor basis.
  * Depends on both pertag and vanitygaps patches being enabled.
@@ -1189,7 +1189,7 @@
  * https://github.com/bakkeby/patches/wiki/togglelayout
  */
 
-#define TOGGLELAYOUT_PATCH 1
+#define TOGGLELAYOUT_PATCH 0
 
 /* Minor patch that lets you use the same keyboard shortcut to toggle to the
  * previous tag if the designated tag is already active.
@@ -1221,7 +1221,7 @@
  * Optionally also applies a layout.
  * https://dwm.suckless.org/patches/unfloatvisible/
  */
-#define UNFLOATVISIBLE_PATCH 0
+#define UNFLOATVISIBLE_PATCH 1
 
 /* This patch adds configurable gaps between windows differentiating between
  * outer, inner, horizontal and vertical gaps.
@@ -1280,7 +1280,7 @@
  * position.
  * https://www.reddit.com/r/suckless/comments/ie5fe3/zoomfloating_my_own_simple_original_patch/
  */
-#define ZOOMFLOATING_PATCH 0
+#define ZOOMFLOATING_PATCH 1
 
 /* The zoomswap patch allows a master and a stack window to swap places
  * rather than every window on the screen changing position.
@@ -1310,7 +1310,7 @@
 /* Centered floating master layout.
  * https://dwm.suckless.org/patches/centeredmaster/
  */
-#define CENTEREDFLOATINGMASTER_LAYOUT 0
+#define CENTEREDFLOATINGMASTER_LAYOUT 1
 
 /* Same as the default tile layout except clients in the master area are
  * arranged in columns (i.e. left to right).
@@ -1337,7 +1337,7 @@
  * A revamped, more flexible, and over-the-top version of the original flextile
  * layout. https://dwm.suckless.org/patches/flextile/ (original)
  */
-#define FLEXTILE_DELUXE_LAYOUT 1
+#define FLEXTILE_DELUXE_LAYOUT 0
 
 /* Gappless grid layout.
  * https://dwm.suckless.org/patches/gaplessgrid/
@@ -1362,9 +1362,9 @@
 /* The default tile layout.
  * This can be optionally disabled in favour of other layouts.
  */
-#define TILE_LAYOUT 0
+#define TILE_LAYOUT 1
 
 /* Monocle layout (default).
  * This can be optionally disabled in favour of other layouts.
  */
-#define MONOCLE_LAYOUT 0
+#define MONOCLE_LAYOUT 1

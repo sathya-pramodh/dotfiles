@@ -18,7 +18,7 @@ play_res = "1920x1080+0,0"
 
 # An alternate resolution that can be toggled to while ingame. Delete this if
 # you do not want to use e.g. thin or tall window.
-alt_res = "320x16384+0,0"
+alt_res = "1920x10000+0,0"
 
 # The delay section contains delays (in milliseconds) before performing various
 # actions. These defaults are completely arbitrary. Increase relevant delays if
@@ -38,10 +38,10 @@ ghost_pie_fix = 20
 reset = ""
 
 # Run when the user switches to their alternate resolution.
-alt_res = "res_toggle"
+alt_res = ""
 
 # Run when the user switches to their normal resolution.
-normal_res = "res_toggle_back"
+normal_res = ""
 
 # Run when an instance is locked on the wall.
 wall_lock = ""
@@ -86,6 +86,7 @@ wall_reset = ""
 [keybinds]
 "Z" = ["ingame_reset"]
 "Q" = ["wall_play_first_locked"]
+"Shift-Q" = ["wall_play_last_reset"]
 "R" = ["wall_reset_all"]
 "Shift-Tab" = ["ingame_toggle_res"]
 "Ctrl-Shift-F" = ["ingame_focus", "wall_focus"]
@@ -150,7 +151,7 @@ enabled = true
 
 # Whether to create gaps in the queue when locking instances. If you have a
 # smaller layout, you will likely want to disable this.
-use_gaps = true
+use_gaps = false
 
 # The list of main instance groups. Instances enter the last group and move
 # towards the first group as you reset. You do not need enough groups to show
@@ -158,12 +159,17 @@ use_gaps = true
 #
 # Refer to the documentation for examples on various moving setups. TODO
 [[wall.moving.groups]]
-position = "1920x820+0,0"
-width = 2
+position = "1920x800+0,140"
+width = 1
+height = 1
+
+[[wall.moving.groups]]
+position = "1920x140+0,940"
+width = 3
 height = 1
 
 [wall.moving.locks]
-position = "1920x260+0,820"
+position = "1920x140+0,0"
 width = 4
 height = 1
 # This section contains settings for optimizing CPU utilization while resetting.
