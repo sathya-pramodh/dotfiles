@@ -14,5 +14,6 @@ This is my personal dotfiles repository.
 - resetti
 - zsh
 - powerlevel10k
+- i3
 
 # Code isn't documented very much because it's tailored personally for my workflow :)
