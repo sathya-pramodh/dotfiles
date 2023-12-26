@@ -26,3 +26,5 @@ alias mux='pgrep -vx tmux > /dev/null && \
         tmux kill-session -t delete-me && \
         tmux attach || tmux attach'
 export GTK_THEME=Adwaita:dark
+export FLYCTL_INSTALL="/home/pramodhsathya/.fly"
+export PATH="$PATH:$FLYCTL_INSTALL/bin"
