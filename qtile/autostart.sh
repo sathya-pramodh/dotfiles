@@ -13,5 +13,5 @@ nm-applet &
 # xinput set-prop 11 "Coordinate Transformation Matrix" 0.625 0.0 0.0 0.0 0.625 0.0 0.0 0.0 1.0
 # xinput set-prop 11 "Coordinate Transformation Matrix" 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0
 # xinput set-prop 11 "Coordinate Transformation Matrix" 0.25 0.0 0.0 0.0 0.25 0.0 0 0 1
-xinput set-prop 11 "Coordinate Transformation Matrix" 0.125 0.0 0.0 0.0 0.125 0.0 0.0 0.0 1.0
+xinput set-prop 15 "Coordinate Transformation Matrix" 0.125 0.0 0.0 0.0 0.125 0.0 0.0 0.0 1.0
 flatpak run com.discordapp.Discord --start-minimized &

@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["leetcode.vim"] = {
+    loaded = true,
+    path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/leetcode.vim",
+    url = "https://github.com/ianding1/leetcode.vim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/pramodhsathya/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
