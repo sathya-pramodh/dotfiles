@@ -15,5 +15,8 @@ This is my personal dotfiles repository.
 - zsh
 - powerlevel10k
 - i3
+- Polybar
+- tmux-sessionizer
+- tmux
 
 # Code isn't documented very much because it's tailored personally for my workflow :)
