@@ -18,6 +18,7 @@ font pango:FiraCode NerdFont 10
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 0
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -187,12 +188,26 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Remove window borders
+for_window [class="^.*"] border pixel 0
+# default_border pixel 0
+# default_floating_border pixel 0
+
+# Default layout setting
+workspace_layout tabbed 
+
+# Window gaps
+gaps inner 6
+
+# Titlebar colors
+client.focused #5E81AC #5E81AC #ECEFF4 #5E81AC
+
 # Disable focus follow mouse
 focus_follows_mouse no
 
 # Custom binds
 bindsym $mod+b exec brave-browser
-bindsym $mod+Shift+s exec flameshot gui
+bindsym $mod+Shift+s exec flameshot gui &
 bindsym $mod+f exec nautilus
 bindsym $mod+p exec rofi -show drun
 bindsym $mod+Ctrl+Shift+s exec rofi -show power-menu -modi power-menu:rofi-power-menu
@@ -205,8 +220,19 @@ focus_on_window_activation focus
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        position top
-        tray_output eDP-1-1
-        status_command i3status
-}
+# bar {
+#         position top
+#         tray_output eDP-1-1
+#         status_command i3status
+#         colors {
+#             background #000000
+#             statusline #ECEFF4
+# 
+#             focused_workspace  #ECEFF4 #5E81AC
+#             active_workspace   #ECEFF4 #333333
+#             inactive_workspace #888888 #222222
+#             urgent_workspace   #ECEFF4 #900000
+#         }
+# }
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+

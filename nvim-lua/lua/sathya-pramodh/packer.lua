@@ -6,8 +6,7 @@ if not vim.g.vscode then
         -- Packer can manage itself
         use 'wbthomason/packer.nvim'
         use {
-            'nvim-telescope/telescope.nvim', tag = '0.1.0',
-            -- or                            , branch = '0.1.x',
+            'nvim-telescope/telescope.nvim',
             requires = { { 'nvim-lua/plenary.nvim' } }
         }
         use 'shaunsingh/nord.nvim'
@@ -57,7 +56,20 @@ if not vim.g.vscode then
         })
         use 'akinsho/flutter-tools.nvim'
         use 'nvim-lualine/lualine.nvim'
-        use 'tanvirtin/monokai.nvim'
+        use { "catppuccin/nvim", as = "catppuccin" }
         use "EdenEast/nightfox.nvim"
+        use { "rose-pine/neovim", as = "rose-pine" }
+        use {
+            "folke/which-key.nvim",
+            config = function()
+                vim.o.timeout = true
+                vim.o.timeoutlen = 300
+                require("which-key").setup {
+                    -- your configuration comes here
+                    -- or leave it empty to use the default settings
+                    -- refer to the configuration section below
+                }
+            end
+        }
     end)
 end

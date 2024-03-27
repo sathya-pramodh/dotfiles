@@ -43,7 +43,7 @@ static const char *altbarcmd =
 #if BAR_HOLDBAR_PATCH
 static const int showbar = 0; /* 0 means no bar */
 #else
-static const int showbar = 1;           /* 0 means no bar */
+static const int showbar = 1; /* 0 means no bar */
 #endif                       // BAR_HOLDBAR_PATCH
 static const int topbar = 1; /* 0 means bottom bar */
 #if TAB_PATCH
@@ -510,15 +510,17 @@ static const Rule rules[] = {
          .isfloating = 1) RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
         RULE(.wintype = WTYPE "TOOLBAR",
              .isfloating = 1) RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
-            RULE(.class = "java-lang-Thread", .isfloating = 1, .monitor = 1)
+            RULE(.class = "ninjabrainbot-Main", .isfloating = 1, .monitor = 1)
                 RULE(.class = "gnome-calculator", .isfloating = 1)
                     RULE(.title = "Android Emulator - Pixel_4_API_30:5554",
                          .isfloating = 1) RULE(.title = "Minecraft* 1.16.1",
                                                .tags = 1 << 0)
                         RULE(.title = "Windowed Projector (Scene) - Wall",
-                             .tags = 1 << 1)
+                             .tags = 1 << 2)
                             RULE(.title = "Windowed Projector (Scene) - Mag",
-                                 .tags = 1 << 1, .isfloating = 1, .monitor = 1)
+                                 .tags = 1 << 2, .isfloating = 1, .monitor = 1)
+                                    RULE(.class = "Minecraft* 1.16.1",
+                                         .isfloating = 1)
 #if SCRATCHPADS_PATCH
                                 RULE(.instance = "spterm", .tags = SPTAG(0),
                                      .isfloating = 1)
@@ -531,7 +533,7 @@ static const Rule rules[] = {
 #if PERTAG_PATCH
 static const MonitorRule monrules[] = {
     /* monitor  tag   layout  mfact  nmaster  showbar  topbar */
-    {-1, 1, 3, -1, -1, -1, -1},   // use a different layout for the second
+    // {-1, 1, 3, -1, -1, -1, -1},   // use a different layout for the second
     {-1, -1, -1, -1, -1, -1, -1}, // use a different layout for the second
 };
 #else

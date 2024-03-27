@@ -3,6 +3,7 @@ export PATH=$PATH:/home/pramodhsathya/.local/bin:/home/pramodhsathya/.local/lib/
 export PROJECT=$HOME/Desktop/Project/
 export DOTFILES="$HOME/dotfiles/dotfiles"
 export WALLPAPERS="$HOME/Downloads/livewall/"
+export TERM=xterm-256color
 alias edit=nvim
 alias q=exit
 alias c=clear
