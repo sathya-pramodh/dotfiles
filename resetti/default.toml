@@ -24,12 +24,22 @@ alt_res = "400x1080+810,0"
 # actions. These defaults are completely arbitrary. Increase relevant delays if
 # you have issues, decrease for lower latency. Depending on your setup, you may
 # be able to set all of these (except for unpause) to 0.
+#
+# wp_pause      The delay between the preview starting and pressing F3+Esc.
+# idle_pause    The delay between the world generation finishing and pressing F3+Esc.
+# unpause       The delay between each unpause when tabbing in.
+# stretch       The delay between stretching the window and (un)focusing.
+# ghost_pie_fix The delay after pressing F3 to fix ghost pie and resetting.
+# warp          The delay between focusing the projector and warping the pointer.
+#               A delay of 0 should work on most setups, but some window managers
+#               (e.g. i3) may require a delay here.
 [delay]
 wp_pause = 20
 idle_pause = 20
 unpause = 20
 stretch = 20
 ghost_pie_fix = 20
+warp = 0
 
 # The hooks section allows you to specify various commands which are run
 # upon certain actions. Any blank hooks will be ignored.
@@ -82,7 +92,7 @@ wall_reset = ""
 # - wall_reset(n)           Reset instance N.
 # - wall_reset_others       Focus reset hovered instance.
 # - wall_reset_others(n)    Focus reset instance N.
-# - wall_play_next_locked   Plays the first locked and idle instance.
+# - wall_play_first_locked  Plays the first locked and idle instance.
 [keybinds]
 "Ctrl-Shift-D"      = ["wall_reset_all", "ingame_reset"]
 "Ctrl-Shift-F"      = ["ingame_focus", "wall_focus"]
@@ -98,10 +108,16 @@ wall_reset = ""
 # otherwise, you must provide connection information.
 #
 # The password field can be left blank if you have authentication off.
+#
+# If you are using 2 OBS instances (one for the verification recording), you
+# can configure port_2 and password_2. Otherwise, they should be deleted.
 [obs]
 enabled = true
 port = 4440
 password = ""
+
+port_2 = 4441
+password_2 = ""
 
 # The wall section lets you configure your wall experience. If you only want
 # the classic multi experience, you can delete everything from this point on.
@@ -139,7 +155,9 @@ freeze_at = 0
 # The percentage to show instances at on preview. Set below 0 to disable.
 show_at = 5
 
-wall_window = "Projector(Scene) - Wall"
+# The projector window to consider as the wall screen must contains this chain of characters.
+# You will have to change this if your OBS isn't in English.
+wall_window = "Projector (Scene) - Wall"
 
 # Instance moving settings.
 [wall.moving]

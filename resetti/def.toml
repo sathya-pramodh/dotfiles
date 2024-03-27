@@ -2,7 +2,7 @@ reset_count = '/home/pramodhsathya/reset_count.txt'
 unpause_focus = true
 poll_rate = 100
 play_res = '1920x1080+0,0'
-alt_res = '320x16384+800,-7652'
+alt_res = ['220x700+860,190', '1920x300+0,390']
 
 [delay]
 wp_pause = 20
@@ -13,8 +13,8 @@ ghost_pie_fix = 20
 
 [hooks]
 reset = ''
-alt_res = 'res_toggle'
-normal_res = 'res_toggle_back'
+alt_res = ''
+normal_res = ''
 wall_lock = ''
 wall_unlock = ''
 wall_play = ''
@@ -22,7 +22,7 @@ wall_reset = ''
 
 [keybinds]
 R = ['wall_reset_all']
-J = ['ingame_toggle_res']
+grave = ['ingame_toggle_res(1)']
 Ctrl-Shift-F = ['ingame_focus', 'wall_focus']
 LMB = ['wall_reset']
 LMB-Ctrl = ['wall_play']
@@ -30,49 +30,43 @@ LMB-Alt = ['wall_lock']
 LMB-Ctrl-Shift = ['wall_reset_others']
 Z = ['ingame_reset']
 Q = ['wall_play_first_locked']
-1 = ['wall_reset(1)']
-Shift-1 = ['wall_play(1)']
+2 = ['wall_reset(1)']
+Ctrl-2 = ['wall_play(1)']
+6 = ['ingame_toggle_res(2)']
 
 [obs]
 enabled = true
 port = 4444
 password = ''
-
-port_2 = 4455
+port_2 = 4444
 password_2 = ''
 
 [wall]
 enabled = true
 confine_pointer = false
-goto_locked = false
+goto_locked = true
 reset_unlock = true
 grace_period = 5000
 stretch_res = '1920x540+0,0'
 use_f1 = false
-freeze_at = 80
-show_at = -10
+freeze_at = 90
+show_at = -1
 wall_window = 'Projector (Scene) - Wall'
 
 [wall.moving]
-enabled = true
+enabled = false
 use_gaps = true
 force_reset_before_play = false
 
 [[wall.moving.groups]]
-position = '1720x900+0,0'
-width = 2
-height = 1
-cosmetic = false
-
-[[wall.moving.groups]]
-position = '200x900+1720,0'
+position = '1920x780+0,0'
 width = 1
-height = 4
+height = 2
 cosmetic = false
 
 [wall.moving.locks]
-position = '1920x180+0,900'
-width = 6
+position = '1920x300+0,780'
+width = 4
 height = 1
 
 [wall.performance]
@@ -80,8 +74,8 @@ sleepbg_path = ''
 affinity = 'advanced'
 
 [wall.performance.sequence]
-active_cpus = 8
-background_cpus = 2
+active_cpus = 6
+background_cpus = 4
 lock_cpus = 8
 
 [wall.performance.advanced]
@@ -91,5 +85,5 @@ affinity_low = 2
 affinity_mid = 4
 affinity_high = 6
 affinity_active = 6
-burst_length = 0
-low_threshold = 30
+burst_length = 1200
+low_threshold = 80

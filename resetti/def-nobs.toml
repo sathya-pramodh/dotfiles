@@ -1,8 +1,8 @@
 reset_count = ''
-unpause_focus = true
+unpause_focus = false
 poll_rate = 100
 play_res = '1920x1080+0,0'
-alt_res = '320x16384+800,-7652'
+alt_res = ['220x700+860,190', '1920x300+0,390']
 
 [delay]
 wp_pause = 20
@@ -13,8 +13,8 @@ ghost_pie_fix = 20
 
 [hooks]
 reset = ''
-alt_res = 'res_toggle'
-normal_res = 'res_toggle_back'
+alt_res = ''
+normal_res = ''
 wall_lock = ''
 wall_unlock = ''
 wall_play = ''
@@ -23,7 +23,7 @@ wall_reset = ''
 [keybinds]
 Z = ['ingame_reset']
 R = ['wall_reset_all']
-J = ['ingame_toggle_res']
+grave = ['ingame_toggle_res']
 Ctrl-Shift-F = ['ingame_focus', 'wall_focus']
 LMB = ['wall_reset']
 LMB-Ctrl = ['wall_play']
@@ -31,6 +31,7 @@ LMB-Alt = ['wall_lock']
 LMB-Ctrl-Shift = ['wall_reset_others']
 1 = ['wall_reset(1)']
 Shift-1 = ['wall_play(1)']
+6 = ['ingame_toggle_res(2)']
 
 [obs]
 enabled = false
