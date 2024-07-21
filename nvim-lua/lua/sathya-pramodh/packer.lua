@@ -71,5 +71,6 @@ if not vim.g.vscode then
                 }
             end
         }
+        use 'MunifTanjim/prettier.nvim'
     end)
 end

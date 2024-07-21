@@ -10,6 +10,11 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $termcmd alacritty
+set $browsercmd brave-browser
+set $screenshotcmd flameshot gui
+set $monitor exec xrandr | grep primary | awk -F ' ' '{print $1}'
+set $second_monitor DVI-I-2-1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -17,8 +22,8 @@ font pango:FiraCode NerdFont 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
-font pango:DejaVu Sans Mono 0
+# font pango:DejaVu Sans Mono 8
+# font pango:DejaVu Sans Mono 0
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -50,7 +55,7 @@ floating_modifier $mod
 # tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec $termcmd
 
 # kill focused window
 bindsym $mod+q kill
@@ -122,15 +127,18 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-workspace $ws1 output eDP-1-1 
-workspace $ws2 output eDP-1-1 
-workspace $ws3 output eDP-1-1 
-workspace $ws4 output eDP-1-1 
-workspace $ws5 output eDP-1-1 
-workspace $ws6 output eDP-1-1 
-workspace $ws7 output eDP-1-1 
-workspace $ws8 output eDP-1-1 
-workspace $ws9 output eDP-1-1 
+set $ws10 "10"
+
+workspace $ws1 output $monitor 
+workspace $ws2 output $monitor 
+workspace $ws3 output $monitor 
+workspace $ws4 output $monitor 
+workspace $ws5 output $monitor 
+workspace $ws6 output $monitor 
+workspace $ws7 output $monitor 
+workspace $ws8 output $monitor 
+workspace $ws9 output $monitor 
+workspace $ws10 output $second_monitor
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -200,29 +208,35 @@ workspace_layout tabbed
 gaps inner 6
 
 # Titlebar colors
-client.focused #5E81AC #5E81AC #ECEFF4 #5E81AC
+# client.focused #5E81AC #5E81AC #ECEFF4 #5E81AC
+client.focused #5E81AC #5E81AC #5E81AC #5E81AC
 
 # Disable focus follow mouse
 focus_follows_mouse no
 
 # Custom binds
-bindsym $mod+b exec brave-browser
-bindsym $mod+Shift+s exec flameshot gui &
+bindsym $mod+b exec $browsercmd
+bindsym $mod+Shift+s exec $screenshotcmd
 bindsym $mod+f exec nautilus
 bindsym $mod+p exec rofi -show drun
 bindsym $mod+Ctrl+Shift+s exec rofi -show power-menu -modi power-menu:rofi-power-menu
 exec ~/.dwm/autostart.sh
 for_window [class="Minecraft\* 1.16.1"] floating enable
+assign [class="Minecraft\* 1.16.1"] $ws1
 for_window [class="ninjabrainbot-Main"] floating enable
+assign [class="ninjabrainbot-Main"] $ws10
+assign [class="obs"] $ws10
 for_window [title="Windowed Projector \(Scene\) - Mag"] floating enable, resize set width 1, resize set height 1, move position 0 0
-for_window [title="Windowed Projector \(Scene\) - Wall"] floating enable, resize set width 1920, resize set height 1080, move position 0 0 
+assign [title="Windowed Projector \(Scene\) - Mag"] $ws3
+for_window [title="Windowed Projector \(Scene\) - Wall"] floating enable, resize set width 1920, resize set height 1080, move position 0 0
+assign [title="Windowed Projector \(Scene\) - Wall"] $ws1
 focus_on_window_activation focus
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 # bar {
 #         position top
-#         tray_output eDP-1-1
+#         tray_output $monitor
 #         status_command i3status
 #         colors {
 #             background #000000
@@ -235,4 +249,4 @@ focus_on_window_activation focus
 #         }
 # }
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
+exec_always --no-startup-id /usr/bin/dunst

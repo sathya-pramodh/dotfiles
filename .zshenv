@@ -1,5 +1,6 @@
 export EDITOR=/bin/nvim
-export PATH=$PATH:/home/pramodhsathya/.local/bin:/home/pramodhsathya/.local/lib/:/home/pramodhsathya/.cargo/bin:/home/pramodhsathya/go/bin/:$HOME/.pub-cache/bin
+export PATH="$PATH:/home/pramodhsathya/.local/bin:/home/pramodhsathya/.local/lib/:/home/pramodhsathya/.cargo/bin:/home/pramodhsathya/go/bin/:$HOME/.pub-cache/bin:/usr/local/cuda-12/bin/"
+export LD_LIBRARY_PATH="/usr/local/cuda-12/lib64:$LD_LIBRARY_PATH"
 export PROJECT=$HOME/Desktop/Project/
 export DOTFILES="$HOME/dotfiles/dotfiles"
 export WALLPAPERS="$HOME/Downloads/livewall/"
@@ -12,6 +13,7 @@ alias gpl="git pull origin"
 alias gi="git init"
 alias gc="git clone"
 alias ga.="git add ."
+alias twitch="/home/pramodhsathya/Documents/twitch-cli_1.1.22_Linux_x86_64/twitch"
 alias qtileconfig="nvim ~/.config/qtile/config.py"
 alias dwmpatchesconfig="nvim $DOTFILES/dwm-flexipatch/patches.h"
 alias dwmconfig="nvim $DOTFILES/dwm-flexipatch/config.h"

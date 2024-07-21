@@ -10,6 +10,8 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $termcmd alacritty
+# set $monitor exec xrandr | grep primary | awk -F ' ' '{print $1}'
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -17,7 +19,8 @@ font pango:FiraCode NerdFont 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+# font pango:DejaVu Sans Mono 8
+# font pango:DejaVu Sans Mono 0
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -36,10 +39,10 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -49,7 +52,7 @@ floating_modifier $mod
 # tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec $termcmd
 
 # kill focused window
 bindsym $mod+q kill
@@ -121,15 +124,15 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-workspace $ws1 output eDP-1-1 
-workspace $ws2 output eDP-1-1 
-workspace $ws3 output eDP-1-1 
-workspace $ws4 output eDP-1-1 
-workspace $ws5 output eDP-1-1 
-workspace $ws6 output eDP-1-1 
-workspace $ws7 output eDP-1-1 
-workspace $ws8 output eDP-1-1 
-workspace $ws9 output eDP-1-1 
+# workspace $ws1 output $monitor 
+# workspace $ws2 output $monitor 
+# workspace $ws3 output $monitor 
+# workspace $ws4 output $monitor 
+# workspace $ws5 output $monitor 
+# workspace $ws6 output $monitor 
+# workspace $ws7 output $monitor 
+# workspace $ws8 output $monitor 
+# workspace $ws9 output $monitor 
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -187,26 +190,77 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Remove window borders
+for_window [class="^.*"] border pixel 0
+# default_border pixel 0
+# default_floating_border pixel 0
+
+# Default layout setting
+workspace_layout tabbed 
+
+# Window gaps
+gaps inner 6
+
+# Titlebar colors
+# client.focused #5E81AC #5E81AC #ECEFF4 #5E81AC
+client.focused #5E81AC #5E81AC #5E81AC #5E81AC
+
 # Disable focus follow mouse
 focus_follows_mouse no
 
 # Custom binds
 bindsym $mod+b exec brave-browser
-bindsym $mod+Shift+s exec flameshot gui
+bindsym $mod+Shift+s exec flameshot gui &
 bindsym $mod+f exec nautilus
 bindsym $mod+p exec rofi -show drun
 bindsym $mod+Ctrl+Shift+s exec rofi -show power-menu -modi power-menu:rofi-power-menu
-exec ~/.dwm/autostart.sh
+# exec ~/.dwm/autostart.sh
 for_window [class="Minecraft\* 1.16.1"] floating enable
-for_window [class="java-lang-Thread"] floating enable
+for_window [class="ninjabrainbot-Main"] floating enable
 for_window [title="Windowed Projector \(Scene\) - Mag"] floating enable, resize set width 1, resize set height 1, move position 0 0
 for_window [title="Windowed Projector \(Scene\) - Wall"] floating enable, resize set width 1920, resize set height 1080, move position 0 0 
+for_window [title="waywall"] floating enable, resize set width 1920, resize set height 1080, move position 1 1
 focus_on_window_activation focus
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        position top
-        tray_output eDP-1-1
-        status_command i3status
+ bar {
+         position top
+         # tray_output eDP-1-1
+         status_command i3status
+         colors {
+             background #000000
+             statusline #ECEFF4
+ 
+             # focused_workspace  #ECEFF4 #5E81AC
+             # active_workspace   #ECEFF4 #333333
+             # inactive_workspace #888888 #222222
+             # urgent_workspace   #ECEFF4 #900000
+         }
+ }
+input "1133:16500:Logitech_G304" {
+    accel_profile "flat"
+    pointer_accel -0.850
 }
+
+output "HEADLESS-1" {
+    pos 1920,0
+    mode 1000x750
+}
+
+output "eDP-1" {
+    pos 0,0
+    mode 1920x1080
+}
+
+exec swaymsg create_output HEADLESS-1
+
+workspace $ws10 output HEADLESS-1
+
+exec virtual_inputs
+exec qpwgraph -axm /home/pramodhsathya/Speedrunning.qpwgraph
+exec /home/pramodhsathya/vnc.sh
+exec_always dunst
+
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id /usr/bin/dunst

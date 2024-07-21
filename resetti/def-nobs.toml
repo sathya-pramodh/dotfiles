@@ -3,11 +3,12 @@ unpause_focus = false
 poll_rate = 100
 play_res = '1920x1080+0,0'
 alt_res = ['220x700+860,190', '1920x300+0,390']
+no_pause = false
 
 [delay]
 wp_pause = 20
 idle_pause = 20
-unpause = 50
+unpause = 20
 stretch = 20
 ghost_pie_fix = 20
 
@@ -34,9 +35,11 @@ Shift-1 = ['wall_play(1)']
 6 = ['ingame_toggle_res(2)']
 
 [obs]
-enabled = false
+enabled = false 
 port = 4444
 password = ''
+port_2 = 4444
+password_2 = ''
 
 [wall]
 enabled = false
