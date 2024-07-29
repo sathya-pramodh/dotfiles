@@ -226,8 +226,6 @@ assign [class="Minecraft\* 1.16.1"] $ws1
 for_window [class="ninjabrainbot-Main"] floating enable
 assign [class="ninjabrainbot-Main"] $ws10
 assign [class="obs"] $ws10
-for_window [title="Windowed Projector \(Scene\) - Mag"] floating enable, resize set width 1, resize set height 1, move position 0 0
-assign [title="Windowed Projector \(Scene\) - Mag"] $ws3
 for_window [title="Windowed Projector \(Scene\) - Wall"] floating enable, resize set width 1920, resize set height 1080, move position 0 0
 assign [title="Windowed Projector \(Scene\) - Wall"] $ws1
 focus_on_window_activation focus
@@ -250,3 +248,5 @@ focus_on_window_activation focus
 # }
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id /usr/bin/dunst
+exec_always xinput | grep "Logitech G304" | grep "pointer" | awk -F ' ' '{print $5}' | awk -F '=' '{print $2}' > ~/.dev_id
+exec_always ratbagctl list | grep "Logitech G304" | awk -F ':' '{print $1}' > ~/.dev_name

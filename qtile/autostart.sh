@@ -11,7 +11,7 @@ xrandr --output "$monitor" --primary
 dwmblocks &
 blueman-applet &
 numlockx on
-virtual_inputs &
+# virtual_inputs &
 picom -b --backend=glx
 /usr/libexec/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)
 xfce4-power-manager &

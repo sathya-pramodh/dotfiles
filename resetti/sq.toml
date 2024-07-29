@@ -2,8 +2,9 @@ reset_count = ''
 unpause_focus = false
 poll_rate = 100
 play_res = '1920x1080+0,0'
-alt_res = ['220x700+860,190', '1920x300+0,390']
-no_pause = true
+alt_res = ['220x700+860,190', '1920x300+0,390', '320x16384+800,-7652']
+disable_pause = false
+utility_mode = true
 
 [delay]
 wp_pause = 20
@@ -13,9 +14,9 @@ stretch = 20
 ghost_pie_fix = 20
 
 [hooks]
-reset = ''
-alt_res = ''
-normal_res = ''
+reset = '/home/pramodhsathya/wall.sh'
+alt_res = ['sh /home/pramodhsathya/thin.sh', 'sh /home/pramodhsathya/wide.sh', '/bin/res_toggle']
+normal_res = ['sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/reset.sh', '/bin/res_toggle_back']
 wall_lock = ''
 wall_unlock = ''
 wall_play = ''
@@ -32,21 +33,22 @@ LMB-Ctrl-Shift = ['wall_reset_others']
 1 = ['wall_reset(1)']
 Shift-1 = ['wall_play(1)']
 6 = ['ingame_toggle_res(2)']
+J = ['ingame_toggle_res(3)']
 
 [obs]
-enabled = false 
+enabled = true 
 port = 4444
 password = ''
 port_2 = 4444
 password_2 = ''
 
 [wall]
-enabled = false
+enabled = true
 confine_pointer = false
 goto_locked = false
 reset_unlock = true
 grace_period = 250
-stretch_res = '1920x1080+0,0'
+stretch_res = '1920x1080+-1919,1079'
 use_f1 = false
 freeze_at = 0
 show_at = 0
