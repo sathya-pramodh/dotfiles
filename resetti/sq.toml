@@ -1,88 +1,17 @@
-reset_count = ''
-unpause_focus = false
 poll_rate = 100
 play_res = '1920x1080+0,0'
-alt_res = ['220x700+860,190', '1920x300+0,390', '320x16384+800,-7652']
-disable_pause = false
-utility_mode = true
-
-[delay]
-wp_pause = 20
-idle_pause = 20
-unpause = 20
-stretch = 20
-ghost_pie_fix = 20
+alt_res = ['280x700+820,190', '1920x300+0,390', '320x16384+800,-7652']
 
 [hooks]
-reset = '/home/pramodhsathya/wall.sh'
-alt_res = ['sh /home/pramodhsathya/thin.sh', 'sh /home/pramodhsathya/wide.sh', '/bin/res_toggle']
-normal_res = ['sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/reset.sh', '/bin/res_toggle_back']
-wall_lock = ''
-wall_unlock = ''
-wall_play = ''
-wall_reset = ''
+reset = ''
+alt_res = ['sh /home/pramodhsathya/thin.sh', 'sh /home/pramodhsathya/wide.sh', 'sh /home/pramodhsathya/tall.sh']
+normal_res = ['sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/tall_reset.sh']
+focus_gained = "python3 /home/pramodhsathya/Desktop/Projects/personal/Rebinder/Rebinder.py rebind"
+focus_lost = "python3 /home/pramodhsathya/Desktop/Projects/personal/Rebinder/Rebinder.py reset"
 
 [keybinds]
-R = ['wall_reset_all']
+Z = ['ingame_reset']
+Ctrl-Shift-F = ['ingame_focus']
 grave = ['ingame_toggle_res']
-Ctrl-Shift-F = ['ingame_focus', 'wall_focus']
-LMB = ['wall_reset']
-LMB-Ctrl = ['wall_play']
-LMB-Alt = ['wall_lock']
-LMB-Ctrl-Shift = ['wall_reset_others']
-1 = ['wall_reset(1)']
-Shift-1 = ['wall_play(1)']
 6 = ['ingame_toggle_res(2)']
 J = ['ingame_toggle_res(3)']
-
-[obs]
-enabled = true 
-port = 4444
-password = ''
-port_2 = 4444
-password_2 = ''
-
-[wall]
-enabled = true
-confine_pointer = false
-goto_locked = false
-reset_unlock = true
-grace_period = 250
-stretch_res = '1920x1080+-1919,1079'
-use_f1 = false
-freeze_at = 0
-show_at = 0
-wall_window = 'Projector (Scene) - Wall'
-
-[wall.moving]
-enabled = false
-use_gaps = true
-
-[[wall.moving.groups]]
-position = '1920x880+0,0'
-width = 2
-height = 2
-
-[wall.moving.locks]
-position = '1920x200+0,880'
-width = 6
-height = 1
-
-[wall.performance]
-sleepbg_path = ''
-affinity = 'sequence'
-
-[wall.performance.sequence]
-active_cpus = 8
-background_cpus = 2
-lock_cpus = 8
-
-[wall.performance.advanced]
-ccx_split = 1
-affinity_idle = 2
-affinity_low = 4
-affinity_mid = 6
-affinity_high = 8
-affinity_active = 8
-burst_length = 0
-low_threshold = 20

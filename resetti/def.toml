@@ -15,8 +15,8 @@ ghost_pie_fix = 20
 
 [hooks]
 reset = 'sh /home/pramodhsathya/wall.sh'
-alt_res = ['sh /home/pramodhsathya/thin.sh', 'sh /home/pramodhsathya/wide.sh', '/bin/res_toggle']
-normal_res = ['sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/reset.sh', '/bin/res_toggle_back']
+alt_res = ['sh /home/pramodhsathya/thin.sh', 'sh /home/pramodhsathya/wide.sh', 'sh /home/pramodhsathya/tall.sh']
+normal_res = ['sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/tall_reset.sh']
 wall_lock = ''
 wall_unlock = ''
 wall_play = ''
@@ -48,7 +48,7 @@ password_2 = ''
 [wall]
 enabled = true
 confine_pointer = false
-goto_locked = true 
+goto_locked = true
 reset_unlock = true
 grace_period = 5000
 stretch_res = '1920x1080+-1919,1079'
@@ -65,7 +65,7 @@ force_reset_before_play = false
 [[wall.moving.groups]]
 position = '1368x882+276,101'
 cosmetic = false
-width = 2
+width = 3
 height = 2
 
 [[wall.moving.groups]]
@@ -95,5 +95,5 @@ affinity_low = 2
 affinity_mid = 4
 affinity_high = 6
 affinity_active = 8
-burst_length = 1000
-low_threshold = 50
+burst_length = 500
+low_threshold = 30

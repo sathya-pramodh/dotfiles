@@ -8,6 +8,9 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec --no-startup-id systemctl --user stop wireplumber xdg-desktop-portal xdg-desktop-portal-wlr
+exec --no-startup-id systemctl --user start wireplumber
 
 set $mod Mod4
 set $termcmd alacritty
@@ -257,9 +260,9 @@ exec swaymsg create_output HEADLESS-1
 
 workspace $ws10 output HEADLESS-1
 
-exec virtual_inputs
+# exec virtual_inputs
 exec qpwgraph -axm /home/pramodhsathya/Speedrunning.qpwgraph
-exec /home/pramodhsathya/vnc.sh
+exec --no-startup-id /home/pramodhsathya/vnc.sh
 exec_always dunst
 
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh

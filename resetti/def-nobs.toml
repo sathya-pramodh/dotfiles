@@ -15,8 +15,8 @@ ghost_pie_fix = 20
 
 [hooks]
 reset = 'sh /home/pramodhsathya/wall.sh'
-alt_res = ['sh /home/pramodhsathya/thin.sh', 'sh /home/pramodhsathya/wide.sh', '/bin/res_toggle']
-normal_res = ['sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/reset.sh', '/bin/res_toggle_back']
+alt_res = ['sh /home/pramodhsathya/thin.sh', 'sh /home/pramodhsathya/wide.sh', 'sh /home/pramodhsathya/tall.sh']
+normal_res = ['sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/tall_reset.sh']
 wall_lock = ''
 wall_unlock = ''
 wall_play = ''

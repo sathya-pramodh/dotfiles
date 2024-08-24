@@ -8,13 +8,12 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
 set $mod Mod4
 set $termcmd alacritty
 set $browsercmd brave-browser
 set $screenshotcmd flameshot gui
-set $monitor exec xrandr | grep primary | awk -F ' ' '{print $1}'
-set $second_monitor DVI-I-2-1
+set $monitor eDP-1-1
+set $second_monitor HDMI-1-1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -220,7 +219,6 @@ bindsym $mod+Shift+s exec $screenshotcmd
 bindsym $mod+f exec nautilus
 bindsym $mod+p exec rofi -show drun
 bindsym $mod+Ctrl+Shift+s exec rofi -show power-menu -modi power-menu:rofi-power-menu
-exec ~/.dwm/autostart.sh
 for_window [class="Minecraft\* 1.16.1"] floating enable
 assign [class="Minecraft\* 1.16.1"] $ws1
 for_window [class="ninjabrainbot-Main"] floating enable
@@ -246,7 +244,6 @@ focus_on_window_activation focus
 #             urgent_workspace   #ECEFF4 #900000
 #         }
 # }
+exec --no-startup-id ~/.dwm/autostart.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id /usr/bin/dunst
-exec_always xinput | grep "Logitech G304" | grep "pointer" | awk -F ' ' '{print $5}' | awk -F '=' '{print $2}' > ~/.dev_id
-exec_always ratbagctl list | grep "Logitech G304" | awk -F ':' '{print $1}' > ~/.dev_name
