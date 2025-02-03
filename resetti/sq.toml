@@ -6,8 +6,8 @@ alt_res = ['280x700+820,190', '1920x300+0,390', '320x16384+800,-7652']
 reset = ''
 alt_res = ['sh /home/pramodhsathya/thin.sh', 'sh /home/pramodhsathya/wide.sh', 'sh /home/pramodhsathya/tall.sh']
 normal_res = ['sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/tall_reset.sh']
-focus_gained = "python3 /home/pramodhsathya/Desktop/Projects/personal/Rebinder/Rebinder.py rebind"
-focus_lost = "python3 /home/pramodhsathya/Desktop/Projects/personal/Rebinder/Rebinder.py reset"
+focus_gained = "python3 /home/pramodhsathya/Desktop/Projects/personal/Rebinder/Rebinder.py focus"
+focus_lost = "python3 /home/pramodhsathya/Desktop/Projects/personal/Rebinder/Rebinder.py unfocus"
 
 [keybinds]
 Z = ['ingame_reset']

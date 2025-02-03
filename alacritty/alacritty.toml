@@ -278,7 +278,7 @@ mode = "Vi|~Search"
 mods = "Shift"
 
 [window]
-opacity = 0.85
+opacity = 1.0
 
 [window.dimensions]
 columns = 120

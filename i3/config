@@ -9,8 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 set $mod Mod4
-set $termcmd alacritty
-set $browsercmd brave-browser
+set $termcmd ghostty 
+set $browsercmd flatpak run io.github.zen_browser.zen 
 set $screenshotcmd flameshot gui
 set $monitor eDP-1-1
 set $second_monitor HDMI-1-1
@@ -208,7 +208,9 @@ gaps inner 6
 
 # Titlebar colors
 # client.focused #5E81AC #5E81AC #ECEFF4 #5E81AC
-client.focused #5E81AC #5E81AC #5E81AC #5E81AC
+# client.focused #5E81AC #5E81AC #5E81AC #5E81AC
+client.focused #e68bbe #e68bbe #e68bbe #e68bbe
+client.unfocused #333333 #222222 #AAAAAA #292d2e
 
 # Disable focus follow mouse
 focus_follows_mouse no

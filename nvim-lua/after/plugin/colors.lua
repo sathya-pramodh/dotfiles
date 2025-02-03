@@ -1,6 +1,6 @@
 function Color(color)
     if not vim.g.vscode then
-        color = color or "catppuccin-macchiato"
+        color = color or "catppuccin-frappe"
         vim.cmd.colorscheme(color)
     end
 

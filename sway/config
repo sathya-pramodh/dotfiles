@@ -13,8 +13,8 @@ exec --no-startup-id systemctl --user stop wireplumber xdg-desktop-portal xdg-de
 exec --no-startup-id systemctl --user start wireplumber
 
 set $mod Mod4
-set $termcmd alacritty
-# set $monitor exec xrandr | grep primary | awk -F ' ' '{print $1}'
+set $termcmd ghostty
+set $browsercmd flatpak run io.github.zen_browser.zen 
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -206,41 +206,42 @@ gaps inner 6
 
 # Titlebar colors
 # client.focused #5E81AC #5E81AC #ECEFF4 #5E81AC
-client.focused #5E81AC #5E81AC #5E81AC #5E81AC
+client.focused #e68bbe #e68bbe #e68bbe #e68bbe
+client.unfocused #333333 #222222 #AAAAAA #292d2e
 
 # Disable focus follow mouse
 focus_follows_mouse no
 
 # Custom binds
-bindsym $mod+b exec brave-browser
-bindsym $mod+Shift+s exec flameshot gui &
+exec_always dunst -mon 0
+bindsym $mod+b exec $browsercmd 
+bindsym $mod+Shift+s exec grim -g "$(slurp -d)" - | wl-copy
 bindsym $mod+f exec nautilus
 bindsym $mod+p exec rofi -show drun
 bindsym $mod+Ctrl+Shift+s exec rofi -show power-menu -modi power-menu:rofi-power-menu
-# exec ~/.dwm/autostart.sh
-for_window [class="Minecraft\* 1.16.1"] floating enable
+exec --no-startup-id ~/.i3/autostart.sh
 for_window [class="ninjabrainbot-Main"] floating enable
 for_window [title="Windowed Projector \(Scene\) - Mag"] floating enable, resize set width 1, resize set height 1, move position 0 0
 for_window [title="Windowed Projector \(Scene\) - Wall"] floating enable, resize set width 1920, resize set height 1080, move position 0 0 
-for_window [title="waywall"] floating enable, resize set width 1920, resize set height 1080, move position 1 1
+for_window [class="waywall"] floating enable, resize set width 1920, resize set height 1080, move position 1 1
 focus_on_window_activation focus
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
- bar {
-         position top
-         # tray_output eDP-1-1
-         status_command i3status
-         colors {
-             background #000000
-             statusline #ECEFF4
- 
-             # focused_workspace  #ECEFF4 #5E81AC
-             # active_workspace   #ECEFF4 #333333
-             # inactive_workspace #888888 #222222
-             # urgent_workspace   #ECEFF4 #900000
-         }
- }
+#  bar {
+#          position top
+#          # tray_output eDP-1-1
+#          status_command i3status
+#          colors {
+#              background #000000
+#              statusline #ECEFF4
+#  
+#              # focused_workspace  #ECEFF4 #5E81AC
+#              # active_workspace   #ECEFF4 #333333
+#              # inactive_workspace #888888 #222222
+#              # urgent_workspace   #ECEFF4 #900000
+#          }
+#  }
 input "1133:16500:Logitech_G304" {
     accel_profile "flat"
     pointer_accel -0.850
@@ -261,9 +262,9 @@ exec swaymsg create_output HEADLESS-1
 workspace $ws10 output HEADLESS-1
 
 # exec virtual_inputs
-exec qpwgraph -axm /home/pramodhsathya/Speedrunning.qpwgraph
-exec --no-startup-id /home/pramodhsathya/vnc.sh
-exec_always dunst
+exec --no-startup-id sh /home/pramodhsathya/vnc.sh
+exec_always --no-startup-id swaybg -i /home/pramodhsathya/Downloads/livewall/minecraft-cherry-grove-1920-1080-v0-getjr3xoyagb1.png
+exec_always --no-startup-id $HOME/.config/waybar/launch.sh 
 
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # exec_always --no-startup-id /usr/bin/dunst

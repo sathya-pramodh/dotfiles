@@ -17,6 +17,8 @@ ghost_pie_fix = 20
 reset = 'sh /home/pramodhsathya/wall.sh'
 alt_res = ['sh /home/pramodhsathya/thin.sh', 'sh /home/pramodhsathya/wide.sh', 'sh /home/pramodhsathya/tall.sh']
 normal_res = ['sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/tall_reset.sh']
+focus_gained = "python3 /home/pramodhsathya/Desktop/Projects/personal/Rebinder/Rebinder.py focus"
+focus_lost = "python3 /home/pramodhsathya/Desktop/Projects/personal/Rebinder/Rebinder.py unfocus"
 wall_lock = ''
 wall_unlock = ''
 wall_play = ''
@@ -42,8 +44,6 @@ J = ['ingame_toggle_res(3)']
 enabled = true
 port = 4444
 password = ''
-port_2 = 4444
-password_2 = ''
 
 [wall]
 enabled = true
@@ -53,7 +53,7 @@ reset_unlock = true
 grace_period = 5000
 stretch_res = '1920x1080+-1919,1079'
 use_f1 = false
-freeze_at = 90
+freeze_at = -1
 show_at = -1
 wall_window = 'Projector (Scene) - Wall'
 
