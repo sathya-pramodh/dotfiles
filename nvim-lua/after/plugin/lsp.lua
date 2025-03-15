@@ -30,7 +30,7 @@ if not vim.g.vscode then
         vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts("LSP - Rename symbol"))
         vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts("LSP - Signature help"))
     end)
-    vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
+    -- vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
     lsp.setup()
 
     vim.diagnostic.config({

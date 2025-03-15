@@ -29,3 +29,4 @@ alias mux='pgrep -vx tmux > /dev/null && \
 export GTK_THEME=Adwaita:dark
 export FLYCTL_INSTALL="/home/pramodhsathya/.fly"
 export PATH="$PATH:$FLYCTL_INSTALL/bin"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"

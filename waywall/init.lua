@@ -1,22 +1,17 @@
 local waywall = require("waywall")
 local helpers = require("waywall.helpers")
 
-local function read_file(path)
-    local file = io.open(path, "r")
-    if not file then return nil end
-    local content = file:read "*a"
-    file:close()
-    return content
-end
-
 local config = {
     input = {
         sensitivity = 0.125,
         confine_pointer = false,
         remaps = {
             ["Q"] = "I",
+            ["I"] = "Q",
             ["S"] = "J",
+            ["J"] = "S",
             ["H"] = "N",
+            ["N"] = "H",
         },
         repeat_delay = 185,
         repeat_rate = 30,
@@ -100,11 +95,56 @@ local mirrors = {
     }),
 
     thin_pie_blockentities = make_mirror({
-        src = { x = 194, y = 478, w = 43, h = 9 },
-        dst = { x = 1100, y = 800, w = 160, h = 44 },
+        src = { x = 0, y = 595, w = 330, h = 180 },
+        dst = { x = 1150, y = 600, w = 500, h = 200},
         color_key = {
-            input  = "#e96d4d",
-            output = "#e87558",
+            input  = "#ec6e4e",
+            output = "#f25d38",
+        },
+    }),
+
+    thin_pie_blockentities_percent = make_mirror({
+        src = { x = 235, y = 779, w = 37, h = 17 },
+        dst = { x = 1308, y = 784, w = 185, h = 100},
+        color_key = {
+            input  = "#E96D4D",
+            output = "#FFFFFF",
+        },
+    }),
+
+    thin_pie_unspecified = make_mirror({
+        src = { x = 0, y = 595, w = 330, h = 180 },
+        dst = { x = 1150, y = 600, w = 500, h = 200},
+        color_key = {
+            input  = "#46CE66",
+            output = "#3eb85b",
+        },
+    }),
+
+    thin_pie_entities = make_mirror({
+        src = { x = 0, y = 595, w = 330, h = 180 },
+        dst = { x = 1150, y = 600, w = 500, h = 200},
+        color_key = {
+            input  = "#E446C4",
+            output = "#2e3440",
+        },
+    }),
+
+    thin_pie_destroyProgress = make_mirror({
+        src = { x = 0, y = 595, w = 330, h = 180 },
+        dst = { x = 1150, y = 600, w = 500, h = 200},
+        color_key = {
+            input  = "#CC6C46",
+            output = "#2e3440",
+        },
+    }),
+
+    thin_pie_prepare = make_mirror({
+        src = { x = 0, y = 595, w = 330, h = 180 },
+        dst = { x = 1150, y = 600, w = 500, h = 200},
+        color_key = {
+            input  = "#464C46",
+            output = "#2e3440",
         },
     }),
 }
@@ -125,10 +165,14 @@ local show_mirrors = function(eye, f3, tall, thin)
     mirrors.f3_ecount(f3)
 
     mirrors.thin_pie_blockentities(thin)
+    mirrors.thin_pie_blockentities_percent(thin)
+    mirrors.thin_pie_entities(thin)
+    mirrors.thin_pie_unspecified(thin)
+    mirrors.thin_pie_destroyProgress(thin)
 end
 
 local thin_enable = function()
-    os.execute('echo "300x700" > ~/.resetti_state')
+    os.execute('echo "330x1000" > ~/.resetti_state')
     show_mirrors(false, true, false, true)
 end
 
@@ -155,7 +199,7 @@ local generic_disable = function()
 end
 
 local resolutions = {
-    thin = make_res(300, 700, thin_enable, generic_disable),
+    thin = make_res(330, 1000, thin_enable, generic_disable),
     tall = make_res(320, 16384, tall_enable, tall_disable),
     wide = make_res(1920, 320, wide_enable, generic_disable),
 }
