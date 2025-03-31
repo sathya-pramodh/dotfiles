@@ -1,6 +1,6 @@
 font-family = FiraCode Nerd Font
 font-feature = -calt
-theme = "catppuccin-frappe"
+theme = "tokyonight-storm"
 shell-integration = zsh
 window-decoration = true
 adjust-cursor-thickness = 10

@@ -5,19 +5,19 @@ local config = {
     input = {
         sensitivity = 0.125,
         confine_pointer = false,
-        remaps = {
-            ["Q"] = "I",
-            ["I"] = "Q",
-            ["S"] = "J",
-            ["J"] = "S",
-            ["H"] = "N",
-            ["N"] = "H",
-        },
+        -- remaps = {
+        --     ["Q"] = "I",
+        --     ["I"] = "Q",
+        --     ["S"] = "J",
+        --     ["J"] = "S",
+        --     ["H"] = "N",
+        --     ["N"] = "H",
+        -- },
         repeat_delay = 185,
         repeat_rate = 30,
     },
     theme = {
-        background = "#c390a1",
+        background = "#23273b",
         ninb_anchor = "topright",
         cursor_theme = "Adwaita-MC",
     },

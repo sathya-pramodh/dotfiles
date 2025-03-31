@@ -1,11 +1,11 @@
 function Color(color)
-    if not vim.g.vscode then
-        color = color or "catppuccin-frappe"
-        vim.cmd.colorscheme(color)
-    end
+	if not vim.g.vscode then
+		color = color or "tokyonight-storm"
+		vim.cmd.colorscheme(color)
+	end
 
-    vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
 Color()
