@@ -96,6 +96,16 @@ if not vim.g.vscode then
 				},
 			},
 		},
+		rust_analyzer = {
+			root_dir = require("lspconfig.util").root_pattern("Cargo.toml"),
+			settings = {
+				["rust-analyzer"] = {
+					cargo = {
+						allFeatures = true,
+					},
+				},
+			},
+		},
 	}
 	local ensure_installed = vim.tbl_keys(servers or {})
 	vim.list_extend(ensure_installed, {
@@ -110,6 +120,9 @@ if not vim.g.vscode then
 			function(server_name)
 				local server = servers[server_name] or {}
 				server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+				server.on_attach = function(client, bufnr)
+					vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+				end
 				require("lspconfig")[server_name].setup(server)
 			end,
 		},

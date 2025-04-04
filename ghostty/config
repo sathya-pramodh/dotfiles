@@ -2,5 +2,5 @@ font-family = FiraCode Nerd Font
 font-feature = -calt
 theme = "tokyonight-storm"
 shell-integration = zsh
-window-decoration = true
+window-decoration = false
 adjust-cursor-thickness = 10

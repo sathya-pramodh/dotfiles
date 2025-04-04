@@ -21,7 +21,7 @@ require("lazy").setup({
 		dependencies = { { "nvim-lua/plenary.nvim" } },
 	},
 	"shaunsingh/nord.nvim",
-	{ { "nvim-treesitter/nvim-treesitter", build = ":TSUpdateSync" } },
+	{ { "nvim-treesitter/nvim-treesitter", lazy = true, build = ":TSUpdate" } },
 	"theprimeagen/harpoon",
 	"mbbill/undotree",
 	{
