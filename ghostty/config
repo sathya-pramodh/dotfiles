@@ -3,4 +3,6 @@ font-feature = -calt
 theme = "tokyonight-storm"
 shell-integration = zsh
 window-decoration = false
+# gtk-titlebar = false
+# gtk-adwaita = false
 adjust-cursor-thickness = 10

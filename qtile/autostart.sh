@@ -19,7 +19,7 @@ xfce4-power-manager &
 nitrogen --restore &
 pnmixer &
 nm-applet &
-xinput set-prop 15 "Coordinate Transformation Matrix" 0.125 0 840 0 0.125 472.5 0 0 1
+xinput set-prop 10 "Coordinate Transformation Matrix" 0.125 0 840 0 0.125 472.5 0 0 1
 discord --start-minimized &
 x11vnc -forever -ncache -multiptr -repeat -clip 1000x750+1920+330 & 
 qpwgraph ~/Speedrunning.qpwgraph -axm &

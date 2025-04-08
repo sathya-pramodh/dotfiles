@@ -9,8 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 set $mod Mod4
-set $termcmd ghostty 
-set $browsercmd flatpak run io.github.zen_browser.zen 
+set $termcmd ghostty
+set $browsercmd flatpak run app.zen_browser.zen 
 set $screenshotcmd flameshot gui
 set $monitor eDP-1-1
 set $second_monitor HDMI-1-1
@@ -54,7 +54,7 @@ floating_modifier $mod
 # tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec $termcmd
+bindsym $mod+Return exec $termcmd 
 
 # kill focused window
 bindsym $mod+q kill
@@ -195,22 +195,21 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Remove window borders
-for_window [class="^.*"] border pixel 0
-# default_border pixel 0
-# default_floating_border pixel 0
+# for_window [class="^com.mitchellh.ghostty*"] border pixel 3
+default_border pixel 3
+default_floating_border pixel 3
 
 # Default layout setting
 workspace_layout tabbed 
 
 # Window gaps
-gaps inner 6
+gaps inner 10
 
 # Titlebar colors
 # client.focused #5E81AC #5E81AC #ECEFF4 #5E81AC
 # client.focused #5E81AC #5E81AC #5E81AC #5E81AC
-client.focused #e68bbe #e68bbe #e68bbe #e68bbe
-client.unfocused #333333 #222222 #AAAAAA #292d2e
+client.focused #7aa2f7 #7aa2f7 #7aa2f7 #7aa2f7 
+client.unfocused #1f2335 #1f2335 #a9b1d6 #1f2335
 
 # Disable focus follow mouse
 focus_follows_mouse no
@@ -221,7 +220,9 @@ bindsym $mod+Shift+s exec $screenshotcmd
 bindsym $mod+f exec nautilus
 bindsym $mod+p exec rofi -show drun
 bindsym $mod+Ctrl+Shift+s exec rofi -show power-menu -modi power-menu:rofi-power-menu
-for_window [class="Minecraft\* 1.16.1"] floating enable
+bindsym $mod+u exec i3-msg border pixel 0
+bindsym $mod+y exec i3-msg border pixel 3
+for_window [class="Minecraft\* 1.16.1"] floating enable border pixel 0
 assign [class="Minecraft\* 1.16.1"] $ws1
 for_window [class="ninjabrainbot-Main"] floating enable
 assign [class="ninjabrainbot-Main"] $ws10
