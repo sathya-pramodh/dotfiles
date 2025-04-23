@@ -20,7 +20,7 @@ nitrogen --restore &
 pnmixer &
 nm-applet &
 xinput set-prop 10 "Coordinate Transformation Matrix" 0.125 0 840 0 0.125 472.5 0 0 1
-discord --start-minimized &
+Discord --start-minimized &
 x11vnc -forever -ncache -multiptr -repeat -clip 1000x750+1920+330 & 
 qpwgraph ~/Speedrunning.qpwgraph -axm &
 xinput | grep "Logitech G304" | grep "pointer" | awk -F ' ' '{print $5}' | awk -F '=' '{print $2}' > ~/.dev_id &

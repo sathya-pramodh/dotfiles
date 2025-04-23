@@ -1,4 +1,4 @@
-poll_rate = 1000
+poll_rate = 100
 play_res = '1920x1080+0,0'
 alt_res = ['330x1000+795,40', '1920x300+0,390', '320x16384+800,-7652']
 
@@ -12,6 +12,7 @@ focus_lost = "python3 /home/pramodhsathya/Desktop/Projects/personal/Rebinder/Reb
 [keybinds]
 Z = ['ingame_reset']
 Ctrl-Shift-F = ['ingame_focus']
-grave = ['ingame_toggle_res']
+grave= ['ingame_toggle_res']
+m4alt = ['ingame_toggle_res']
 6 = ['ingame_toggle_res(2)']
 J = ['ingame_toggle_res(3)']
