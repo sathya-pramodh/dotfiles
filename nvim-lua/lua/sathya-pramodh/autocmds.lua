@@ -11,4 +11,11 @@ if not vim.g.vscode then
 		group = compileAndRun,
 		command = "lua vim.keymap.set('n', '<F5>', ':!cat input.txt | python3 % > output.txt<CR>')",
 	})
+	api.nvim_create_autocmd("TextYankPost", {
+		desc = "Highlight when yanking (copying) text",
+		group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+		callback = function()
+			vim.hl.on_yank()
+		end,
+	})
 end

@@ -203,7 +203,7 @@ default_floating_border pixel 3
 workspace_layout tabbed 
 
 # Window gaps
-gaps inner 10
+gaps inner 5
 
 # Titlebar colors
 # client.focused #5E81AC #5E81AC #ECEFF4 #5E81AC

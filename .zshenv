@@ -1,4 +1,4 @@
-export EDITOR=/bin/nvim
+export EDITOR=/usr/local/bin/nvim
 export PATH="$PATH:/home/pramodhsathya/.local/bin:/home/pramodhsathya/.local/lib/:/home/pramodhsathya/.cargo/bin:/home/pramodhsathya/go/bin/:$HOME/.pub-cache/bin:/usr/local/cuda-12/bin/"
 export LD_LIBRARY_PATH="/usr/local/cuda-12/lib64:$LD_LIBRARY_PATH"
 export PROJECT=$HOME/Desktop/Project/
