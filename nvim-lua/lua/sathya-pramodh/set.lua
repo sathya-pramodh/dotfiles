@@ -8,7 +8,7 @@ vim.o.signcolumn = "yes"
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 
-vim.o.breakindent = true
+vim.o.breakindent = false
 -- vim.o.smartindent = true
 
 vim.o.wrap = true
