@@ -28,15 +28,22 @@ if not vim.g.vscode then
 	vim.keymap.set("n", "<C-L>", "<C-W><C-L>")
 end
 
---nohlsearch
-vim.keymap.set("n", "<leader>\\", ":nohlsearch<CR>")
+vim.keymap.set("t", "<leader><leader>", "<C-\\><C-n>", { desc = "Terminal - Go to normal mode" })
+local term_win_id = nil
 
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
-vim.keymap.set("n", "<leader>T", function()
+vim.keymap.set("n", "<leader>`", function()
+	if term_win_id and vim.api.nvim_win_is_valid(term_win_id) then
+		vim.api.nvim_set_current_win(term_win_id)
+		vim.cmd("startinsert")
+		return
+	end
+
 	vim.cmd("botright 15split")
 	vim.cmd("terminal")
 	vim.cmd("startinsert")
-end, { desc = "Open 15-line terminal in split below" })
+
+	term_win_id = vim.api.nvim_get_current_win()
+end, { desc = "Terminal - Focus or open dedicated terminal window" })
 
 if not vim.g.vscode then
 	vim.keymap.set("n", "<leader>2", function()
