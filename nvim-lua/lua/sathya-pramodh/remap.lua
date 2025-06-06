@@ -31,6 +31,13 @@ end
 --nohlsearch
 vim.keymap.set("n", "<leader>\\", ":nohlsearch<CR>")
 
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>")
+vim.keymap.set("n", "<leader>T", function()
+	vim.cmd("botright 15split")
+	vim.cmd("terminal")
+	vim.cmd("startinsert")
+end, { desc = "Open 15-line terminal in split below" })
+
 if not vim.g.vscode then
 	vim.keymap.set("n", "<leader>2", function()
 		vim.cmd([[cn]])
