@@ -1,25 +1,43 @@
 #!/usr/bin/env bash
 
+# Get selected project path from argument or fzf
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Desktop/Projects/college/ ~/Desktop/Projects/personal/ ~/Desktop/Projects/work/ ~/dotfiles/ -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/Desktop/Projects/college/ ~/Desktop/Projects/personal/ ~/dotfiles/ -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
+# Exit if nothing selected
 if [[ -z $selected ]]; then
     exit 0
 fi
 
+# Generate a tmux-safe session name
 selected_name=$(basename "$selected" | tr . _)
+
+# Check if tmux is running
 tmux_running=$(pgrep tmux)
 
+# Session doesn't exist and tmux is not attached/running → create and attach
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected
+    tmux new-session -s "$selected_name" -c "$selected" -n nvim \;\
+        send-keys -t "$selected_name:1" 'nvim' C-m \;\
+        new-window -t "$selected_name" -n zsh -c "$selected" \;\
+        new-window -t "$selected_name" -n zsh -c "$selected" \;\
+        select-window -t "$selected_name:1" \;\
+        attach -t "$selected_name"
     exit 0
 fi
 
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected
+# Session doesn't exist but tmux is running → create in detached mode
+if ! tmux has-session -t="$selected_name" 2>/dev/null; then
+    tmux new-session -ds "$selected_name" -c "$selected" -n nvim
+    tmux send-keys -t "$selected_name:1" 'nvim' C-m
+    tmux new-window -t "$selected_name" -n zsh -c "$selected"
+    tmux new-window -t "$selected_name" -n zsh -c "$selected"
+    tmux select-window -t "$selected_name:1"
+    tmux attach -t "$selected_name"
 fi
 
-tmux switch-client -t $selected_name
+# Session exists → switch to it
+tmux switch-client -t "$selected_name"
