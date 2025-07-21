@@ -1,10 +1,11 @@
 return {
 	"neovim/nvim-lspconfig",
+	lazy = true,
+	version = false,
 	dependencies = {
 		{ "mason-org/mason.nvim", opts = {} },
 		"mason-org/mason-lspconfig.nvim",
-		"WhoIsSethDaniel/mason-tool-installer.nvim",
-
+		{ "WhoIsSethDaniel/mason-tool-installer.nvim", event = "LspAttach" },
 		{
 			"j-hui/fidget.nvim",
 			opts = {
@@ -14,7 +15,6 @@ return {
 				} },
 			},
 		},
-
 		"saghen/blink.cmp",
 	},
 	config = function()

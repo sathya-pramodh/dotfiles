@@ -1,8 +1,6 @@
 vim.o.nu = true
 vim.o.relativenumber = true
 
-vim.o.list = true
-vim.opt.listchars = { tab = "| ", trail = "·", nbsp = "␣" }
 vim.o.showmode = false
 vim.o.signcolumn = "yes"
 vim.o.shiftwidth = 2

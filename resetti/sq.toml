@@ -13,6 +13,6 @@ focus_lost = "python3 /home/pramodhsathya/Desktop/Projects/personal/Rebinder/Reb
 Z = ['ingame_reset']
 Ctrl-Shift-F = ['ingame_focus']
 grave= ['ingame_toggle_res']
-m4alt = ['ingame_toggle_res']
+# m4alt = ['ingame_toggle_res']
 6 = ['ingame_toggle_res(2)']
 J = ['ingame_toggle_res(3)']
