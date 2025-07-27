@@ -20,6 +20,8 @@ return {
 			require("mini.statusline").setup()
 			require("mini.files").setup({
 				mappings = {
+					go_out = "<S-h>",
+					go_in = "<S-l>",
 					go_in_plus = "<CR>",
 				},
 			})
