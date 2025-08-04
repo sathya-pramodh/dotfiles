@@ -1,6 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	build = ":TSUpdate",
+	cmd = { "TSInstall", "TSUpdate" },
+	lazy = true,
 	config = function()
 		if not vim.g.vscode then
 			require("nvim-treesitter.configs").setup({
