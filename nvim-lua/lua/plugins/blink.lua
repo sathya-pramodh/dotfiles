@@ -16,6 +16,14 @@ return {
 			opts = {},
 		},
 		"folke/lazydev.nvim",
+		"supermaven-inc/supermaven-nvim",
+		{
+			"saghen/blink.compat",
+			version = "event",
+			opts = {
+				enable_events = true,
+			},
+		},
 	},
 	opts = {
 		keymap = {
@@ -37,6 +45,13 @@ return {
 			default = { "lsp", "path", "snippets", "lazydev" },
 			providers = {
 				lazydev = { module = "lazydev.integrations.blink", score_offset = 100 },
+				-- supermaven = {
+				-- 	name = "supermaven",
+				-- 	module = "blink.compat.source",
+				-- 	score_offset = 200,
+				-- 	enabled = true,
+				-- 	async = true,
+				-- },
 			},
 		},
 

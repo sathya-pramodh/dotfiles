@@ -9,4 +9,5 @@ export GTK_THEME=Adwaita:dark
 export FLYCTL_INSTALL="/home/pramodhsathya/.fly"
 export PATH="$PATH:$FLYCTL_INSTALL/bin"
 alias mux="tmux attach 2>/dev/null || tmux"
+alias prime-run="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"

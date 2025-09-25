@@ -20,6 +20,7 @@ nitrogen --restore &
 pnmixer &
 nm-applet &
 xinput set-prop 10 "libinput Accel Speed" -0.86 
+xinput set-prop 11 "libinput Accel Speed" -0.86 
 xinput set-prop 4 "libinput Accel Speed" -0.86 
 Discord --start-minimized &
 x11vnc -forever -ncache -multiptr -repeat -clip 1000x750+1920+330 & 

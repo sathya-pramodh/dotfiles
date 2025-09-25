@@ -229,6 +229,8 @@ assign [class="ninjabrainbot-Main"] $ws10
 assign [class="obs"] $ws10
 for_window [title="Projector - Scene: Wall"] floating enable, resize set width 1920, resize set height 1080, move position 0 0
 assign [title="Projector - Scene: Wall"] $ws1
+for_window [class="Wfica"] floating enable, resize set width 1920, resize set height 1080, move position 0 0, border pixel 0
+assign [title="Wfica"] $ws1
 focus_on_window_activation focus
 
 # Start i3bar to display a workspace bar (plus the system information i3status

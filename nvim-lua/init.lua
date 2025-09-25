@@ -7,6 +7,9 @@ vim.api.nvim_create_user_command("PostRestart", function()
 	os.remove("Session.vim")
 end, { bar = true })
 vim.api.nvim_create_user_command("Restart", function()
+	-- vim.api.nvim_command("restart +PreRestart source Session.vim | lua os.remove('Session.vim')")
 	vim.api.nvim_command("restart +PreRestart PostRestart")
 end, { bar = true })
+-- vim.o.exrc = true
+-- vim.g.exrc_file = "---"
 require("sathya-pramodh")
