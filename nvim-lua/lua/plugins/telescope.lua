@@ -17,9 +17,7 @@ return {
 		},
 		{
 			"<C-s>",
-			function()
-				builtin.grep_string({ search = vim.fn.input("Grep > ") })
-			end,
+			builtin.live_grep,
 			desc = "Telescope - Grep string",
 		},
 	},

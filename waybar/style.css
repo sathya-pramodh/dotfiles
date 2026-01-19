@@ -1,0 +1,152 @@
+* {
+  font-family: FiraCode Nerd Font;
+  border-radius: 8;
+  font-size: 14px;
+  padding: 0px;
+  background: transparent;
+}
+
+window#waybar {
+  background-image: linear-gradient(to bottom, #24283b 100%);
+  background-size: cover;
+  background-position: 0% 50%;
+  border-radius: 14px;
+  padding: 0px;
+  border-style: none;
+}
+
+#pulseaudio,
+#power-profiles-daemon,
+#cpu,
+#memory,
+#clock,
+#tray,
+#workspaces {
+  background-image: linear-gradient(to bottom, #1f2335 100%);
+
+  margin: 6px;
+  margin-right: 0px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: #c0caf5;
+
+  border-style: none;
+  transition-duration: 120ms;
+}
+
+#clock {
+  margin-right: 6px;
+}
+
+#pulseaudio:hover {
+  background-image: linear-gradient(to bottom, #7aa2f7 100%);
+  color: #24283b;
+  transition-duration: 120ms;
+}
+
+#custom-applauncher {
+  font-weight: bold;
+  transition-duration: 120ms;
+}
+#custom-applauncher:hover {
+  background-image: linear-gradient(to bottom, #bb9af7 100%);
+  color: #24283b;
+  transition-duration: 120ms;
+}
+
+#custom-spotify {
+  transition-duration: 120ms;
+}
+#custom-spotify:hover {
+  background-image: linear-gradient(to bottom, #7dcfff 100%);
+  color: #24283b;
+  transition-duration: 120ms;
+}
+
+#bluetooth:hover {
+  background-image: linear-gradient(to bottom, #9ece6a 100%);
+  color: #24283b;
+  transition-duration: 120ms;
+}
+#network:hover {
+  background-image: linear-gradient(to bottom, #e0af68 100%);
+  color: #24283b;
+  transition-duration: 120ms;
+}
+
+#tray menu {
+  background-color: #1f2335;
+  color: #c0caf5;
+  padding: 4px;
+}
+#tray menu menuitem {
+  background-image: linear-gradient(to bottom, #24283b 100%);
+
+  margin: 3px;
+  color: #c0caf5;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #1f2335;
+}
+#tray menu menuitem:hover {
+  background-image: linear-gradient(to bottom, #1f2335 100%);
+  color: #bb9af7;
+  font-weight: bold;
+}
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: #c0caf5;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: #7aa2f7;
+}
+#workspaces button.focused {
+  color: #bb9af7;
+  font-weight: bold;
+}
+#workspaces button.active {
+  color: #7dcfff;
+  font-weight: bold;
+}
+#workspaces button.urgent {
+  color: #f7768e;
+}
+
+#battery {
+  background-color: #1f2335;
+  color: #c0caf5;
+}
+#battery.warning {
+  color: #e0af68;
+  background-color: #ff9e64;
+}
+#battery.critical,
+#battery.urgent {
+  color: #f7768e;
+  background-color: #ff9e64;
+}
+
+/* Hyprland window module */
+#window {
+  background: transparent;
+  color: #c0caf5;
+  font-weight: normal;
+  padding: 0 8px;
+}
+
+#window.focused {
+  color: #7aa2f7;
+  font-weight: bold;
+}
+
+#window.unfocused {
+  color: #565f89;
+}

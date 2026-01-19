@@ -1,13 +1,13 @@
 poll_rate = 100
-play_res = '1920x1080+0,0'
-alt_res = ['330x1000+795,40', '1920x300+0,390', '320x16384+800,-7652']
+play_res = '1920x1080+1920,0'
+alt_res = ['330x1000+2715,40', '1920x300+1920,390', '320x16384+2720,-7652']
 
 [hooks]
 reset = ''
-alt_res = ['sh /home/pramodhsathya/thin.sh', 'sh /home/pramodhsathya/wide.sh', 'sh /home/pramodhsathya/tall.sh']
-normal_res = ['sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/reset.sh', 'sh /home/pramodhsathya/tall_reset.sh']
-focus_gained = "python3 /home/pramodhsathya/Desktop/Projects/personal/Rebinder/Rebinder.py focus"
-focus_lost = "python3 /home/pramodhsathya/Desktop/Projects/personal/Rebinder/Rebinder.py unfocus"
+alt_res = ['sh /home/pramodhsathya/MCSR/thin.sh', 'sh /home/pramodhsathya/MCSR/wide.sh', 'sh /home/pramodhsathya/MCSR/tall.sh']
+normal_res = ['sh /home/pramodhsathya/MCSR/reset.sh', 'sh /home/pramodhsathya/MCSR/reset.sh', 'sh /home/pramodhsathya/MCSR/tall_reset.sh']
+focus_gained = "python3 /home/pramodhsathya/MCSR/Rebinder.py focus"
+focus_lost = "python3 /home/pramodhsathya/MCSR/Rebinder.py unfocus"
 
 [keybinds]
 Z = ['ingame_reset']

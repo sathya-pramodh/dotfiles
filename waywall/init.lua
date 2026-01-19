@@ -1,10 +1,14 @@
 local waywall = require("waywall")
 local helpers = require("waywall.helpers")
+-- local plug = require("plug.init")
+-- plug.setup({
+-- 	dir = "plugins",
+-- })
 
 local config = {
 	input = {
 		layout = "usda",
-		sensitivity = 0.125,
+		sensitivity = -0.96875,
 		confine_pointer = false,
 		remaps = {
 			-- ["n", "f"],
@@ -27,6 +31,8 @@ local config = {
 			-- ["u"] = "c",
 			-- ["s"] = "h",
 			-- ["h"] = "s",
+			["CAPSLOCK"] = "BackSpace",
+			["mouse3"] = "rightshift",
 		},
 		repeat_delay = 185,
 		repeat_rate = 30,
@@ -51,6 +57,10 @@ local exec_ninb = function()
 	if not is_ninb_running() then
 		waywall.exec("java -jar /home/pramodhsathya/Downloads/NinjaBrain/Ninjabrain-Bot-1.5.1.jar")
 	end
+end
+
+local exec_tmpfs_clear = function()
+	waywall.exec("bash /home/pramodhsathya/MCSR/tmpfs_clear.sh")
 end
 
 local make_image = function(path, dst)
@@ -164,7 +174,7 @@ local mirrors = {
 }
 
 local images = {
-	overlay = make_image("/home/pramodhsathya/Documents/overlay.png", {
+	overlay = make_image("/home/pramodhsathya/MCSR/overlay.png", {
 		dst = { x = 0, y = 315, w = 800, h = 450 },
 	}),
 }
@@ -189,7 +199,9 @@ end
 
 local tall_enable = function()
 	os.execute('echo "320x1080" > ~/.resetti_state')
-	os.execute("ratbagctl $(ratbagctl list | grep 'Logitech G304' | awk -F ':' '{print $1}') dpi set 200")
+	-- os.execute("hyprctl -r -- keyword device[beken-2.4g-wireless-device-1]:sensitivity -1")
+	-- os.execute("hyprctl -r -- keyword device[beken-x3-mouse-2]:sensitivity -1")
+	-- os.execute("ratbagctl $(ratbagctl list | grep 'Logitech G304' | awk -F ':' '{print $1}') dpi set 200")
 	show_mirrors(true, true, true, false)
 end
 
@@ -200,7 +212,9 @@ end
 
 local tall_disable = function()
 	os.execute('echo "1920x1080" > ~/.resetti_state')
-	os.execute("ratbagctl $(ratbagctl list | grep 'Logitech G304' | awk -F ':' '{print $1}') dpi set 2500")
+	-- os.execute("hyprctl -r -- keyword device[beken-2.4g-wireless-device-1]:sensitivity -0.86")
+	-- os.execute("hyprctl -r -- keyword device[beken-x3-mouse-2]:sensitivity -0.86")
+	-- os.execute("ratbagctl $(ratbagctl list | grep 'Logitech G304' | awk -F ':' '{print $1}') dpi set 2500")
 	show_mirrors(false, false, false, false)
 end
 
@@ -226,6 +240,9 @@ config.actions = {
 	-- ninb bot
 	["Shift-7"] = exec_ninb,
 	-- ["J"] = toggle_floating,
+
+	-- tmpfs clear
+	["Ctrl-Alt-C"] = exec_tmpfs_clear,
 
 	-- misc
 	-- ["m1"] = atum_reset,

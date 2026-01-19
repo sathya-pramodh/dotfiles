@@ -10,11 +10,11 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec --no-startup-id systemctl --user stop wireplumber xdg-desktop-portal xdg-desktop-portal-wlr
-exec --no-startup-id systemctl --user start wireplumber
+exec --no-startup-id systemctl --user start wireplumber xdg-desktop-portal xdg-desktop-portal-wlr
 
 set $mod Mod4
 set $termcmd ghostty
-set $browsercmd flatpak run io.github.zen_browser.zen 
+set $browsercmd flatpak run app.zen_browser.zen
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -127,15 +127,19 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-# workspace $ws1 output $monitor 
-# workspace $ws2 output $monitor 
-# workspace $ws3 output $monitor 
-# workspace $ws4 output $monitor 
-# workspace $ws5 output $monitor 
-# workspace $ws6 output $monitor 
-# workspace $ws7 output $monitor 
-# workspace $ws8 output $monitor 
-# workspace $ws9 output $monitor 
+set $ws10 "10"
+set $ws11 "11"
+set $monitor "DP-4"
+workspace $ws1 output $monitor 
+workspace $ws2 output $monitor 
+workspace $ws3 output $monitor 
+workspace $ws4 output $monitor 
+workspace $ws5 output $monitor 
+workspace $ws6 output $monitor 
+workspace $ws7 output $monitor 
+workspace $ws8 output $monitor 
+workspace $ws9 output $monitor 
+workspace $ws9 output $monitor 
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -147,6 +151,8 @@ bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+bindsym $mod+Alt+1 workspace number $ws11
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
@@ -158,13 +164,15 @@ bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+Alt+1 move container to workspace number $ws11
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 #Shift restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+q exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -197,33 +205,37 @@ bindsym $mod+r mode "resize"
 for_window [class="^.*"] border pixel 0
 # default_border pixel 0
 # default_floating_border pixel 0
+default_border pixel 3
+default_floating_border pixel 3
 
 # Default layout setting
 workspace_layout tabbed 
 
 # Window gaps
-gaps inner 6
+gaps inner 5
 
 # Titlebar colors
 # client.focused #5E81AC #5E81AC #ECEFF4 #5E81AC
-client.focused #e68bbe #e68bbe #e68bbe #e68bbe
-client.unfocused #333333 #222222 #AAAAAA #292d2e
+client.focused #7aa2f7 #7aa2f7 #7aa2f7 #7aa2f7 
+client.unfocused #1f2335 #1f2335 #a9b1d6 #1f2335
 
 # Disable focus follow mouse
 focus_follows_mouse no
 
 # Custom binds
-exec_always dunst -mon 0
+exec_always mako --default-timeout 3000
 bindsym $mod+b exec $browsercmd 
 bindsym $mod+Shift+s exec grim -g "$(slurp -d)" - | wl-copy
 bindsym $mod+f exec nautilus
-bindsym $mod+p exec rofi -show drun
-bindsym $mod+Ctrl+Shift+s exec rofi -show power-menu -modi power-menu:rofi-power-menu
-exec --no-startup-id ~/.i3/autostart.sh
+bindsym $mod+p exec rofi -normal-window -show drun
+bindsym $mod+Ctrl+Shift+s exec rofi -normal-window -show power-menu -modi power-menu:rofi-power-menu
+# exec --no-startup-id ~/.i3/autostart.sh
 for_window [class="ninjabrainbot-Main"] floating enable
 for_window [title="Windowed Projector \(Scene\) - Mag"] floating enable, resize set width 1, resize set height 1, move position 0 0
 for_window [title="Windowed Projector \(Scene\) - Wall"] floating enable, resize set width 1920, resize set height 1080, move position 0 0 
 for_window [class="waywall"] floating enable, resize set width 1920, resize set height 1080, move position 1 1
+# for_window [class="Wfica"] floating enable, resize set width 1920, resize set height 1080, move position 0 0, border pixel 0
+for_window [class="Rofi"] floating enable
 focus_on_window_activation focus
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -244,27 +256,40 @@ focus_on_window_activation focus
 #  }
 input "1133:16500:Logitech_G304" {
     accel_profile "flat"
-    pointer_accel -0.850
+    pointer_accel -0.86
 }
 
+# exec virtual_inputs
+# exec --no-startup-id sh /home/pramodhsathya/vnc.sh
+exec_always --no-startup-id swaybg -i /home/pramodhsathya/Desktop/livewall/celeste.png -o "*"
+exec --no-startup-id blueman-applet &
+exec --no-startup-id qpwgraph -axm &
+exec --no-startup-id vesktop --start-minimized --enable-features=UseOzonePlatform --ozone-platform=wayland &
+exec --no-startup-id wl-paste --type text --watch cliphist store &
+exec --no-startup id wl-paste --type image --watch cliphist store &
+# exec --no-startup-id picom -f -b
+exec --no-startup-id /usr/libexec/polkit-mate-authentication-agent-1 &
+exec --no-startup-id sh ~/sway_virtual_monitor.sh &
+
 output "HEADLESS-1" {
-    pos 1920,0
+    pos -1920,520
+    mode 1920x1080
+}
+
+output "HEADLESS-2" {
+    pos 1920,425
     mode 1000x750
 }
 
-output "eDP-1" {
+output "DP-4" {
     pos 0,0
     mode 1920x1080
 }
 
-exec swaymsg create_output HEADLESS-1
-
 workspace $ws10 output HEADLESS-1
+workspace $ws11 output HEADLESS-2
 
-# exec virtual_inputs
-exec --no-startup-id sh /home/pramodhsathya/vnc.sh
-exec_always --no-startup-id swaybg -i /home/pramodhsathya/Downloads/livewall/minecraft-cherry-grove-1920-1080-v0-getjr3xoyagb1.png
 exec_always --no-startup-id $HOME/.config/waybar/launch.sh 
-
+# exec env WAYLAND_DISPLAY="" /opt/Citrix/ICAClient/selfservice &
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # exec_always --no-startup-id /usr/bin/dunst
